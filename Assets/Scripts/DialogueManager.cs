@@ -30,18 +30,17 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             if(story.canContinue)
             {
                 speakerName.text = "Jayce";
                 AdvanceDialogue();
             }
-        }
-        else
-        {
-            //infinitely says the logged msg
-            FinishDialogue();
+            else
+            {
+                FinishDialogue();
+            }
         }
     }
 
