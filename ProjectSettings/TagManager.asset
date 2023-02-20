@@ -50,3 +50,9 @@ TagManager:
   - name: Machine
     uniqueID: 2635826835
     locked: 0
+  - name: UI
+    uniqueID: 2942617999
+    locked: 0
+  - name: UI-popup
+    uniqueID: 3088353475
+    locked: 0
