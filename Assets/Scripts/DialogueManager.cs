@@ -15,6 +15,12 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueText;
     public GameObject nameText;
 
+    //is there a better way to do this lol
+    public GameObject cousinNeutral;
+    public GameObject cousinAnnoyed;
+    public GameObject cousinWorried;
+    public GameObject cousinHappy;
+
     static Story story;
     TextMeshProUGUI speakerName;
     TextMeshProUGUI message;
@@ -26,6 +32,7 @@ public class DialogueManager : MonoBehaviour
         message = dialogueText.GetComponent<TMPro.TextMeshProUGUI>();
         Debug.Log(speakerName.text);
         Debug.Log(message.text);
+        cousinSpriteChange("neutral");
     }
 
     void Update()
@@ -48,11 +55,43 @@ public class DialogueManager : MonoBehaviour
     {
         string currentSentence = story.Continue();
         message.text = currentSentence;
+        cousinSpriteChange("happy");
     }
 
     void FinishDialogue()
     {
         //in game, change scene to minigame
         Debug.Log("yahoo finished");
+    }
+
+    void cousinSpriteChange(string expression)
+    {
+        switch(expression)
+        {
+            case "neutral":
+                cousinNeutral.SetActive(true);
+                cousinAnnoyed.SetActive(false);
+                cousinWorried.SetActive(false);
+                cousinHappy.SetActive(false);
+                break;
+            case "happy":
+                cousinNeutral.SetActive(false);
+                cousinAnnoyed.SetActive(false);
+                cousinWorried.SetActive(false);
+                cousinHappy.SetActive(true);
+                break;
+            case "annoyed":
+                cousinNeutral.SetActive(false);
+                cousinAnnoyed.SetActive(true);
+                cousinWorried.SetActive(false);
+                cousinHappy.SetActive(false);
+                break;
+            case "worried":
+                cousinNeutral.SetActive(false);
+                cousinAnnoyed.SetActive(false);
+                cousinWorried.SetActive(true);
+                cousinHappy.SetActive(false);
+                break;
+        }
     }
 }
