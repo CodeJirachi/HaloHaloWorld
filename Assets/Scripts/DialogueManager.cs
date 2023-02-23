@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 //VISUAL NOVEL/INK INTEGRATION CODE ADAPTED FROM:
 //https://www.youtube.com/watch?v=-nK-tQ_vc0Y 
@@ -25,6 +26,8 @@ public class DialogueManager : MonoBehaviour
     TextMeshProUGUI speakerName;
     TextMeshProUGUI message;
 
+    public GameObject customButton;
+
     void Start()
     {
         story = new Story(inkFile.text);
@@ -33,6 +36,8 @@ public class DialogueManager : MonoBehaviour
         Debug.Log(speakerName.text);
         Debug.Log(message.text);
         cousinSpriteChange("neutral");
+        ChoiceTracker.CT.testVar = 3;
+        Debug.Log(ChoiceTracker.CT.testVar);
     }
 
     void Update()
@@ -43,10 +48,16 @@ public class DialogueManager : MonoBehaviour
             {
                 speakerName.text = "Jayce";
                 AdvanceDialogue();
+
+                if(story.currentChoices.Count > 0)
+                {
+                    Debug.Log("choices...");
+                }
             }
             else
             {
-                FinishDialogue();
+                //FinishDialogue();
+                SceneManager.LoadScene("UI testing");
             }
         }
     }
@@ -94,4 +105,24 @@ public class DialogueManager : MonoBehaviour
                 break;
         }
     }
+
+    /*
+    IENumerator ShowChoices()
+    {
+        Debug.Log("choices appear");
+        List<Choice> choices = story.currentChoices;
+
+        foreach (Choice choice in choices)
+        {
+            //FINISH THIS
+            //create temp button for each choice
+            GameObject temp = Instantiate(customButton);
+            temp.transform.GetChild(0).GetComponent<Text>().text = choice.text;
+            temp.AddComponent<Selectable>();
+        }
+    
+    }
+    */
+    
 }
+

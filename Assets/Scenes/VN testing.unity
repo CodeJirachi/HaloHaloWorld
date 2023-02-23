@@ -1060,13 +1060,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03c391fd11ed3647949d311d14cc000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkFile: {fileID: 4900000, guid: 16a68df51eb84c64084be73eedbe487e, type: 3}
+  inkFile: {fileID: 4900000, guid: 800478f46a7e77a478bf9b7d86f43575, type: 3}
   dialogueText: {fileID: 2123689763}
   nameText: {fileID: 1469421579}
   cousinNeutral: {fileID: 1943957941}
   cousinAnnoyed: {fileID: 979914615}
   cousinWorried: {fileID: 1244116471}
   cousinHappy: {fileID: 1111093082}
+  customButton: {fileID: 0}
 --- !u!1 &1756700604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1235,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1966776761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966776763}
+  - component: {fileID: 1966776762}
+  m_Layer: 0
+  m_Name: ChoiceTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1966776762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966776761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c967236bd68c24ea128937c913d8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testVar: 0
+--- !u!4 &1966776763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966776761}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5712748, y: 0.96343064, z: 0.040060878}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2123689763
 GameObject:
