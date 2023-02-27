@@ -26,7 +26,11 @@ public class DialogueManager : MonoBehaviour
     TextMeshProUGUI speakerName;
     TextMeshProUGUI message;
 
+    public GameObject choicePanel;
     public GameObject customButton;
+    static Choice choiceSelected;
+
+    List<string> tags;
 
     void Start()
     {
@@ -51,13 +55,14 @@ public class DialogueManager : MonoBehaviour
 
                 if(story.currentChoices.Count > 0)
                 {
-                    Debug.Log("choices...");
+                    //Debug.Log("choices...");
+                    StartCoroutine(ShowChoices());
                 }
             }
             else
             {
-                //FinishDialogue();
-                SceneManager.LoadScene("UI testing");
+                FinishDialogue();
+                //SceneManager.LoadScene("UI testing");
             }
         }
     }
@@ -66,7 +71,8 @@ public class DialogueManager : MonoBehaviour
     {
         string currentSentence = story.Continue();
         message.text = currentSentence;
-        cousinSpriteChange("happy");
+        ParseTags();
+        StopAllCoroutines();
     }
 
     void FinishDialogue()
@@ -106,23 +112,67 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    /*
-    IENumerator ShowChoices()
+    
+    IEnumerator ShowChoices()
     {
         Debug.Log("choices appear");
         List<Choice> choices = story.currentChoices;
 
-        foreach (Choice choice in choices)
+        for(int i = 0; i < choices.Count; i++)
         {
-            //FINISH THIS
             //create temp button for each choice
-            GameObject temp = Instantiate(customButton);
-            temp.transform.GetChild(0).GetComponent<Text>().text = choice.text;
+            Debug.Log(choices[i].text);
+
+            GameObject temp = Instantiate(customButton, new Vector3(347.5f, (i*40)+195.4f, 0), Quaternion.identity, choicePanel.transform);
+            temp.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = choices[i].text;
             temp.AddComponent<Selectable>();
+            temp.GetComponent<Selectable>().element = choices[i];
+            temp.GetComponent<Button>().onClick.AddListener(() => { temp.GetComponent<Selectable>().Decide(); });
         }
-    
+
+        choicePanel.SetActive(true);
+
+        yield return new WaitUntil(() => { return choiceSelected != null; });
+
+        AdvanceFromDecision();
     }
-    */
-    
+
+    void AdvanceFromDecision()
+    {
+        choicePanel.SetActive(false);
+        for (int i = 0; i < choicePanel.transform.childCount; i++)
+        {
+            Destroy(choicePanel.transform.GetChild(i).gameObject);
+        }
+        choiceSelected = null; // Forgot to reset the choiceSelected. Otherwise, it would select an option without player intervention.
+        AdvanceDialogue();
+    }
+
+    public static void SetDecision(object element)
+    {
+        Debug.Log(element);
+        choiceSelected = (Choice)element;
+        story.ChooseChoiceIndex(choiceSelected.index);
+    }
+
+    void ParseTags()
+    {
+        tags = story.currentTags;
+        foreach (string t in tags)
+        {
+            string prefix = t.Split(' ')[0];
+            string param = t.Split(' ')[1];
+
+            switch (prefix.ToLower())
+            {
+                case "cousin":
+                    cousinSpriteChange(param);
+                    break;
+            }
+        }
+    }
+
+    //function TBA - fast forward for VN
+    //coroutine - play each line, waitsomethingseconds, stop when faced with choice
 }
 
