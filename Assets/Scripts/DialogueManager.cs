@@ -51,7 +51,7 @@ public class DialogueManager : MonoBehaviour
         {
             if(story.canContinue)
             {
-                speakerName.text = "Jayce";
+                //speakerName.text = "Jayce";
                 AdvanceDialogue();
 
                 if(story.currentChoices.Count > 0)
@@ -81,39 +81,6 @@ public class DialogueManager : MonoBehaviour
         //in game, change scene to minigame
         Debug.Log("yahoo finished");
     }
-
-    //better system needed
-    void cousinSpriteChange(string expression)
-    {
-        switch(expression)
-        {
-            case "neutral":
-                cousinNeutral.SetActive(true);
-                cousinAnnoyed.SetActive(false);
-                cousinWorried.SetActive(false);
-                cousinHappy.SetActive(false);
-                break;
-            case "happy":
-                cousinNeutral.SetActive(false);
-                cousinAnnoyed.SetActive(false);
-                cousinWorried.SetActive(false);
-                cousinHappy.SetActive(true);
-                break;
-            case "annoyed":
-                cousinNeutral.SetActive(false);
-                cousinAnnoyed.SetActive(true);
-                cousinWorried.SetActive(false);
-                cousinHappy.SetActive(false);
-                break;
-            case "worried":
-                cousinNeutral.SetActive(false);
-                cousinAnnoyed.SetActive(false);
-                cousinWorried.SetActive(true);
-                cousinHappy.SetActive(false);
-                break;
-        }
-    }
-
     
     IEnumerator ShowChoices()
     {
@@ -173,11 +140,52 @@ public class DialogueManager : MonoBehaviour
 
             switch (prefix.ToLower())
             {
+                //need better system for sprite changing
                 case "cousin":
                     cousinSpriteChange(param);
                     break;
+                case "speaker":
+                    changeSpeaker(param);
+                    break;
             }
         }
+    }
+
+    //better system needed
+    void cousinSpriteChange(string expression)
+    {
+        switch (expression)
+        {
+            case "neutral":
+                cousinNeutral.SetActive(true);
+                cousinAnnoyed.SetActive(false);
+                cousinWorried.SetActive(false);
+                cousinHappy.SetActive(false);
+                break;
+            case "happy":
+                cousinNeutral.SetActive(false);
+                cousinAnnoyed.SetActive(false);
+                cousinWorried.SetActive(false);
+                cousinHappy.SetActive(true);
+                break;
+            case "annoyed":
+                cousinNeutral.SetActive(false);
+                cousinAnnoyed.SetActive(true);
+                cousinWorried.SetActive(false);
+                cousinHappy.SetActive(false);
+                break;
+            case "worried":
+                cousinNeutral.SetActive(false);
+                cousinAnnoyed.SetActive(false);
+                cousinWorried.SetActive(true);
+                cousinHappy.SetActive(false);
+                break;
+        }
+    }
+
+    void changeSpeaker(string name)
+    {
+        speakerName.text = name;
     }
 
     //function TBA - fast forward for VN

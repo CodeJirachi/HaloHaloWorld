@@ -1,9 +1,14 @@
 this is a test
 
-i dont know whats going on # cousin worried
+# cousin worried
+# speaker cousin
+i dont know whats going on 
 
-heck yeah.......................................... # cousin happy
+# cousin happy
+heck yeah..........................................
 
+# cousin neutral
+# speaker Jayce
 here is a super long line for testing . weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 
 ok byeeeeeeeeeeee 

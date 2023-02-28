@@ -939,7 +939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Name
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54764c83a7df002419f54326be7ffede, type: 2}
   m_sharedMaterial: {fileID: 4624364039032476276, guid: 54764c83a7df002419f54326be7ffede, type: 2}
@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03c391fd11ed3647949d311d14cc000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkFile: {fileID: 4900000, guid: 800478f46a7e77a478bf9b7d86f43575, type: 3}
+  inkFile: {fileID: 4900000, guid: 16a68df51eb84c64084be73eedbe487e, type: 3}
   dialogueText: {fileID: 2123689763}
   nameText: {fileID: 1469421579}
   cousinNeutral: {fileID: 1943957941}
@@ -1367,6 +1367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testVar: 0
+  choice: 
 --- !u!4 &1966776763
 Transform:
   m_ObjectHideFlags: 0
@@ -1440,9 +1441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'hiiiiiiiiiiiiiiiiiiiiiiiiiii ..................................
-
-    dfskdjfksdjfk'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54764c83a7df002419f54326be7ffede, type: 2}
   m_sharedMaterial: {fileID: 4624364039032476276, guid: 54764c83a7df002419f54326be7ffede, type: 2}
