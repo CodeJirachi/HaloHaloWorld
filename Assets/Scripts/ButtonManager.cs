@@ -10,7 +10,9 @@ public class ButtonManager : MonoBehaviour
 
     public void Start()
     {
+        //for testing choice tracking
         Debug.Log(ChoiceTracker.CT.testVar);
+        Debug.Log(ChoiceTracker.CT.choice);
     }
 
     public void openRecipe()

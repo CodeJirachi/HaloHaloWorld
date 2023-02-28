@@ -9,6 +9,7 @@ public class ChoiceTracker : MonoBehaviour
     public static ChoiceTracker CT;
 
     public int testVar;
+    public string choice;
 
     private void Awake()
     {

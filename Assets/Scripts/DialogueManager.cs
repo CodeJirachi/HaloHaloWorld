@@ -46,7 +46,8 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        //lock advancing dialogue to space for now b/c left click breaks choices
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             if(story.canContinue)
             {
@@ -61,8 +62,8 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
-                FinishDialogue();
-                //SceneManager.LoadScene("UI testing");
+                //FinishDialogue();
+                SceneManager.LoadScene("UI testing");
             }
         }
     }
@@ -81,6 +82,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("yahoo finished");
     }
 
+    //better system needed
     void cousinSpriteChange(string expression)
     {
         switch(expression)
@@ -123,6 +125,7 @@ public class DialogueManager : MonoBehaviour
             //create temp button for each choice
             Debug.Log(choices[i].text);
 
+            //hack-y way to spawn buttons for now, need offset bc of choice canvas
             GameObject temp = Instantiate(customButton, new Vector3(347.5f, (i*40)+195.4f, 0), Quaternion.identity, choicePanel.transform);
             temp.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = choices[i].text;
             temp.AddComponent<Selectable>();
@@ -150,8 +153,13 @@ public class DialogueManager : MonoBehaviour
 
     public static void SetDecision(object element)
     {
-        Debug.Log(element);
-        choiceSelected = (Choice)element;
+        Choice choice = (Choice)element;
+
+        //Debug.Log(choice.text);
+
+        //set selected choice in order to keep between scenes
+        ChoiceTracker.CT.choice = choice.text;
+        choiceSelected = choice;
         story.ChooseChoiceIndex(choiceSelected.index);
     }
 
