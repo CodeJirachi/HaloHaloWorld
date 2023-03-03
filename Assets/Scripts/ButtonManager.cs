@@ -9,6 +9,13 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject exitButton;
     [SerializeField] GameObject recipePage;
 
+    public void Start()
+    {
+        //for testing choice tracking
+        Debug.Log(ChoiceTracker.CT.testVar);
+        Debug.Log(ChoiceTracker.CT.choice);
+    }
+
     public void openRecipe()
     {
         recipeButton.SetActive(false);
