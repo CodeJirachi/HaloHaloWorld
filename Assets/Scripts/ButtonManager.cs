@@ -17,6 +17,8 @@ public class ButtonManager : MonoBehaviour
 
         //recipe page opens + its contents show with it dynamically (HMM) 
         recipePage.SetActive(true);
+
+
         //recipe page must hold values that are set true or false depending on whether/ how they are toggled in VN gameplay 0
     }
 
