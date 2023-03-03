@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour
     void Update()
     {
         //lock advancing dialogue to space for now b/c left click breaks choices
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space)) //&& a choice isnt up? so i could leave left click in
         {
             if(story.canContinue)
             {
