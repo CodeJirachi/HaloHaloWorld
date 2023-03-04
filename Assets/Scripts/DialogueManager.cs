@@ -32,13 +32,23 @@ public class DialogueManager : MonoBehaviour
 
     List<string> tags;
 
+    public bool inChoices;
+
     void Start()
     {
         story = new Story(inkFile.text);
+        //might need to hardcode first line of scene
         speakerName = nameText.GetComponent<TMPro.TextMeshProUGUI>();
         message = dialogueText.GetComponent<TMPro.TextMeshProUGUI>();
-        Debug.Log(speakerName.text);
-        Debug.Log(message.text);
+        //Debug.Log(speakerName.text);
+        //Debug.Log(message.text);
+
+        speakerName.text = "";
+        message.text = "--ACT 1 BEGIN--";
+
+        inChoices = false;
+
+        //testing things - to be deleted/changed
         cousinSpriteChange("neutral");
         ChoiceTracker.CT.testVar = 3;
         Debug.Log(ChoiceTracker.CT.testVar);
@@ -47,7 +57,7 @@ public class DialogueManager : MonoBehaviour
     void Update()
     {
         //lock advancing dialogue to space for now b/c left click breaks choices
-        if(Input.GetKeyDown(KeyCode.Space)) //&& a choice isnt up? so i could leave left click in
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) ) && !inChoices) 
         {
             if(story.canContinue)
             {
@@ -63,7 +73,7 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 //FinishDialogue();
-                SceneManager.LoadScene("UI testing");
+                SceneManager.LoadScene("Kitchen1");
             }
         }
     }
@@ -84,6 +94,7 @@ public class DialogueManager : MonoBehaviour
     
     IEnumerator ShowChoices()
     {
+        inChoices = true;
         Debug.Log("choices appear");
         List<Choice> choices = story.currentChoices;
 
@@ -115,6 +126,7 @@ public class DialogueManager : MonoBehaviour
             Destroy(choicePanel.transform.GetChild(i).gameObject);
         }
         choiceSelected = null; // Forgot to reset the choiceSelected. Otherwise, it would select an option without player intervention.
+        inChoices = false;
         AdvanceDialogue();
     }
 
