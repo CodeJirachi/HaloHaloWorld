@@ -37,12 +37,12 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         story = new Story(inkFile.text);
-        //might need to hardcode first line of scene
         speakerName = nameText.GetComponent<TMPro.TextMeshProUGUI>();
         message = dialogueText.GetComponent<TMPro.TextMeshProUGUI>();
         //Debug.Log(speakerName.text);
         //Debug.Log(message.text);
 
+        //might need to hardcode first line of scene:
         speakerName.text = "";
         message.text = "--ACT 1 BEGIN--";
 
@@ -56,12 +56,10 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        //lock advancing dialogue to space for now b/c left click breaks choices
         if((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) ) && !inChoices) 
         {
             if(story.canContinue)
             {
-                //speakerName.text = "Jayce";
                 AdvanceDialogue();
 
                 if(story.currentChoices.Count > 0)
@@ -134,9 +132,7 @@ public class DialogueManager : MonoBehaviour
     {
         Choice choice = (Choice)element;
 
-        //Debug.Log(choice.text);
-
-        //set selected choice in order to keep between scenes
+        //set selected choice to its TEXT in order to keep between scenes
         ChoiceTracker.CT.choice = choice.text;
         choiceSelected = choice;
         story.ChooseChoiceIndex(choiceSelected.index);
@@ -164,6 +160,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     //better system needed
+    //maybe separate SpriteManager script?
     void cousinSpriteChange(string expression)
     {
         switch (expression)
