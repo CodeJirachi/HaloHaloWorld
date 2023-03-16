@@ -8,6 +8,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject settingsButton;
     [SerializeField] GameObject exitButton;
     [SerializeField] GameObject recipePage;
+    [SerializeField] GameObject recipeText;
 
     public void Start()
     {
@@ -20,11 +21,11 @@ public class ButtonManager : MonoBehaviour
     {
         recipeButton.SetActive(false);
         settingsButton.SetActive(false);
+        recipeText.SetActive(true);
         exitButton.SetActive(true);
 
         //recipe page opens + its contents show with it dynamically (HMM) 
         recipePage.SetActive(true);
-
 
         //recipe page must hold values that are set true or false depending on whether/ how they are toggled in VN gameplay 0
     }
@@ -33,10 +34,12 @@ public class ButtonManager : MonoBehaviour
     {
         recipeButton.SetActive(true);
         settingsButton.SetActive(true);
-        exitButton.SetActive(false);
 
         //recipe page closes
         recipePage.SetActive(false);
+
+        recipeText.SetActive(false);
+        exitButton.SetActive(false);
         //ensures the contents of it, closes with it
 
     }
