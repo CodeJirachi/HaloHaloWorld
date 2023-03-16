@@ -16,22 +16,15 @@ public class cookingManager : MonoBehaviour
 
     public void setHaloHaloSequence()
     {
-        
-        // track current ingred (what it is) -> 
-        //if (currentIngredient.name is inventoryBeans)
-        //{
-            //ice.setActive(true);
-            //beans.SetActive(true);
-        //}
+       
     }
-    /** void initializeHaloHalo()
+
+    // jira choice code attempt
+    public static void GetDecision()
     {
-        glassEmpty.setActive(true);
-        ice.setActive(false);
-        beans.setActive(false);
-        natadeCoco.setActive(false);
-        lecheFlan.setActive(false);
-        stickoComplete.setActive(false);
+        //halohalo
     }
-     **/
+
+    // jira
+    
 }

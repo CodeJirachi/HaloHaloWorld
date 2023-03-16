@@ -130,6 +130,14 @@ public class DialogueManager : MonoBehaviour
         story.ChooseChoiceIndex(choiceSelected.index);
     }
 
+    // jira choice code attempt
+    public static void GetDecision()
+    {
+        //halohalo
+    }
+
+    // jira
+
     void ParseTags()
     {
         tags = story.currentTags;
