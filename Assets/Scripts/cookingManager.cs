@@ -28,13 +28,29 @@ public class cookingManager : MonoBehaviour
 
         //name of current scene -> retrieve 
         string sceneName = currentScene.name;
-        string choiceTest = "choice test ingredient";
+
+        //default choice is "???"
+        string choiceText = "???";
 
         if (sceneName == "HaloHalo")
         {
+            
+            if (ChoiceTracker.CT.testVar == 3)
+            {
+                choiceText = "ube";
+                //this works 
+            }
+            else
+            {
+                //default
+                choiceText = "???";
+            }
+            
             //yay this works, nice 
             recipeTitle.text = "Halo Halo";
-            recipeContent.text = "1. test" + choiceTest;
+            recipeContent.text = "1. use the ice machine to shave down ice \n" + 
+                "2. scoop shaved ice into glass \n" + "3. follow with beans \n" + "4. follow with nata de coco \n" + "5. follow with leche flan \n" + 
+                "6. follow with " + choiceText + " ice cream \n" + "7. finally, finish with a sticko on top!";
         }
          
         //spaghetti gameplay scenes: 
@@ -47,13 +63,5 @@ public class cookingManager : MonoBehaviour
         }
          
     }
-
-    // jira choice code attempt
-    public static void GetDecision()
-    {
-        //halohalo
-    }
-
-    // jira
     
 }
