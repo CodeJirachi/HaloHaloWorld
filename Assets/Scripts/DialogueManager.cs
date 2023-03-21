@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 //FinishDialogue();
-                SceneManager.LoadScene("UI testing");
+                SceneManager.LoadScene("HaloHalo");
             }
         }
     }
@@ -129,14 +129,6 @@ public class DialogueManager : MonoBehaviour
         choiceSelected = choice;
         story.ChooseChoiceIndex(choiceSelected.index);
     }
-
-    // jira choice code attempt
-    public static void GetDecision()
-    {
-        //halohalo
-    }
-
-    // jira
 
     void ParseTags()
     {
