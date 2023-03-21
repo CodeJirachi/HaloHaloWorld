@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Idea & code adapted from:
 //https://answers.unity.com/questions/323195/how-can-i-have-a-static-class-i-can-access-from-an.html
 
 public class ChoiceTracker : MonoBehaviour

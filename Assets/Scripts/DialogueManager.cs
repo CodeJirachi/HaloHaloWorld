@@ -43,8 +43,9 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log(message.text);
 
         //might need to hardcode first line of scene:
-        speakerName.text = "";
-        message.text = "--ACT 1 BEGIN--";
+        //speakerName.text = "";
+        //message.text = "--ACT 1 BEGIN--";
+        AdvanceDialogue();
 
         inChoices = false;
 
@@ -99,10 +100,12 @@ public class DialogueManager : MonoBehaviour
         for(int i = 0; i < choices.Count; i++)
         {
             //create temp button for each choice
-            Debug.Log(choices[i].text);
+            Debug.Log(i + ": " + choices[i].text);
 
-            //hack-y way to spawn buttons for now, need offset bc of choice canvas
-            GameObject temp = Instantiate(customButton, new Vector3(347.5f, (i*40)+195.4f, 0), Quaternion.identity, choicePanel.transform);
+            //hack-y way to spawn buttons for now, need offset bc of choice canvas (WHEN CHOICE CANVAS RENDER MODE IS SET TO OVERLAY)
+            //GameObject temp = Instantiate(customButton, new Vector3(347.5f, (i*40)+195.4f, 0), Quaternion.identity, choicePanel.transform);
+            GameObject temp = Instantiate(customButton, new Vector3(0, (i * 1), 0), Quaternion.identity, choicePanel.transform); //for when render mode = world space
+
             temp.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = choices[i].text;
             temp.AddComponent<Selectable>();
             temp.GetComponent<Selectable>().element = choices[i];

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class ButtonManager : MonoBehaviour
     public void Start()
     {
         //for testing choice tracking
-        Debug.Log(ChoiceTracker.CT.testVar);
+        //Debug.Log(ChoiceTracker.CT.testVar);
         Debug.Log(ChoiceTracker.CT.choice);
     }
 
@@ -39,4 +40,20 @@ public class ButtonManager : MonoBehaviour
 
     }
 
+    public void openSettings()
+    {
+        //use prefab of settings/menus, or LoadLevelAdditive
+    }
+
+    public void startGame()
+    {
+        //temp name
+        SceneManager.LoadScene("VN testing");
+    }
+
+    public void quitGame()
+    {
+        //Application.Quit(); //use this for when actually deploying game
+        UnityEditor.EditorApplication.isPlaying = false; //this is temporary, just for editor purposes
+    }
 }
