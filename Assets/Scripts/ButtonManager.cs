@@ -71,7 +71,7 @@ public class ButtonManager : MonoBehaviour
             //go to sink scene on button press
             SceneManager.LoadScene("Spaghetti1");
         }
-        else if (sceneName == "Spaghetti1")
+        else if (sceneName == "Spaghetti2")
         {
             SceneManager.LoadScene("Spaghetti0");
         }
@@ -90,7 +90,7 @@ public class ButtonManager : MonoBehaviour
             //go to cuttingboard scene on button press
             SceneManager.LoadScene("Spaghetti2");
         }
-        else if (sceneName == "Spaghetti2")
+        else if (sceneName == "Spaghetti1")
         {
             SceneManager.LoadScene("Spaghetti0");
         }
