@@ -915,7 +915,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149634226}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a627acd6277339e488ab84b97e01d8b2, type: 3}
@@ -1603,6 +1603,8 @@ MonoBehaviour:
   recipeButton: {fileID: 404113521}
   settingsButton: {fileID: 2001384609}
   exitButton: {fileID: 1639433489}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
   recipePage: {fileID: 2090850681}
   recipeText: {fileID: 154062876}
 --- !u!1 &1549050255

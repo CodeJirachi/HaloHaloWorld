@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] GameObject recipeButton;
     [SerializeField] GameObject settingsButton;
     [SerializeField] GameObject exitButton;
+    [SerializeField] GameObject leftButton;
+    [SerializeField] GameObject rightButton;
     [SerializeField] GameObject recipePage;
     [SerializeField] GameObject recipeText;
 
@@ -41,6 +44,17 @@ public class ButtonManager : MonoBehaviour
         recipeText.SetActive(false);
         exitButton.SetActive(false);
         //ensures the contents of it, closes with it
+
+    }
+    public void leftSink()
+    {
+        //go to sink scene on button press
+        SceneManager.LoadScene("Spaghetti1");
+    }
+    public void rightCuttinBoad()
+    {
+        //go to cuttingboard scene on button press
+        SceneManager.LoadScene("Spaghetti2");
 
     }
 
