@@ -14,11 +14,19 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject recipeTitle;
     [SerializeField] GameObject recipeContent;
 
-    public void Start()
+    public void Awake()
+
     {
         //for testing choice tracking
         Debug.Log(ChoiceTracker.CT.testVar);
         Debug.Log(ChoiceTracker.CT.choice);
+
+        //current scene will determine recipe 
+        //temp reference current scene 
+        //Scene currentScene = SceneManager.GetActiveScene();
+        //name of current scene -> retrieve 
+        //string sceneName = currentScene.name;
+
     }
 
     public void openRecipe()
@@ -49,15 +57,43 @@ public class ButtonManager : MonoBehaviour
         //ensures the contents of it, closes with it
 
     }
-    public void leftSink()
+    public void leftClick()
     {
-        //go to sink scene on button press
-        SceneManager.LoadScene("Spaghetti1");
+        //current scene will determine recipe 
+        //temp reference current scene 
+        Scene currentScene = SceneManager.GetActiveScene();
+        //name of current scene -> retrieve 
+        string sceneName = currentScene.name;
+
+        Debug.Log("F1 reads " + sceneName);
+        if (sceneName == "Spaghetti0")
+        {
+            //go to sink scene on button press
+            SceneManager.LoadScene("Spaghetti1");
+        }
+        else if (sceneName == "Spaghetti1")
+        {
+            SceneManager.LoadScene("Spaghetti0");
+        }
     }
-    public void rightCuttinBoad()
+    public void rightClick()
     {
-        //go to cuttingboard scene on button press
-        SceneManager.LoadScene("Spaghetti2");
+        //current scene will determine recipe 
+        //temp reference current scene 
+        Scene currentScene = SceneManager.GetActiveScene();
+        //name of current scene -> retrieve 
+        string sceneName = currentScene.name;
+
+        Debug.Log("F2 reads" + sceneName);
+        if (sceneName == "Spaghetti0")
+        {
+            //go to cuttingboard scene on button press
+            SceneManager.LoadScene("Spaghetti2");
+        }
+        else if (sceneName == "Spaghetti2")
+        {
+            SceneManager.LoadScene("Spaghetti0");
+        }
 
     }
 
