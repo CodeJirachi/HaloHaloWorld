@@ -32,26 +32,35 @@ public class DialogueManager : MonoBehaviour
 
     List<string> tags;
 
+    public bool inChoices;
+
     void Start()
     {
         story = new Story(inkFile.text);
         speakerName = nameText.GetComponent<TMPro.TextMeshProUGUI>();
         message = dialogueText.GetComponent<TMPro.TextMeshProUGUI>();
-        Debug.Log(speakerName.text);
-        Debug.Log(message.text);
-        cousinSpriteChange("neutral");
-        ChoiceTracker.CT.testVar = 3;
-        Debug.Log(ChoiceTracker.CT.testVar);
+        //Debug.Log(speakerName.text);
+        //Debug.Log(message.text);
+
+        //might need to hardcode first line of scene:
+        //speakerName.text = "";
+        //message.text = "--ACT 1 BEGIN--";
+        AdvanceDialogue();
+
+        inChoices = false;
+
+        //testing things - to be deleted/changed
+        //cousinSpriteChange("neutral");
+        //ChoiceTracker.CT.testVar = 3;
+        //Debug.Log(ChoiceTracker.CT.testVar);
     }
 
     void Update()
     {
-        //lock advancing dialogue to space for now b/c left click breaks choices
-        if(Input.GetKeyDown(KeyCode.Space)) //&& a choice isnt up? so i could leave left click in
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) ) && !inChoices) 
         {
             if(story.canContinue)
             {
-                //speakerName.text = "Jayce";
                 AdvanceDialogue();
 
                 if(story.currentChoices.Count > 0)
@@ -63,7 +72,17 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 //FinishDialogue();
-                SceneManager.LoadScene("HaloHalo");
+                ChoiceTracker.CT.scene += 1;
+                switch(ChoiceTracker.CT.scene)
+                {
+                    case 1:
+                        SceneManager.LoadScene("Kitchen1");
+                        Debug.Log("scene is " + ChoiceTracker.CT.scene);
+                        break;
+                    case 2:
+                        //spaghetti
+                        break;
+                }
             }
         }
     }
@@ -84,16 +103,19 @@ public class DialogueManager : MonoBehaviour
     
     IEnumerator ShowChoices()
     {
+        inChoices = true;
         Debug.Log("choices appear");
         List<Choice> choices = story.currentChoices;
 
         for(int i = 0; i < choices.Count; i++)
         {
             //create temp button for each choice
-            Debug.Log(choices[i].text);
+            Debug.Log(i + ": " + choices[i].text);
 
-            //hack-y way to spawn buttons for now, need offset bc of choice canvas
-            GameObject temp = Instantiate(customButton, new Vector3(347.5f, (i*40)+195.4f, 0), Quaternion.identity, choicePanel.transform);
+            //hack-y way to spawn buttons for now, need offset bc of choice canvas (WHEN CHOICE CANVAS RENDER MODE IS SET TO OVERLAY)
+            //GameObject temp = Instantiate(customButton, new Vector3(347.5f, (i*40)+195.4f, 0), Quaternion.identity, choicePanel.transform);
+            GameObject temp = Instantiate(customButton, new Vector3(0, (i * 1), 0), Quaternion.identity, choicePanel.transform); //for when render mode = world space
+
             temp.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = choices[i].text;
             temp.AddComponent<Selectable>();
             temp.GetComponent<Selectable>().element = choices[i];
@@ -115,6 +137,7 @@ public class DialogueManager : MonoBehaviour
             Destroy(choicePanel.transform.GetChild(i).gameObject);
         }
         choiceSelected = null; // Forgot to reset the choiceSelected. Otherwise, it would select an option without player intervention.
+        inChoices = false;
         AdvanceDialogue();
     }
 
@@ -122,9 +145,7 @@ public class DialogueManager : MonoBehaviour
     {
         Choice choice = (Choice)element;
 
-        //Debug.Log(choice.text);
-
-        //set selected choice in order to keep between scenes
+        //set selected choice to its TEXT in order to keep between scenes
         ChoiceTracker.CT.choice = choice.text;
         choiceSelected = choice;
         story.ChooseChoiceIndex(choiceSelected.index);
@@ -152,6 +173,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     //better system needed
+    //maybe separate SpriteManager script?
     void cousinSpriteChange(string expression)
     {
         switch (expression)
@@ -180,12 +202,24 @@ public class DialogueManager : MonoBehaviour
                 cousinWorried.SetActive(true);
                 cousinHappy.SetActive(false);
                 break;
+            case "none":
+                cousinNeutral.SetActive(false);
+                cousinAnnoyed.SetActive(false);
+                cousinWorried.SetActive(false);
+                cousinHappy.SetActive(false);
+                break;
         }
     }
 
     void changeSpeaker(string name)
     {
-        speakerName.text = name;
+        if(name == "clear")
+        {
+            speakerName.text = "";
+        } else
+        {
+            speakerName.text = name;
+        }
     }
 
     //function TBA - fast forward for VN

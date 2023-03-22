@@ -15,6 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/UI testing.unity
     guid: 44062c05cb077ef4ab63ed9e9acdcaca
   - enabled: 1
+    path: Assets/Scenes/PreHaloHalo.unity
+    guid: c3f0feddf91d7934e9ab3b0d62ace4f5
+  - enabled: 1
+    path: Assets/Scenes/PreSpaghetti.unity
+    guid: 6806c163b9bf7ec48a1e796672424f46
     path: Assets/Scenes/Spaghetti0.unity
     guid: 60915207d8a55af41afc60183e036eca
   - enabled: 1
