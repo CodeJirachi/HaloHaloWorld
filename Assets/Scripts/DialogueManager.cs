@@ -76,7 +76,7 @@ public class DialogueManager : MonoBehaviour
                 switch(ChoiceTracker.CT.scene)
                 {
                     case 1:
-                        SceneManager.LoadScene("Kitchen1");
+                        SceneManager.LoadScene("HaloHalo");
                         Debug.Log("scene is " + ChoiceTracker.CT.scene);
                         break;
                     case 2:

@@ -20,8 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PreSpaghetti.unity
     guid: 6806c163b9bf7ec48a1e796672424f46
-    path: Assets/Scenes/Spaghetti0.unity
-    guid: 60915207d8a55af41afc60183e036eca
   - enabled: 1
     path: Assets/Scenes/Spaghetti1.unity
     guid: 36dd72aef7266aa4fb8db6f4ec2f09db

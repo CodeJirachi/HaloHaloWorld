@@ -11,7 +11,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject leftButton;
     [SerializeField] GameObject rightButton;
     [SerializeField] GameObject recipePage;
-    [SerializeField] Object nextScene;
+    //[SerializeField] Object nextScene;
     [SerializeField] GameObject recipeTitle;
     [SerializeField] GameObject recipeContent;
 
@@ -102,7 +102,7 @@ public class ButtonManager : MonoBehaviour
         //use prefab of settings/menus, or LoadLevelAdditive
     }
 
-    public void startGame()
+    public void startGame(Object nextScene)
     {
         //temp name
         SceneManager.LoadScene(nextScene.name);
