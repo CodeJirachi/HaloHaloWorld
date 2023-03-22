@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 //FinishDialogue();
-                SceneManager.LoadScene("UI testing");
+                SceneManager.LoadScene("HaloHalo");
             }
         }
     }
