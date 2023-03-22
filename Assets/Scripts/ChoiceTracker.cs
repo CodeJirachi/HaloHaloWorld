@@ -11,6 +11,7 @@ public class ChoiceTracker : MonoBehaviour
 
     public int testVar;
     public string choice;
+    public int scene = 0; //used for checking which recipe to change to after (1 = halo halo, 2 = spaghetti, etc.)
 
     private void Awake()
     {

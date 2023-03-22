@@ -50,9 +50,9 @@ public class DialogueManager : MonoBehaviour
         inChoices = false;
 
         //testing things - to be deleted/changed
-        cousinSpriteChange("neutral");
-        ChoiceTracker.CT.testVar = 3;
-        Debug.Log(ChoiceTracker.CT.testVar);
+        //cousinSpriteChange("neutral");
+        //ChoiceTracker.CT.testVar = 3;
+        //Debug.Log(ChoiceTracker.CT.testVar);
     }
 
     void Update()
@@ -72,7 +72,17 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 //FinishDialogue();
-                SceneManager.LoadScene("Kitchen1");
+                ChoiceTracker.CT.scene += 1;
+                switch(ChoiceTracker.CT.scene)
+                {
+                    case 1:
+                        SceneManager.LoadScene("Kitchen1");
+                        Debug.Log("scene is " + ChoiceTracker.CT.scene);
+                        break;
+                    case 2:
+                        //spaghetti
+                        break;
+                }
             }
         }
     }
@@ -192,12 +202,24 @@ public class DialogueManager : MonoBehaviour
                 cousinWorried.SetActive(true);
                 cousinHappy.SetActive(false);
                 break;
+            case "none":
+                cousinNeutral.SetActive(false);
+                cousinAnnoyed.SetActive(false);
+                cousinWorried.SetActive(false);
+                cousinHappy.SetActive(false);
+                break;
         }
     }
 
     void changeSpeaker(string name)
     {
-        speakerName.text = name;
+        if(name == "clear")
+        {
+            speakerName.text = "";
+        } else
+        {
+            speakerName.text = name;
+        }
     }
 
     //function TBA - fast forward for VN
