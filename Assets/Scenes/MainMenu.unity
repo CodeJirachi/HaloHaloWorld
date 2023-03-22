@@ -841,6 +841,7 @@ MonoBehaviour:
   settingsButton: {fileID: 0}
   exitButton: {fileID: 0}
   recipePage: {fileID: 0}
+  nextScene: {fileID: 102900000, guid: c3f0feddf91d7934e9ab3b0d62ace4f5, type: 3}
 --- !u!4 &1550419180
 Transform:
   m_ObjectHideFlags: 0

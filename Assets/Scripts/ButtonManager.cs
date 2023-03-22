@@ -9,6 +9,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject settingsButton;
     [SerializeField] GameObject exitButton;
     [SerializeField] GameObject recipePage;
+    [SerializeField] Object nextScene;
 
     public void Start()
     {
@@ -48,7 +49,7 @@ public class ButtonManager : MonoBehaviour
     public void startGame()
     {
         //temp name
-        SceneManager.LoadScene("VN testing");
+        SceneManager.LoadScene(nextScene.name);
     }
 
     public void quitGame()
