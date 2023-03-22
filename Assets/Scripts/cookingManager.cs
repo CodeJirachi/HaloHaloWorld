@@ -35,7 +35,8 @@ public class cookingManager : MonoBehaviour
         if (sceneName == "HaloHalo")
         {
             
-            if (ChoiceTracker.CT.testVar == 3)
+            //
+            if (ChoiceTracker.CT.choice == "Ube, always have it on me!")
             {
                 choiceText = "ube";
                 //this works 
