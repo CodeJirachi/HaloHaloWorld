@@ -13,10 +13,10 @@ Wha… is someone there?
 \*ding dong*
 
 #speaker Jayce
-Who is it?
+Ate.. is that you?
 
 #speaker ???
-Take a guess!
+Who else would it be?
 
 #speaker Jayce
 Well only one person would interrupt my nap…
@@ -69,10 +69,13 @@ So you’ll be able to catch me if I mess up?
 #speaker Cousin-
 Sure, but you’ve done this so many times It’ll probably come back to you quickly. 
 
+For starters, I know you’ve got the right kind of ice cream in your fridge, yeah?
+
 -> choice
 
 === choice ===
-For starters, I know you’ve got the right kind of ice cream in your fridge, yeah?
+#speaker Jayce
+Wait a second… what do we even have in the fridge again…? Right, um, let’s check.
 * [Vanilla makes the dish very experimental!] -> after_choice
 * [Of course, mint chocolate chip!] -> after_choice
 * [Ube, always have it on me!] -> after_choice
