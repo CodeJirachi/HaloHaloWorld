@@ -2,7 +2,7 @@
 
 === start_scene ===
 #cousin happy
-#speaker Cousin-
+#speaker Jasmine
 This is so good! Tired or not, no one makes it like you do.
 
 #speaker Jayce
@@ -11,7 +11,7 @@ Thanks, but like… it's just adding ingredients together really.
 Nothing too special or involved or anything.
 
 #cousin neutral
-#speaker Cousin-
+#speaker Jasmine
 But the <i>balance</i> is where you shine. 
 
 Everyone else either makes it too sweet or not sweet enough,
@@ -25,26 +25,26 @@ Every time you make me halo halo it tastes like a perfect balance of everything.
 #speaker Jayce
 Well, I’m glad you like it then! You’re always welcome to stop by if you want some more.
 
-#speaker Cousin-
+#speaker Jasmine
 You’ll be seeing a lot more of me from now on then!
 
 #speaker Jayce
 Speaking of, what brings you here? It hasn’t been that long since I saw you last time.
 
 #cousin worried
-#speaker Cousin-
+#speaker Jasmine
 Well.. I was already in the area and figured I’d stop by, just to like - check in and stuff.
 
 #speaker Jayce
 ...
 
-#speaker Cousin-
+#speaker Jasmine
 Things just happened so fast and all...
 
 I felt like I should make sure you’re doing alright now that it’s been a few weeks.
 
 #speaker Jayce
-Thanks, Cousin-. I don’t know, lately I've just felt like… tired, y’know? Just from everything. 
+Thanks, Jasmine. I don’t know, lately I've just felt like… tired, y’know? Just from everything. 
 
 I still miss him now.
 
@@ -54,7 +54,7 @@ It almost feels like this is all a dream, and by sleeping...
 
 Maybe even just be able to say goodbye in one of my dreams.
 
-#speaker Cousin-
+#speaker Jasmine
 Yeah, I can’t even imagine…
 
 #speaker Jayce
@@ -75,7 +75,7 @@ and in the process chooses to alienate who I am and want to be.
 Sorry about all that, I’m just not in a great space lately.
 
 #cousin neutral
-#speaker Cousin-
+#speaker Jasmine
 No no, go off king, that’s why I’m here. 
 
 Glad you were able to get that off your chest. 
@@ -89,7 +89,7 @@ I know she hasn’t exactly been good at that, like ever, but maybe she’s tryi
 #speaker Jayce
 I don't know if she’d just change her thoughts after all these years all of a sudden.
 
-#speaker Cousin-
+#speaker Jasmine
 ...
 
 #cousin worried
@@ -105,13 +105,13 @@ I’m sure she’s hurting too, and wants to hold onto the family she has left.
 #speaker Jayce
 Hm… 
 
-Thanks again, Cousin-. 
+Thanks again, Jasmine. 
 
 I’d like to talk to her if she’s willing to actually have a conversation-
 
 instead of the usual lecturing and patronizing.
 
-#speaker Cousin-
+#speaker Jasmine
 Again, why I came here in the first place. Might be worth giving that a shot, when you feel ready.
 
 #speaker Jayce
@@ -122,7 +122,7 @@ Anyway, it’s getting kinda late, are you going home?
 If not, I’d love to host you for dinner if you’re down?
 
 #cousin happy
-#speaker Cousin-
+#speaker Jasmine
 Sure! Want me to help prepare anything? What are we making?
 
 #speaker Jayce
@@ -134,7 +134,7 @@ All this talk about family has me craving my go-to comfort food.
 
 === choice ===
 #cousin neutral
-#speaker Cousin-
+#speaker Jasmine
 Oh man, what's that herb your dad always put in again?
 * [Thai basil] -> thai_basil
 * [Mint] -> mint
@@ -162,3 +162,4 @@ and needed to get our parents to help us finish while we cleaned up.
 Spaghetti sounds like the perfect thing to get your mind off things for a bit.
 
 -> DONE
+
