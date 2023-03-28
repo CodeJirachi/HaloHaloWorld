@@ -105,12 +105,12 @@ public class ButtonManager : MonoBehaviour
     public void startGame(Object nextScene)
     {
         //temp name
-        SceneManager.LoadScene(nextScene.name);
+        SceneManager.LoadScene("PreHaloHalo");
     }
 
     public void quitGame()
     {
-        //Application.Quit(); //use this for when actually deploying game
-        UnityEditor.EditorApplication.isPlaying = false; //this is temporary, just for editor purposes
+        Application.Quit(); //use this for when actually deploying game
+        //UnityEditor.EditorApplication.isPlaying = false; //this is temporary, just for editor purposes
     }
 }
