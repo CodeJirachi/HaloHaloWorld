@@ -14,6 +14,8 @@ public class FoodContainer : MonoBehaviour, IDropHandler
     [SerializeField] GameObject stickoComplete;
 
     public string currentIngredient;
+    GameObject draggedObject; 
+
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("OnDrop");
@@ -21,7 +23,11 @@ public class FoodContainer : MonoBehaviour, IDropHandler
         {
             //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().Destroy();
             //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            currentIngredient = eventData.pointerDrag.GetComponent<RectTransform>().name;
+            //currentIngredient = eventData.pointerDrag.GetComponent<RectTransform>().name;
+
+            draggedObject = eventData.pointerDrag;
+            currentIngredient = draggedObject.name;
+
             Debug.Log(currentIngredient);
 
             if (currentIngredient == "inventoryBeans")
@@ -30,6 +36,7 @@ public class FoodContainer : MonoBehaviour, IDropHandler
             }
             else if (currentIngredient == "half filled ice bowl PLACEHOLDER"){
                 ice.SetActive(true);
+                draggedObject.SetActive(false);
             }
         }
     }

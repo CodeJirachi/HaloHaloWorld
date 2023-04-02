@@ -9,7 +9,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     public RectTransform rectTransform;
     public CanvasGroup canvasGroup;
-   
+    public Canvas canvas;
 
     public void Awake()
     {
@@ -27,8 +27,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("OnDrag");
-        rectTransform.anchoredPosition += eventData.delta;
-
+        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -36,7 +35,10 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
         Debug.Log("OnEndDrag");
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
-        rectTransform.localScale = new Vector2(0, 0);
+        //rectTransform.localScale = new Vector2(0, 0);
+
+        //rectTransform.anchoredPosition -= eventData.delta;
+        rectTransform.anchoredPosition = new Vector2(-60, -90);
     }
 
     public void OnPointerDown(PointerEventData eventData)

@@ -19,7 +19,7 @@ public class ButtonManager : MonoBehaviour
     {
         //for testing choice tracking
         //Debug.Log(ChoiceTracker.CT.testVar);
-        Debug.Log(ChoiceTracker.CT.choice);
+        //Debug.Log(ChoiceTracker.CT.choice);
 
         //current scene will determine recipe 
         //temp reference current scene 
