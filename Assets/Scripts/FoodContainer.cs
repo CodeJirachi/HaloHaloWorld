@@ -13,8 +13,17 @@ public class FoodContainer : MonoBehaviour, IDropHandler
     [SerializeField] GameObject lecheFlan;
     [SerializeField] GameObject stickoComplete;
 
+    public GameObject halohalo;
+
     public string currentIngredient;
-    GameObject draggedObject; 
+    GameObject draggedObject;
+
+    private int currIngredientLayer;
+
+    public void Awake()
+    {
+        currIngredientLayer = 0;
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -30,6 +39,7 @@ public class FoodContainer : MonoBehaviour, IDropHandler
 
             Debug.Log(currentIngredient);
 
+            /*
             if (currentIngredient == "inventoryBeans")
             {
                 beans.SetActive(true);
@@ -37,6 +47,41 @@ public class FoodContainer : MonoBehaviour, IDropHandler
             else if (currentIngredient == "half filled ice bowl PLACEHOLDER"){
                 ice.SetActive(true);
                 draggedObject.SetActive(false);
+            }
+            */
+
+            //maybe dont do a switch
+            /*
+            switch(currentIngredient)
+            {
+                case "TEMP ice":
+                    halohalo.transform.GetChild(10).gameObject.SetActive(true);
+                    draggedObject.SetActive(false);
+                    break;
+                case "TEMP beans":
+                    halohalo.transform.GetChild(9).gameObject.SetActive(true);
+                    draggedObject.SetActive(false);
+                    break;
+                default:
+                    Debug.Log("wrong ingredient >:(");
+                    //wrong ingredient
+                    break;
+            }
+            */
+
+            if(currentIngredient == "TEMP ice" && currIngredientLayer == 0)
+            {
+                halohalo.transform.GetChild(10).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            } else if(currentIngredient == "TEMP beans" && currIngredientLayer == 1)
+            {
+                halohalo.transform.GetChild(9).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            } else
+            {
+                Debug.Log("wrong ingredient >:(");
             }
         }
     }
