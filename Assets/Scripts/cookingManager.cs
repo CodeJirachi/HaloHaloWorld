@@ -32,7 +32,7 @@ public class cookingManager : MonoBehaviour
         //default choice is "???"
         string choiceText = "???";
 
-        if (sceneName == "HaloHalo")
+        if (sceneName == "HaloHalo 1")
         {
             
             //
