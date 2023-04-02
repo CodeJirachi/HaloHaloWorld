@@ -11,14 +11,14 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject leftButton;
     [SerializeField] GameObject rightButton;
     [SerializeField] GameObject recipePage;
+    //[SerializeField] Object nextScene;
     [SerializeField] GameObject recipeTitle;
     [SerializeField] GameObject recipeContent;
 
     public void Awake()
-
     {
         //for testing choice tracking
-        Debug.Log(ChoiceTracker.CT.testVar);
+        //Debug.Log(ChoiceTracker.CT.testVar);
         Debug.Log(ChoiceTracker.CT.choice);
 
         //current scene will determine recipe 
@@ -97,4 +97,20 @@ public class ButtonManager : MonoBehaviour
 
     }
 
+    public void openSettings()
+    {
+        //use prefab of settings/menus, or LoadLevelAdditive
+    }
+
+    public void startGame(Object nextScene)
+    {
+        //temp name
+        SceneManager.LoadScene(nextScene.name);
+    }
+
+    public void quitGame()
+    {
+        //Application.Quit(); //use this for when actually deploying game
+        UnityEditor.EditorApplication.isPlaying = false; //this is temporary, just for editor purposes
+    }
 }

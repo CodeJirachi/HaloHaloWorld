@@ -273,7 +273,11 @@ SpriteRenderer:
   m_Size: {x: 0.75, y: 0.33}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< HEAD
   m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> 2824f2a84c044e7c6e49566d9a149ae840e896db
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &237861597
@@ -863,7 +867,11 @@ SpriteRenderer:
   m_Size: {x: 4.4, y: 2.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< HEAD
   m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> 2824f2a84c044e7c6e49566d9a149ae840e896db
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1108092878
@@ -1237,6 +1245,10 @@ MonoBehaviour:
   cousinHappy: {fileID: 1111093082}
   choicePanel: {fileID: 1869226462}
   customButton: {fileID: 4655723026960085111, guid: 3b0dbf2de2196964291eba0e0107ef47, type: 3}
+<<<<<<< HEAD
+=======
+  inChoices: 0
+>>>>>>> 2824f2a84c044e7c6e49566d9a149ae840e896db
 --- !u!1 &1679258441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,7 +1315,11 @@ SpriteRenderer:
   m_Size: {x: 8.15, y: 20.07}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< HEAD
   m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> 2824f2a84c044e7c6e49566d9a149ae840e896db
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1679258443
@@ -1387,7 +1403,11 @@ SpriteRenderer:
   m_Size: {x: 11.49, y: 11.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< HEAD
   m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> 2824f2a84c044e7c6e49566d9a149ae840e896db
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1736159399
@@ -1704,6 +1724,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testVar: 0
   choice: 
+<<<<<<< HEAD
+=======
+  scene: 0
+>>>>>>> 2824f2a84c044e7c6e49566d9a149ae840e896db
 --- !u!4 &1966776763
 Transform:
   m_ObjectHideFlags: 0
@@ -1785,7 +1809,11 @@ SpriteRenderer:
   m_Size: {x: 3.65, y: 0.62}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< HEAD
   m_WasSpriteAssigned: 0
+=======
+  m_WasSpriteAssigned: 1
+>>>>>>> 2824f2a84c044e7c6e49566d9a149ae840e896db
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1986022844
