@@ -14,7 +14,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             currentItem = eventData.pointerDrag.GetComponent<RectTransform>().name;
             Debug.Log(currentItem);
-            //TODO: set "prev position" of ingredient here
+            //TODO: set "prev position" of ingredient here?
         }
     }
 

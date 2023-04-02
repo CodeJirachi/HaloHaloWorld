@@ -32,7 +32,7 @@ public class ButtonManager : MonoBehaviour
     public void openRecipe()
     {
         recipeButton.SetActive(false);
-        settingsButton.SetActive(false);
+        //settingsButton.SetActive(false);
        
         exitButton.SetActive(true);
 
@@ -46,7 +46,7 @@ public class ButtonManager : MonoBehaviour
     public void closeRecipe()
     {
         recipeButton.SetActive(true);
-        settingsButton.SetActive(true);
+        //settingsButton.SetActive(true);
 
         //recipe page closes
         recipePage.SetActive(false);

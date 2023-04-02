@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class FoodContainer : MonoBehaviour, IDropHandler
 {
@@ -20,9 +21,29 @@ public class FoodContainer : MonoBehaviour, IDropHandler
 
     private int currIngredientLayer;
 
+
+    public GameObject dialoguePopup;
+    public GameObject dialogueText;
+    public GameObject nameText;
+
+    TextMeshProUGUI speakerName;
+    TextMeshProUGUI message;
+
+    bool inPopup;
+
     public void Awake()
     {
         currIngredientLayer = 0;
+    }
+
+    public void Update()
+    {
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && inPopup)
+        {
+            //hide pop up
+            dialoguePopup.SetActive(false);
+            inPopup = false;
+        }
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -81,6 +102,11 @@ public class FoodContainer : MonoBehaviour, IDropHandler
                 currIngredientLayer++;
             } else
             {
+                //show popup
+                inPopup = true;
+                dialoguePopup.SetActive(true);
+                nameText.GetComponent<TMPro.TextMeshProUGUI>().text = "Jasmine";
+                dialogueText.GetComponent<TMPro.TextMeshProUGUI>().text = "bruh........ im pretty sure that's wrong";
                 Debug.Log("wrong ingredient >:(");
             }
         }
