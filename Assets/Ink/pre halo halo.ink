@@ -13,10 +13,10 @@ Wha… is someone there?
 \*ding dong*
 
 #speaker Jayce
-Who is it?
+Ate.. is that you?
 
 #speaker ???
-Take a guess!
+Who else would it be?
 
 #speaker Jayce
 Well only one person would interrupt my nap…
@@ -25,14 +25,14 @@ Well only one person would interrupt my nap…
 \*creeeak*
 
 #cousin happy
-#speaker Cousin-
+#speaker Jasmine
 Interrupt? I mean sure I would, but I even waited an extra hour before droppin’ by!
 
 #cousin neutral
 #speaker Jayce
 Oh man, I must’ve slept through my alarms…
 
-#speaker Cousin-
+#speaker Jasmine
 Busy huh? Well if you wanna crash for longer I can swing by another time or somethin’.
 
 #speaker Jayce
@@ -40,19 +40,19 @@ No, no, thank you actually. Can’t have another sleepless night ‘cause of an 
 
 How about I treat you to some <b>halo halo</b> as an apology for that?
 
-#speaker Cousin-
+#speaker Jasmine
 Is it still an apology if I was gonna get it anyway?
 
 #speaker Jayce
 I mean I could always take it back…
 
-#speaker Cousin-
+#speaker Jasmine
 Fine fine, point taken.
 
 #speaker Jayce
 I’m still pretty groggy anyway, so it’s not gonna be my best work.
 
-#speaker Cousin-
+#speaker Jasmine
 Hey, don’t sell yourself short, no one makes it like you do. 
 
 I swear I’ve seen you make halo halo a thousand times- 
@@ -66,17 +66,22 @@ And believe me I have <i>tried.</i>
 #speaker Jayce
 So you’ll be able to catch me if I mess up?
 
-#speaker Cousin-
+#speaker Jasmine
 Sure, but you’ve done this so many times It’ll probably come back to you quickly. 
+
+For starters, I know you’ve got the right kind of ice cream in your fridge, yeah?
 
 -> choice
 
 === choice ===
-For starters, I know you’ve got the right kind of ice cream in your fridge, yeah?
+#speaker Jayce
+Wait a second… what do we even have in the fridge again…? Right, um, let’s check.
 * [Vanilla makes the dish very experimental!] -> after_choice
 * [Of course, mint chocolate chip!] -> after_choice
 * [Ube, always have it on me!] -> after_choice
 
 === after_choice ===
+#speaker Jasmine
 Sounds good!
 -> DONE
+
