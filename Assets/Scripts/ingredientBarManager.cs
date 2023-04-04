@@ -16,9 +16,30 @@ public class ingredientBarManager : MonoBehaviour
     {
         //Scene currentScene = SceneManager.GetActiveScene();
         //string sceneName = currentScene.name;
+        if (bar1.activeInHierarchy == true)
+        {
+            bar1.SetActive(false);
+            bar2.SetActive(true);
+        }
+        else if (bar2.activeInHierarchy == true)
+        {
+            bar2.SetActive(false);
+            bar1.SetActive(true);
+        }
 
-        bar1.SetActive(false);
-        bar2.SetActive(true);
+    }
 
+    public void upArrow()
+    {
+        if (bar1.activeInHierarchy == true)
+        {
+            bar1.SetActive(false);
+            bar2.SetActive(true);
+        }
+        else if (bar2.activeInHierarchy == true)
+        {
+            bar2.SetActive(false);
+            bar1.SetActive(true);
+        }
     }
 }
