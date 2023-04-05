@@ -17,6 +17,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        //canvas = GetComponent<Canvas>();
         prev_pos = GetComponent<RectTransform>().anchoredPosition;
     }
 
