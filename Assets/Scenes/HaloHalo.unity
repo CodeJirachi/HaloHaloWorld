@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 0}
   canvasGroup: {fileID: 0}
+  canvas: {fileID: 1368548038}
 --- !u!114 &55628828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,6 +1156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 0}
   canvasGroup: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!114 &1311039971
 MonoBehaviour:
   m_ObjectHideFlags: 0

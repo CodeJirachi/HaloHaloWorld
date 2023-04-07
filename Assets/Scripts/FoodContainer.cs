@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class FoodContainer : MonoBehaviour, IDropHandler
 {
@@ -13,7 +14,38 @@ public class FoodContainer : MonoBehaviour, IDropHandler
     [SerializeField] GameObject lecheFlan;
     [SerializeField] GameObject stickoComplete;
 
+    public GameObject halohalo;
+
     public string currentIngredient;
+    GameObject draggedObject;
+
+    private int currIngredientLayer;
+
+
+    public GameObject dialoguePopup;
+    public GameObject dialogueText;
+    public GameObject nameText;
+
+    TextMeshProUGUI speakerName;
+    TextMeshProUGUI message;
+
+    bool inPopup;
+
+    public void Awake()
+    {
+        currIngredientLayer = 0;
+    }
+
+    public void Update()
+    {
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && inPopup)
+        {
+            //hide pop up
+            dialoguePopup.SetActive(false);
+            inPopup = false;
+        }
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("OnDrop");
@@ -21,15 +53,61 @@ public class FoodContainer : MonoBehaviour, IDropHandler
         {
             //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().Destroy();
             //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            currentIngredient = eventData.pointerDrag.GetComponent<RectTransform>().name;
+            //currentIngredient = eventData.pointerDrag.GetComponent<RectTransform>().name;
+
+            draggedObject = eventData.pointerDrag;
+            currentIngredient = draggedObject.name;
+
             Debug.Log(currentIngredient);
 
+            /*
             if (currentIngredient == "inventoryBeans")
             {
                 beans.SetActive(true);
             }
             else if (currentIngredient == "half filled ice bowl PLACEHOLDER"){
                 ice.SetActive(true);
+                draggedObject.SetActive(false);
+            }
+            */
+
+            //maybe dont do a switch
+            /*
+            switch(currentIngredient)
+            {
+                case "TEMP ice":
+                    halohalo.transform.GetChild(10).gameObject.SetActive(true);
+                    draggedObject.SetActive(false);
+                    break;
+                case "TEMP beans":
+                    halohalo.transform.GetChild(9).gameObject.SetActive(true);
+                    draggedObject.SetActive(false);
+                    break;
+                default:
+                    Debug.Log("wrong ingredient >:(");
+                    //wrong ingredient
+                    break;
+            }
+            */
+
+            if(currentIngredient == "TEMP ice" && currIngredientLayer == 0)
+            {
+                halohalo.transform.GetChild(10).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            } else if(currentIngredient == "TEMP beans" && currIngredientLayer == 1)
+            {
+                halohalo.transform.GetChild(9).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            } else
+            {
+                //show popup
+                inPopup = true;
+                dialoguePopup.SetActive(true);
+                nameText.GetComponent<TMPro.TextMeshProUGUI>().text = "Jasmine";
+                dialogueText.GetComponent<TMPro.TextMeshProUGUI>().text = "well, that was certainly a choice";
+                Debug.Log("wrong ingredient >:(");
             }
         }
     }
