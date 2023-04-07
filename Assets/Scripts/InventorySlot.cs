@@ -9,7 +9,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     IngredientDragDrop ingredient;
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("OnDrop");
+        //Debug.Log("OnDrop");
         if (eventData.pointerDrag != null)
         {
             //set new position in slot
