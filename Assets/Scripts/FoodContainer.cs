@@ -133,6 +133,18 @@ public class FoodContainer : MonoBehaviour, IDropHandler
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
             }
+            else if (currentIngredient == "evaporated milk" && currIngredientLayer == 7)
+            {
+                halohalo.transform.GetChild(3).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            }
+            else if (currentIngredient == "sticko" && currIngredientLayer == 8)
+            {
+                halohalo.transform.GetChild(11).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            }
             else
             {
                 //show popup
