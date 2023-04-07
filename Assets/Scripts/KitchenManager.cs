@@ -29,11 +29,18 @@ public class KitchenManager : MonoBehaviour
 
     public void Chop()
     {
-        if(knife.activeSelf && chiliStage < 4)
+        //EXTREMELY HACK-Y WAY
+        //does not need to be chili - need to generalize these variables b/c you can pick what is the "ingredient" in inspector
+        if(knife.activeSelf && chiliStage < 5)
         {
             chili.transform.GetChild(chiliStage).gameObject.SetActive(false);
             chiliStage++;
             chili.transform.GetChild(chiliStage).gameObject.SetActive(true);
+            if(chiliStage == 5)
+            {
+                //this deletes the button on top of the ingredient icon
+                chili.transform.GetChild(6).gameObject.SetActive(false);
+            }
         }
     }
 }
