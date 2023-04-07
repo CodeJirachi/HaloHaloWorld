@@ -987,7 +987,7 @@ MonoBehaviour:
   rectTransform: {fileID: 0}
   canvasGroup: {fileID: 0}
   canvas: {fileID: 1368548038}
-  inSlot: 0
+  inSlot: 1
   prev_pos: {x: 0, y: 0}
 --- !u!114 &165555861
 MonoBehaviour:
@@ -3079,7 +3079,7 @@ MonoBehaviour:
   rectTransform: {fileID: 0}
   canvasGroup: {fileID: 0}
   canvas: {fileID: 1368548038}
-  inSlot: 0
+  inSlot: 1
   prev_pos: {x: 0, y: 0}
 --- !u!114 &954040042
 MonoBehaviour:
@@ -5214,7 +5214,7 @@ MonoBehaviour:
   rectTransform: {fileID: 0}
   canvasGroup: {fileID: 0}
   canvas: {fileID: 1368548038}
-  inSlot: 0
+  inSlot: 1
   prev_pos: {x: 0, y: 0}
 --- !u!114 &1413558732
 MonoBehaviour:
