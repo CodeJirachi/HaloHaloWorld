@@ -1138,12 +1138,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691085848}
   m_CullTransparentMesh: 1
+
 --- !u!224 &691085852
 RectTransform:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 691085848}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 90}
@@ -1158,6 +1161,7 @@ RectTransform:
   m_AnchoredPosition: {x: 5.1888123, y: 3.9519348}
   m_SizeDelta: {x: 15, y: 11}
   m_Pivot: {x: 0.5, y: 0.5}
+
 --- !u!1 &985722866
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,6 +3189,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+
 --- !u!1 &2001384609
 GameObject:
   m_ObjectHideFlags: 0
