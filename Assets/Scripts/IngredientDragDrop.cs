@@ -11,12 +11,16 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
     public CanvasGroup canvasGroup;
     public Canvas canvas;
 
-    protected Vector2 prev_pos;
+    public static IngredientDragDrop ING;
+    public bool inSlot;
+
+    public Vector2 prev_pos;
 
     public void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        //canvas = GetComponent<Canvas>();
         prev_pos = GetComponent<RectTransform>().anchoredPosition;
     }
 
@@ -42,7 +46,10 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
         //rectTransform.anchoredPosition -= eventData.delta;
         //rectTransform.anchoredPosition = new Vector2(-60, -90);
-        rectTransform.anchoredPosition = prev_pos;
+        if (inSlot)
+        {
+            rectTransform.anchoredPosition = prev_pos;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)

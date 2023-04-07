@@ -106,7 +106,7 @@ public class FoodContainer : MonoBehaviour, IDropHandler
                 inPopup = true;
                 dialoguePopup.SetActive(true);
                 nameText.GetComponent<TMPro.TextMeshProUGUI>().text = "Jasmine";
-                dialogueText.GetComponent<TMPro.TextMeshProUGUI>().text = "well, that was certainly a choice";
+                dialogueText.GetComponent<TMPro.TextMeshProUGUI>().text = "Well... that's certainly a choice.";
                 Debug.Log("wrong ingredient >:(");
             }
         }
