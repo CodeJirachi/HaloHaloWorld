@@ -7,11 +7,11 @@ public class KitchenManager : MonoBehaviour
     public GameObject knife;
 
     public GameObject chili;
-    private int chiliStage;
+    private int ingredientStage;
 
     public void Start()
     {
-        chiliStage = 0;
+        ingredientStage = 0;
     }
 
     public void SelectTool(string name)
@@ -27,20 +27,24 @@ public class KitchenManager : MonoBehaviour
         }
     }
 
-    public void Chop()
+    public void Chop(GameObject ingredient)
     {
         //EXTREMELY HACK-Y WAY
         //does not need to be chili - need to generalize these variables b/c you can pick what is the "ingredient" in inspector
-        if(knife.activeSelf && chiliStage < 5)
+        if(knife.activeSelf && ingredientStage < 4)
         {
-            chili.transform.GetChild(chiliStage).gameObject.SetActive(false);
-            chiliStage++;
-            chili.transform.GetChild(chiliStage).gameObject.SetActive(true);
-            if(chiliStage == 5)
+            ingredient.transform.GetChild(ingredientStage).gameObject.SetActive(false);
+            ingredientStage++;
+            ingredient.transform.GetChild(ingredientStage).gameObject.SetActive(true);
+
+            if(ingredientStage == 4)
             {
                 //this deletes the button on top of the ingredient icon
-                chili.transform.GetChild(6).gameObject.SetActive(false);
+                ingredient.transform.GetChild(6).gameObject.SetActive(false);
+
+                //maybe reset ingredientStage here?
             }
+            
         }
     }
 }

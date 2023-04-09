@@ -488,8 +488,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 348192653}
+  - component: {fileID: 348192654}
   m_Layer: 5
-  m_Name: 'chili '
+  m_Name: chili
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -512,7 +513,6 @@ RectTransform:
   - {fileID: 1618619747}
   - {fileID: 1920820537}
   - {fileID: 854172872}
-  - {fileID: 1881107321}
   - {fileID: 1440011803}
   m_Father: {fileID: 607260748}
   m_RootOrder: 6
@@ -522,6 +522,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &348192654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348192652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed72510c4275b7429e0d89a9089802b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredient_icon: {fileID: 1881107320}
+  canvas: {fileID: 607260747}
+  ingredientFinalStage: {fileID: 854172871}
 --- !u!1 &446599714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1048,7 @@ RectTransform:
   - {fileID: 1085915918}
   - {fileID: 1701381206}
   - {fileID: 348192653}
+  - {fileID: 1881107321}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3002,7 +3018,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 348192653}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3056,10 +3072,10 @@ MonoBehaviour:
       - m_Target: {fileID: 123456060}
         m_TargetAssemblyTypeName: KitchenManager, Assembly-CSharp
         m_MethodName: Chop
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 348192652}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3687,7 +3703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1881107321
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3696,16 +3712,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881107320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4.132456}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.0000212, y: 2.0000212, z: 2.0000212}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 348192653}
-  m_RootOrder: 5
+  m_Father: {fileID: 607260748}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34, y: -23}
+  m_AnchoredPosition: {x: 538, y: 207}
   m_SizeDelta: {x: 32, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1881107322
