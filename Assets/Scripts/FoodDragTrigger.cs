@@ -10,6 +10,7 @@ public class FoodDragTrigger : MonoBehaviour, IPointerDownHandler, IBeginDragHan
     public Canvas canvas;
 
     public GameObject ingredientFinalStage;
+    bool finalStage;
 
     // Update is called once per frame
     void Update()
@@ -18,11 +19,16 @@ public class FoodDragTrigger : MonoBehaviour, IPointerDownHandler, IBeginDragHan
         {
             this.gameObject.SetActive(false);
         }
+
+        if(GameObject.Find("chili 4 PLACEHOLDER").activeSelf)
+        {
+            finalStage = true;
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (!ingredient_icon.GetComponent<IngredientDragDrop>().inSlot)
+        if (finalStage && !ingredient_icon.GetComponent<IngredientDragDrop>().inSlot)
         {
             Debug.Log("begindrag");
 
@@ -38,7 +44,7 @@ public class FoodDragTrigger : MonoBehaviour, IPointerDownHandler, IBeginDragHan
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (!ingredient_icon.GetComponent<IngredientDragDrop>().inSlot)
+        if (finalStage && !ingredient_icon.GetComponent<IngredientDragDrop>().inSlot)
         {
             ingredient_icon.GetComponent<RectTransform>().anchoredPosition += eventData.delta / canvas.scaleFactor;
         }
@@ -46,7 +52,7 @@ public class FoodDragTrigger : MonoBehaviour, IPointerDownHandler, IBeginDragHan
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (!ingredient_icon.GetComponent<IngredientDragDrop>().inSlot) {
+        if (finalStage && !ingredient_icon.GetComponent<IngredientDragDrop>().inSlot) {
             ingredient_icon.SetActive(false);
         }
     }
