@@ -364,7 +364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knife: {fileID: 880998850}
-  chili: {fileID: 348192652}
   ingredientStage: 0
   ingredientStageMax: 0
 --- !u!1 &164450051

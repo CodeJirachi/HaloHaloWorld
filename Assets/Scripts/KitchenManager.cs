@@ -8,7 +8,7 @@ public class KitchenManager : MonoBehaviour
 {
     public GameObject knife;
 
-    public GameObject chili;
+    //these are public just so i can see for testing
     public int ingredientStage;
     public int ingredientStageMax;
 
