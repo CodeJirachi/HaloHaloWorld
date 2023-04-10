@@ -4,15 +4,23 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+//attach this script to the parent gameobject of the ingredient to be chopped
+
 public class FoodDragTrigger : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     public GameObject ingredient_icon;
     public Canvas canvas;
 
-    public GameObject ingredientFinalStage;
-    bool finalStage;
+    public GameObject ingredientFinalStage; //set in inspector; the sprite of the very last "stage" of the chopped ingredient (when its fully chopped)
+    public int ingredientCurrStage;
+    public int ingredientMaxStage; //set in inspector; to determine how many sprites to go through
+    bool finalStage;  
 
-    // Update is called once per frame
+    void Start()
+    {
+        ingredientCurrStage = 0;
+    }
+
     void Update()
     {
         if (ingredient_icon.GetComponent<IngredientDragDrop>().inSlot)
@@ -20,7 +28,7 @@ public class FoodDragTrigger : MonoBehaviour, IPointerDownHandler, IBeginDragHan
             this.gameObject.SetActive(false);
         }
 
-        if(GameObject.Find("chili 4 PLACEHOLDER").activeSelf)
+        if(ingredientFinalStage.activeSelf)
         {
             finalStage = true;
         }

@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//for the "buttons" involved in cooking (selecting a tool, chopping, etc.)
+
 public class KitchenManager : MonoBehaviour
 {
     public GameObject knife;
 
     public GameObject chili;
-    private int ingredientStage;
-
-    public void Start()
-    {
-        ingredientStage = 0;
-    }
+    public int ingredientStage;
+    public int ingredientStageMax;
 
     public void SelectTool(string name)
     {
@@ -27,22 +25,23 @@ public class KitchenManager : MonoBehaviour
         }
     }
 
+    //set this method to the "button" under the ingredient to be chopped
+    //also, make the button transparent and as big as the ingredient sprite
     public void Chop(GameObject ingredient)
     {
+        ingredientStage = ingredient.GetComponent<FoodDragTrigger>().ingredientCurrStage;
+        ingredientStageMax = ingredient.GetComponent<FoodDragTrigger>().ingredientMaxStage;
+
         //EXTREMELY HACK-Y WAY
-        //does not need to be chili - need to generalize these variables b/c you can pick what is the "ingredient" in inspector
-        if(knife.activeSelf && ingredientStage < 4)
+        if (knife.activeSelf && ingredientStage < ingredientStageMax)
         {
             ingredient.transform.GetChild(ingredientStage).gameObject.SetActive(false);
-            ingredientStage++;
-            ingredient.transform.GetChild(ingredientStage).gameObject.SetActive(true);
+            ingredient.GetComponent<FoodDragTrigger>().ingredientCurrStage++;
+            ingredient.transform.GetChild(ingredient.GetComponent<FoodDragTrigger>().ingredientCurrStage).gameObject.SetActive(true);
 
-            if(ingredientStage == 4)
+            if(ingredientStage == ingredientStageMax)
             {
-                //this deletes the button on top of the ingredient icon
-                ingredient.transform.GetChild(6).gameObject.SetActive(false);
-
-                //maybe reset ingredientStage here?
+                ingredient.GetComponent<FoodDragTrigger>().ingredientCurrStage = 0;
             }
             
         }

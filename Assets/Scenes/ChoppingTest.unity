@@ -305,6 +305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knife: {fileID: 880998850}
   chili: {fileID: 348192652}
+  ingredientStage: 0
+  ingredientStageMax: 0
 --- !u!1 &235328259
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +539,8 @@ MonoBehaviour:
   ingredient_icon: {fileID: 1881107320}
   canvas: {fileID: 607260747}
   ingredientFinalStage: {fileID: 854172871}
+  ingredientCurrStage: 0
+  ingredientMaxStage: 4
 --- !u!1 &446599714
 GameObject:
   m_ObjectHideFlags: 0

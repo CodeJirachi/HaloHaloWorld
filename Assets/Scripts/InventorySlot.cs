@@ -16,7 +16,8 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         {
             currentItem = eventData.pointerDrag.GetComponent<RectTransform>().name;
             Debug.Log(currentItem);
-            //ANOTHER TEMPORARY CONDITIONAL CHECK HERE - check if its a fake - gonna generalize this to check tags also maybe
+
+            //ANOTHER TEMPORARY CONDITIONAL CHECK HERE- gonna generalize this to check tags also maybe
             if(eventData.pointerDrag.GetComponent<RectTransform>().name == "rice cooker")
             {
                 GameObject.Find("cooked rice").SetActive(true);
@@ -26,6 +27,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 GameObject.Find("cooked rice").GetComponent<Image>().raycastTarget = true;
             }
 
+            //checking if its a chopped ingredient being dragged in
             else if(currentItem == "chili")
             {
                 GameObject.Find("chili icon").SetActive(true);
@@ -35,7 +37,15 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 GameObject.Find("chili icon").GetComponent<Image>().raycastTarget = true;
             }
 
-            //TEMPORARY IF - gonna change this to check tags maybe?
+            else if (currentItem == "garlic")
+            {
+                GameObject.Find("chopped garlic icon").SetActive(true);
+                GameObject.Find("chopped garlic icon").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("chopped garlic icon").GetComponent<IngredientDragDrop>().inSlot = true;
+                GameObject.Find("chopped garlic icon").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("chopped garlic icon").GetComponent<Image>().raycastTarget = true;
+            }
+
             else
             {
                 //set new position in slot
