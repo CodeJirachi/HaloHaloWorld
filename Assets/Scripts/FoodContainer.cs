@@ -103,13 +103,48 @@ public class FoodContainer : MonoBehaviour, IDropHandler
                 currIngredientLayer++;
             }
             // should be jackfruit 
-            else if (currentIngredient == "nata de coco" && currIngredientLayer == 2)
+            else if (currentIngredient == "jackfruit" && currIngredientLayer == 2)
             {
                 halohalo.transform.GetChild(8).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
             }
-
+            else if (currentIngredient == "nata de coco" && currIngredientLayer == 3)
+            {
+                halohalo.transform.GetChild(7).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            }
+            else if (currentIngredient == "saba (banana)" && currIngredientLayer == 4)
+            {
+                halohalo.transform.GetChild(6).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            }
+            else if (currentIngredient == "ube ice cream" && currIngredientLayer == 5)
+            {
+                halohalo.transform.GetChild(4).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            }
+            else if (currentIngredient == "flan" && currIngredientLayer == 6)
+            {
+                halohalo.transform.GetChild(5).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            }
+            else if (currentIngredient == "evaporated milk" && currIngredientLayer == 7)
+            {
+                halohalo.transform.GetChild(3).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            }
+            else if (currentIngredient == "sticko" && currIngredientLayer == 8)
+            {
+                halohalo.transform.GetChild(11).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            }
             else
             {
                 //show popup
