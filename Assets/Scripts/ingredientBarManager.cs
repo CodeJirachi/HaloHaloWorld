@@ -10,7 +10,7 @@ public class ingredientBarManager : MonoBehaviour
     
     public void Awake()
     {
-        bar1.SetActive(true);
+        //bar1.SetActive(true);
     }
     public void downArrow()
     {
