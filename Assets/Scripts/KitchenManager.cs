@@ -6,21 +6,36 @@ using UnityEngine;
 
 public class KitchenManager : MonoBehaviour
 {
+    public GameObject tool;
+    //tools: 
     public GameObject knife;
+    public GameObject spoon;
 
     //these are public just so i can see for testing
     public int ingredientStage;
     public int ingredientStageMax;
+
+    //audrey code is above this
+    public GameObject collander; 
+    public GameObject pot;
+    public GameObject pan;
+    public GameObject saucepan;
+    public GameObject measuringCup;
+
+    //affected by tool Item not needed in kitchen manager
 
     public void SelectTool(string name)
     {
         switch(name)
         {
             case "knife":
-                knife.SetActive(!knife.activeSelf);
+                tool.SetActive(!tool.activeSelf);
                 break;
             case "spoon":
-                knife.SetActive(false);
+                tool.SetActive(false);
+                break;
+            case "pot":
+                tool.SetActive(!tool.activeSelf);
                 break;
         }
     }
@@ -45,5 +60,18 @@ public class KitchenManager : MonoBehaviour
             }
             
         }
+
+    }
+    
+    public void Fill()
+    {
+        // JIRA!!!! fix so parts of pot dont disappear 
+        //if (tool.activeSelf && ingredientStage < 3)
+        //{
+        //    chili.transform.
+       //     chili.transform.GetChild(chiliStage).gameObject.SetActive(false);
+        //    chiliStage++;
+        //    chili.transform.GetChild(chiliStage).gameObject.SetActive(true);
+       // }
     }
 }
