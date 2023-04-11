@@ -6,10 +6,17 @@ using UnityEngine.UI;
 
 public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    public string currentItem;
-    public GameObject cookedRice;
-    public Canvas canvas;
 
+    // detects empty pot, that WILL be filled 
+    public string currentItem;
+
+    // sink fills the pot w water
+    // this is the filled pot that drags away back into inventory for usage 
+    public GameObject filledPot;
+
+    public GameObject filledCollander;
+
+    public Canvas canvas;
     GameObject currentIngredient;
     Vector2 currentPrevPosition;
 
@@ -25,9 +32,15 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
             if (currentItem == "empty pot")
             {
                 currentIngredient.SetActive(false);
-                StartCoroutine(CookRice(1.0f));
+                StartCoroutine(FillPot(1.0f));
                 //cookedRice.GetComponent<RectTransform>().anchoredPosition = currentPrevPosition;
                 //cookedRice.SetActive(true);
+            }
+            else if (currentItem == "collanderParent")
+            {
+                currentIngredient.SetActive(false);
+                StartCoroutine(FillCollander(0.0f));
+                //need another function for filling collander 
             }
 
             Debug.Log(currentItem);
@@ -36,25 +49,25 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (!cookedRice.GetComponent<IngredientDragDrop>().inSlot)
+        if (!filledPot.GetComponent<IngredientDragDrop>().inSlot)
         {
             Debug.Log("begindrag");
 
             Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
 
-            cookedRice.SetActive(true);
-            cookedRice.GetComponent<IngredientDragDrop>().inSlot = false;
-            cookedRice.GetComponent<RectTransform>().position = mousepos;
-            cookedRice.GetComponent<Image>().raycastTarget = false;
+            filledPot.SetActive(true);
+            filledPot.GetComponent<IngredientDragDrop>().inSlot = false;
+            filledPot.GetComponent<RectTransform>().position = mousepos;
+            filledPot.GetComponent<Image>().raycastTarget = false;
         }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (!cookedRice.GetComponent<IngredientDragDrop>().inSlot)
+        if (!filledPot.GetComponent<IngredientDragDrop>().inSlot)
         {
-            cookedRice.GetComponent<RectTransform>().anchoredPosition += eventData.delta / canvas.scaleFactor;
+            filledPot.GetComponent<RectTransform>().anchoredPosition += eventData.delta / canvas.scaleFactor;
         }
     }
 
@@ -62,9 +75,9 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
     {
         //if (orangelight.activeSelf)
         //{
-            if (!cookedRice.GetComponent<IngredientDragDrop>().inSlot)
+        if (!filledPot.GetComponent<IngredientDragDrop>().inSlot)
             {
-                cookedRice.SetActive(true);
+                filledPot.SetActive(true);
                 //cookedRice.SetActive(false);
             }
         //}
@@ -75,21 +88,28 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
 
     }
 
-    public IEnumerator CookRice(float seconds)
+    public IEnumerator FillPot(float seconds)
     {
       
         //yield return new WaitForSeconds(seconds);
         int stage = 0;
         int stageMax = 5;
 
-        cookedRice.SetActive(true);
+        filledPot.SetActive(true);
 
         while (currentItem == "empty pot" && stage <= stageMax)
         {
             yield return new WaitForSeconds(seconds);
-            cookedRice.transform.GetChild(stage).gameObject.SetActive(true);
+            filledPot.transform.GetChild(stage).gameObject.SetActive(true);
             stage++;
         } 
         
+    }
+
+    public IEnumerator FillCollander(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        filledCollander.SetActive(true);
+
     }
 }

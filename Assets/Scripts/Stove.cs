@@ -7,7 +7,10 @@ using UnityEngine.UI;
 public class Stove : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     public string currentItem;
+    // change naming conventions later, the stove script just makes the stove appear when the filled pot is dragged onto the stove 
+    // ... for now 
     public GameObject cookedRice;
+    public GameObject cookedSpaghetti;
     public Canvas canvas;
 
     GameObject currentIngredient;
