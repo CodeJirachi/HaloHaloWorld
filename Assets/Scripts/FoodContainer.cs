@@ -95,13 +95,14 @@ public class FoodContainer : MonoBehaviour, IDropHandler
                 halohalo.transform.GetChild(10).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
-            } 
-            else if(currentIngredient == "TEMP beans" && currIngredientLayer == 1)
+            }
+            else if (currentIngredient == "TEMP beans" && currIngredientLayer == 1)
             {
                 halohalo.transform.GetChild(9).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
             }
+           
             // should be jackfruit 
             else if (currentIngredient == "jackfruit" && currIngredientLayer == 2)
             {
