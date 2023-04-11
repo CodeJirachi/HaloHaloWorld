@@ -25,7 +25,7 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
             if (currentItem == "empty pot")
             {
                 currentIngredient.SetActive(false);
-                StartCoroutine(CookRice(1.5f));
+                StartCoroutine(CookRice(1.0f));
                 //cookedRice.GetComponent<RectTransform>().anchoredPosition = currentPrevPosition;
                 //cookedRice.SetActive(true);
             }
@@ -77,9 +77,7 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
 
     public IEnumerator CookRice(float seconds)
     {
-        //redlight.SetActive(true);
-        
-        
+      
         //yield return new WaitForSeconds(seconds);
         int stage = 0;
         int stageMax = 5;
@@ -90,21 +88,8 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
         {
             yield return new WaitForSeconds(seconds);
             cookedRice.transform.GetChild(stage).gameObject.SetActive(true);
-            //rawRice.SetActive(false);
-            //currIngredientLayer++;
             stage++;
         } 
-
-
-        //cookedRice.SetActive(true);
-        //cookedRice.transform.GetChild(2).gameObject.SetActive(true);
-        
-        //cookedRice.transform.GetChild(stage).gameObject.SetActive(false);
-        //stage++;
-        //cookedRice.transform.GetChild(stage).gameObject.SetActive(true);
-
-        //redlight.SetActive(false);
-        //orangelight.SetActive(true);
         
     }
 }

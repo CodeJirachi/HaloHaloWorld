@@ -83,7 +83,8 @@ public class RiceCooker : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeg
         redlight.SetActive(true);
 
         yield return new WaitForSeconds(seconds);
-        cookedRice.SetActive(true);
+
+
         redlight.SetActive(false);
         orangelight.SetActive(true);
     }
