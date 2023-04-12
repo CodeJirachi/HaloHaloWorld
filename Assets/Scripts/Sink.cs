@@ -36,11 +36,23 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
                 //cookedRice.GetComponent<RectTransform>().anchoredPosition = currentPrevPosition;
                 //cookedRice.SetActive(true);
             }
+
             else if (currentItem == "collanderParent")
+            {
+                //currentIngredient.SetActive(false);
+
+                //if (currentItem == "potFilled")
+                //{
+                    currentIngredient.SetActive(false);
+                    StartCoroutine(SinkCollander(0.0f));
+                //}
+                //need another function for filling collander maybe??
+            }
+
+            else if (currentItem == "potFilled")
             {
                 currentIngredient.SetActive(false);
                 StartCoroutine(FillCollander(0.0f));
-                //need another function for filling collander 
             }
 
             Debug.Log(currentItem);
@@ -106,10 +118,17 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
         
     }
 
-    public IEnumerator FillCollander(float seconds)
+    public IEnumerator SinkCollander(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         filledCollander.SetActive(true);
-
     }
+
+    // this does not work 
+    //public IEnumerator FillCollander(float seconds)
+    //{
+     //   yield return new WaitForSeconds(seconds);
+        // fills with pasta 
+     //   filledCollander.transform.GetChild(1).gameObject.SetActive(true);
+    //}
 }
