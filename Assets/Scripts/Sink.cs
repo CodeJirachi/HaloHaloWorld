@@ -52,7 +52,7 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
             else if (currentItem == "potFilled")
             {
                 currentIngredient.SetActive(false);
-                StartCoroutine(FillCollander(0.0f));
+                //StartCoroutine(FillCollander(0.0f));
             }
 
             Debug.Log(currentItem);
