@@ -13,6 +13,9 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
     [SerializeField] GameObject rawSpaghetti;
     [SerializeField] GameObject underwaterSpaghetti;
 
+    [SerializeField] GameObject collander;
+    [SerializeField] GameObject filledCollander;
+
     //pot not done 
     public GameObject redlight;
     //indicates pot done boiling 
@@ -60,7 +63,14 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
 
                 //after a few secconds, make the spaghetti submerge 
 
-                currIngredientLayer++;
+                //currIngredientLayer++;
+                Debug.Log(currentIngredient);
+            }
+            else if (currentIngredient == "potFilled")
+            {
+                //collander.SetActive(false);
+                filledCollander.SetActive(true);
+                draggedObject.SetActive(false);
             }
             else
             {
