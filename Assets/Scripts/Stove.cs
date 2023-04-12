@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class RiceCooker : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class Stove : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-
     public string currentItem;
-    public GameObject redlight;
-    public GameObject orangelight;
+    // change naming conventions later, the stove script just makes the stove appear when the filled pot is dragged onto the stove 
+    // ... for now 
     public GameObject cookedRice;
+    public GameObject cookedSpaghetti;
     public Canvas canvas;
 
     GameObject currentIngredient;
@@ -25,10 +25,10 @@ public class RiceCooker : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeg
             currentItem = currentIngredient.GetComponent<RectTransform>().name;
             currentPrevPosition = currentIngredient.GetComponent<IngredientDragDrop>().prev_pos;
 
-            if (currentItem == "raw rice")
+            if (currentItem == "filled pot")
             {
                 currentIngredient.SetActive(false);
-                StartCoroutine(CookRice(5.0f));
+                StartCoroutine(CookRice(0f));
                 //cookedRice.GetComponent<RectTransform>().anchoredPosition = currentPrevPosition;
                 //cookedRice.SetActive(true);
             }
@@ -37,10 +37,9 @@ public class RiceCooker : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeg
         }
     }
 
-
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (orangelight.activeSelf && !cookedRice.GetComponent<IngredientDragDrop>().inSlot)
+        if (!cookedRice.GetComponent<IngredientDragDrop>().inSlot)
         {
             Debug.Log("begindrag");
 
@@ -56,7 +55,7 @@ public class RiceCooker : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeg
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (orangelight.activeSelf && !cookedRice.GetComponent<IngredientDragDrop>().inSlot)
+        if (!cookedRice.GetComponent<IngredientDragDrop>().inSlot)
         {
             cookedRice.GetComponent<RectTransform>().anchoredPosition += eventData.delta / canvas.scaleFactor;
         }
@@ -64,13 +63,14 @@ public class RiceCooker : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeg
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (orangelight.activeSelf)
+        //if (orangelight.activeSelf)
+        //{
+        if (!cookedRice.GetComponent<IngredientDragDrop>().inSlot)
         {
-            if (!cookedRice.GetComponent<IngredientDragDrop>().inSlot)
-            {
-                cookedRice.SetActive(false);
-            }
+            cookedRice.SetActive(true);
+            //cookedRice.SetActive(false);
         }
+        //}
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -78,15 +78,22 @@ public class RiceCooker : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeg
 
     }
 
-    private IEnumerator CookRice(float seconds)
+    public IEnumerator CookRice(float seconds)
     {
-        redlight.SetActive(true);
 
+        //yield return new WaitForSeconds(seconds);
+        //int stage = 0;
+        //int stageMax = 5;
         yield return new WaitForSeconds(seconds);
+        cookedRice.SetActive(true);
 
+        //while (currentItem == "filled pot" && stage <= stageMax)
+        //{
+        //   yield return new WaitForSeconds(seconds);
+        //    cookedRice.transform.GetChild(stage).gameObject.SetActive(true);
+        //    stage++;
+        //}
 
-        redlight.SetActive(false);
-        orangelight.SetActive(true);
     }
-
 }
+

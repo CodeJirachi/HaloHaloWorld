@@ -92,32 +92,33 @@ public class FoodContainer : MonoBehaviour, IDropHandler
 
             if(currentIngredient == "TEMP ice" && currIngredientLayer == 0)
             {
+                halohalo.transform.GetChild(11).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            }
+            else if (currentIngredient == "TEMP beans" && currIngredientLayer == 1)
+            {
                 halohalo.transform.GetChild(10).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
-            } 
-            else if(currentIngredient == "TEMP beans" && currIngredientLayer == 1)
+            }
+           
+            // should be jackfruit 
+            else if (currentIngredient == "jackfruit" && currIngredientLayer == 2)
             {
                 halohalo.transform.GetChild(9).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
             }
-            // should be jackfruit 
-            else if (currentIngredient == "jackfruit" && currIngredientLayer == 2)
+            else if (currentIngredient == "nata de coco" && currIngredientLayer == 3)
             {
                 halohalo.transform.GetChild(8).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
             }
-            else if (currentIngredient == "nata de coco" && currIngredientLayer == 3)
-            {
-                halohalo.transform.GetChild(7).gameObject.SetActive(true);
-                draggedObject.SetActive(false);
-                currIngredientLayer++;
-            }
             else if (currentIngredient == "saba (banana)" && currIngredientLayer == 4)
             {
-                halohalo.transform.GetChild(6).gameObject.SetActive(true);
+                halohalo.transform.GetChild(7).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
             }
@@ -127,9 +128,16 @@ public class FoodContainer : MonoBehaviour, IDropHandler
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
             }
-            else if (currentIngredient == "flan" && currIngredientLayer == 6)
+            // is allowed to be dragged in, this is THE WRONG CHOICE!!!!!!!! ITS WRONG YO!!! 
+            else if (currentIngredient == "mint choco chip ice cream" && currIngredientLayer == 5)
             {
                 halohalo.transform.GetChild(5).gameObject.SetActive(true);
+                draggedObject.SetActive(false);
+                currIngredientLayer++;
+            }
+            else if (currentIngredient == "flan" && currIngredientLayer == 6)
+            {
+                halohalo.transform.GetChild(6).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
             }
@@ -141,7 +149,7 @@ public class FoodContainer : MonoBehaviour, IDropHandler
             }
             else if (currentIngredient == "sticko" && currIngredientLayer == 8)
             {
-                halohalo.transform.GetChild(11).gameObject.SetActive(true);
+                halohalo.transform.GetChild(12).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
             }
@@ -154,6 +162,8 @@ public class FoodContainer : MonoBehaviour, IDropHandler
                 dialogueText.GetComponent<TMPro.TextMeshProUGUI>().text = "Well... that's certainly a choice.";
                 Debug.Log("wrong ingredient >:(");
             }
+
+
         }
     }
 
