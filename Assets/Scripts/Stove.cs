@@ -9,8 +9,10 @@ public class Stove : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDra
     public string currentItem;
     // change naming conventions later, the stove script just makes the stove appear when the filled pot is dragged onto the stove 
     // ... for now 
-    public GameObject cookedRice;
-    public GameObject cookedSpaghetti;
+    public GameObject pot;
+    public GameObject pot2;
+    public GameObject pan;
+    //public GameObject cookedSpaghetti;
     public Canvas canvas;
 
     GameObject currentIngredient;
@@ -28,9 +30,17 @@ public class Stove : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDra
             if (currentItem == "filled pot")
             {
                 currentIngredient.SetActive(false);
-                StartCoroutine(CookRice(0f));
+                pot.SetActive(true);
+                Debug.Log(currentIngredient);
+
+                //StartCoroutine(CookRice(0f));
                 //cookedRice.GetComponent<RectTransform>().anchoredPosition = currentPrevPosition;
                 //cookedRice.SetActive(true);
+            }
+            else if (currentItem == "empty pot 2")
+            {
+                currentIngredient.SetActive(false);
+                pot2.SetActive(true);
             }
 
             Debug.Log(currentItem);
@@ -39,25 +49,25 @@ public class Stove : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (!cookedRice.GetComponent<IngredientDragDrop>().inSlot)
+        if (!pot.GetComponent<IngredientDragDrop>().inSlot)
         {
             Debug.Log("begindrag");
 
             Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
 
-            cookedRice.SetActive(true);
-            cookedRice.GetComponent<IngredientDragDrop>().inSlot = false;
-            cookedRice.GetComponent<RectTransform>().position = mousepos;
-            cookedRice.GetComponent<Image>().raycastTarget = false;
+            pot.SetActive(true);
+            pot.GetComponent<IngredientDragDrop>().inSlot = false;
+            pot.GetComponent<RectTransform>().position = mousepos;
+            pot.GetComponent<Image>().raycastTarget = false;
         }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (!cookedRice.GetComponent<IngredientDragDrop>().inSlot)
+        if (!pot.GetComponent<IngredientDragDrop>().inSlot)
         {
-            cookedRice.GetComponent<RectTransform>().anchoredPosition += eventData.delta / canvas.scaleFactor;
+            pot.GetComponent<RectTransform>().anchoredPosition += eventData.delta / canvas.scaleFactor;
         }
     }
 
@@ -65,9 +75,9 @@ public class Stove : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDra
     {
         //if (orangelight.activeSelf)
         //{
-        if (!cookedRice.GetComponent<IngredientDragDrop>().inSlot)
+        if (!pot.GetComponent<IngredientDragDrop>().inSlot)
         {
-            cookedRice.SetActive(true);
+            pot.SetActive(true);
             //cookedRice.SetActive(false);
         }
         //}
@@ -78,6 +88,7 @@ public class Stove : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDra
 
     }
 
+    /*
     public IEnumerator CookRice(float seconds)
     {
 
@@ -97,5 +108,6 @@ public class Stove : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDra
         //}
 
     }
+     */
 }
 

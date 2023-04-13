@@ -12,7 +12,9 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
     [SerializeField] GameObject potEmpty;
     [SerializeField] GameObject rawSpaghetti;
     [SerializeField] GameObject underwaterSpaghetti;
+    [SerializeField] GameObject saucePot;
 
+    [SerializeField] GameObject potReset;
     [SerializeField] GameObject collander;
     [SerializeField] GameObject filledCollander;
 
@@ -66,11 +68,27 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
                 //currIngredientLayer++;
                 Debug.Log(currentIngredient);
             }
+
+            else if (currentIngredient == "sauce")
+            {
+                saucePot.SetActive(true);
+                draggedObject.SetActive(false);
+            }
+
+            // fill collander with spaghetti 
             else if (currentIngredient == "potFilled")
             {
                 //collander.SetActive(false);
                 filledCollander.SetActive(true);
                 draggedObject.SetActive(false);
+
+                greenlight.SetActive(false);
+
+                if (potReset.activeSelf == false)
+                {
+                    potReset.SetActive(true);
+                }
+
             }
             else
             {
