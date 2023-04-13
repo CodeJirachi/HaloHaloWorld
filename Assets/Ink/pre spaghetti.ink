@@ -6,9 +6,9 @@
 This is so good! Tired or not, no one makes it like you do.
 
 #speaker Jayce
-Thanks, but like… it's just adding ingredients together really. 
+Thanks! But like… it's just mixing random stuff into a cup.
 
-Nothing too special or involved or anything.
+Haha, mix mix like… halo halo..
 
 #cousin neutral
 #speaker Jasmine
@@ -23,17 +23,11 @@ Every time you make me halo halo it tastes like a perfect balance of everything.
 
 #cousin neutral
 #speaker Jayce
-Well, I’m glad you like it then! You’re always welcome to stop by if you want some more.
-
-#speaker Jasmine
-You’ll be seeing a lot more of me from now on then!
-
-#speaker Jayce
-Speaking of, what brings you here? It hasn’t been that long since I saw you last time.
+Well, I’m glad you like it then!
 
 #cousin worried
 #speaker Jasmine
-Well.. I was already in the area and figured I’d stop by, just to like - check in and stuff.
+By the way, I stopped by because... well, I was already in the area and figured I’d stop by, just to like - check in and stuff.
 
 #speaker Jayce
 ...
@@ -44,60 +38,79 @@ Things just happened so fast and all...
 I felt like I should make sure you’re doing alright now that it’s been a few weeks.
 
 #speaker Jayce
-Thanks, Jasmine. I don’t know, lately I've just felt like… tired, y’know? Just from everything. 
-
-I still miss him now.
-
-It almost feels like this is all a dream, and by sleeping...
-
-...I’ll wake up and I’ll be back at home with my dad again. 
-
-Maybe even just be able to say goodbye in one of my dreams.
-
-#speaker Jasmine
-Yeah, I can’t even imagine…
-
-#speaker Jayce
-And like... I feel like I can’t even talk to my mom about anything serious anymore, not since I left.
-
-It always comes back to “Aww, anak, this is why you should come back home and live with us”-
-
-let alone the constant deadnaming she still does no matter how many times I try to remind her.
-
-Like I swear at the funeral when we were talking-
-
-she was dancing around using my name at all just to avoid calling me ‘Jayce’.
-
-It’s like she never wants to see me as anything but her perfect, idealized daughter...
-
-and in the process chooses to alienate who I am and want to be.
-
-Sorry about all that, I’m just not in a great space lately.
-
-#cousin neutral
-#speaker Jasmine
-No no, go off king, that’s why I’m here. 
-
-Glad you were able to get that off your chest. 
-
-But I did notice she wasn’t deadnaming you at the funeral. 
-
-I hate to play the devil’s advocate here, but maybe she’s finally respecting who you are? 
-
-I know she hasn’t exactly been good at that, like ever, but maybe she’s trying to fix things?
-
-#speaker Jayce
-I don't know if she’d just change her thoughts after all these years all of a sudden.
+Thanks, Jasmine. Uh, you're always welcome to stop by if you want some more halo halo!
 
 #speaker Jasmine
 ...
 
+You’ll be seeing a lot more of me from now on then…
+
 #cousin worried
+...How are you… with your mom?
+
+#speaker Jayce
+Uh… its…it could be worse. I feel like I can’t even talk to my mom about anything serious anymore, not since I left. 
+
+It always comes back to “aww, anak, this is why you should come back home and live with us,” 
+
+or “Why do you keep going to the gym? Why not go back to nursing school instead?” Like, these gains don’t happen by themselves!
+
+#cousin annoyed
+#speaker Jasmine
+Ugh, Tita Andrea does that to me, too. It’s so annoying.
+
+#cousin worried
+But that wasn’t what I meant, I was talking about…… y’know… since the anniversary is coming up.
+
+#speaker Jayce
+Wait, there’s an anniversary?? I thought Tita Andrea wasn’t even married? 
+
+#cousin annoyed
+Did I miss something? Was there a wedding I didn’t know about– I mean like who would even marry her, she ruins the lives of every guy she’s been with–
+
+#speaker Jasmine
+Oh my god NO I wasn’t talking about her, dumbass. 
+
+#cousin worried
+I meant y’know, with your dad. If you don’t want to talk about it, that’s totally okay, too.
+
+#speaker Jayce
+Ohhhhh. Oh.
+
+...
+
+I guess it hasn’t, um, been easy. I do miss him. 
+
+Mom hasn’t really talked to me about it. I think it’s been hard for her, too.
+
+I did try to call her the other day. I just said hello and she didn’t even recognize me over the phone.
+
+#cousin neutral
+#speaker Jasmine
+How would she not know it's you? Maybe being dumb runs on your side of the family or something.
+
+#speaker Jayce
+Ha ha, very funny Ate. 
+
+But I think it’s like, her brain refuses to recognize how my voice is now. I don’t know, it’s been so long but she’s still weird about me. 
+
+Has she… said anything to you?
+
+#speaker Jasmine
+No, she hasn’t said anything to me since the funeral for your dad last year. I think she only likes talking about other people rather than her own feelings. 
+
+The chismosa runs in her veins.
+
+#speaker Jayce
+Maybe that’s one thing I inherited.
+
+Anyway... I don't know if she’d just change her thoughts after all these years all of a sudden.
+
+#cousin worried
+#speaker Jasmine
 A loss like this can sometimes be a catalyst for change. 
 
-It could just be that she’s finally realizing that she can’t maintain a relationship with you-
-
-without giving you the respect you deserve.
+It could just be that she’s finally realizing that she can’t maintain a relationship with you without giving you the respect you deserve.
 
 I’m sure she’s hurting too, and wants to hold onto the family she has left.
 
@@ -107,9 +120,7 @@ Hm…
 
 Thanks again, Jasmine. 
 
-I’d like to talk to her if she’s willing to actually have a conversation-
-
-instead of the usual lecturing and patronizing.
+I’d like to talk to her if she’s willing to actually have a conversation instead of the usual lecturing and patronizing.
 
 #speaker Jasmine
 Again, why I came here in the first place. Might be worth giving that a shot, when you feel ready.
