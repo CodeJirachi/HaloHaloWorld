@@ -51,6 +51,7 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
                 //need another function for filling collander maybe??
             }
 
+            //else if (currentItem == "potFilled")
             //else if (currentIngredient == "potFilled")
             //{
             //    currentIngredient.SetActive(false);
