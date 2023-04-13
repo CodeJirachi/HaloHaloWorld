@@ -87,6 +87,8 @@ public class Stove : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDra
         yield return new WaitForSeconds(seconds);
         cookedRice.SetActive(true);
 
+        Debug.Log(currentIngredient);
+
         //while (currentItem == "filled pot" && stage <= stageMax)
         //{
         //   yield return new WaitForSeconds(seconds);

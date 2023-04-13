@@ -57,6 +57,8 @@ public class ButtonManager : MonoBehaviour
         //ensures the contents of it, closes with it
 
     }
+
+    // change these to NEXT click 
     public void leftClick()
     {
         //current scene will determine recipe 
