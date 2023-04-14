@@ -21,6 +21,10 @@ public class Tool : MonoBehaviour
         //from https://gamedevbeginner.com/make-an-object-follow-the-mouse-in-unity-in-2d/
         //rectTransform.anchoredPosition = Input.mousePosition / canvas.scaleFactor;
         Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if(this.gameObject.name == "spoon")
+        {
+            mousepos.y += 1;
+        }
         mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
         transform.position = mousepos;
     }
