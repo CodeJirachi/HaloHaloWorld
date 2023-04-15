@@ -22,6 +22,7 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
 
     public void OnDrop(PointerEventData eventData)
     {
+
         //Debug.Log("OnDrop");
         if (eventData.pointerDrag != null)
         {
@@ -46,7 +47,6 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
                     currentIngredient.SetActive(false);
                     StartCoroutine(SinkCollander(0.0f));
 
-
                 //}
                 //need another function for filling collander maybe??
             }
@@ -58,7 +58,8 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
             //    StartCoroutine(FillCollander(0.0f));
             //}
 
-            Debug.Log(currentItem);
+            
+            //Debug.Log(currentItem);
         }
     }
 
