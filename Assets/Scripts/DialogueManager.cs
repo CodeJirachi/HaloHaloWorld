@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject cousinWorried;
     public GameObject cousinHappy;
 
+    //yes there is! (kinda)
     public GameObject jayce;
 
     static Story story;
