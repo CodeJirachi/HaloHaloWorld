@@ -18,7 +18,7 @@ public class MixingTrigger : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && GameObject.Find("spoon"))
         {
             if (KM.mixingTriggerStage > 10) KM.mixingTriggerStage = 0;
             //Debug.Log("yoo");
