@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
     public string currentItem;
-    IngredientDragDrop ingredient;
+    GameObject ingredient;
+
+    GameObject ingredient_icon;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -15,6 +17,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag != null)
         {
             currentItem = eventData.pointerDrag.GetComponent<RectTransform>().name;
+            ingredient = eventData.pointerDrag;
             Debug.Log(currentItem);
 
             //ANOTHER TEMPORARY CONDITIONAL CHECK HERE- gonna generalize this to check tags also maybe
@@ -28,22 +31,15 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             }
 
             //checking if its a chopped ingredient being dragged in
-            else if(currentItem == "chili")
+            else if(currentItem == "chili" || currentItem == "garlic")
             {
-                GameObject.Find("chili icon").SetActive(true);
-                GameObject.Find("chili icon").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-                GameObject.Find("chili icon").GetComponent<IngredientDragDrop>().inSlot = true;
-                GameObject.Find("chili icon").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
-                GameObject.Find("chili icon").GetComponent<Image>().raycastTarget = true;
-            }
+                ingredient_icon = ingredient.gameObject.GetComponent<FoodDragTrigger>().ingredient_icon;
 
-            else if (currentItem == "garlic")
-            {
-                GameObject.Find("chopped garlic icon").SetActive(true);
-                GameObject.Find("chopped garlic icon").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-                GameObject.Find("chopped garlic icon").GetComponent<IngredientDragDrop>().inSlot = true;
-                GameObject.Find("chopped garlic icon").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
-                GameObject.Find("chopped garlic icon").GetComponent<Image>().raycastTarget = true;
+                ingredient_icon.SetActive(true);
+                ingredient_icon.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                ingredient_icon.GetComponent<IngredientDragDrop>().inSlot = true;
+                ingredient_icon.GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
+                ingredient_icon.GetComponent<Image>().raycastTarget = true;
             }
 
             else

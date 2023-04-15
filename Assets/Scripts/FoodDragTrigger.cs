@@ -8,8 +8,11 @@ using UnityEngine.UI;
 
 public class FoodDragTrigger : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
+    public GameObject ingredient_icon_prefab;
     public GameObject ingredient_icon;
     public Canvas canvas;
+
+    GameObject curr_icon; //the one that pertains to this container
 
     public GameObject ingredientFinalStage; //set in inspector; the sprite of the very last "stage" of the chopped ingredient (when its fully chopped)
     public int ingredientCurrStage;
@@ -19,6 +22,12 @@ public class FoodDragTrigger : MonoBehaviour, IPointerDownHandler, IBeginDragHan
     void Start()
     {
         ingredientCurrStage = 0;
+
+        //load in a new sprite icon from prefab - makes it so you can have multiple of the same thing chopped without using the same icon
+        ingredient_icon = Instantiate(ingredient_icon_prefab, canvas.transform);
+        ingredient_icon.GetComponent<RectTransform>().anchoredPosition = new Vector2(540, 120);
+        ingredient_icon.GetComponent<IngredientDragDrop>().canvas = canvas;
+        ingredient_icon.GetComponent<IngredientDragDrop>().inSlot = false;
     }
 
     void Update()

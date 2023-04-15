@@ -18,13 +18,7 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject nameBox;
 
-    //is there a better way to do this lol
-    public GameObject cousinNeutral;
-    public GameObject cousinAnnoyed;
-    public GameObject cousinWorried;
-    public GameObject cousinHappy;
-
-    //yes there is! (kinda)
+    public GameObject jasmine;
     public GameObject jayce;
 
     static Story story;
@@ -193,37 +187,28 @@ public class DialogueManager : MonoBehaviour
     //maybe separate SpriteManager script?
     void cousinSpriteChange(string expression)
     {
+        foreach (Transform child in jasmine.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
         switch (expression)
         {
             case "neutral":
-                cousinNeutral.SetActive(true);
-                cousinAnnoyed.SetActive(false);
-                cousinWorried.SetActive(false);
-                cousinHappy.SetActive(false);
-                break;
-            case "happy":
-                cousinNeutral.SetActive(false);
-                cousinAnnoyed.SetActive(false);
-                cousinWorried.SetActive(false);
-                cousinHappy.SetActive(true);
+                jasmine.transform.GetChild(0).gameObject.SetActive(true);
                 break;
             case "annoyed":
-                cousinNeutral.SetActive(false);
-                cousinAnnoyed.SetActive(true);
-                cousinWorried.SetActive(false);
-                cousinHappy.SetActive(false);
+                jasmine.transform.GetChild(1).gameObject.SetActive(true);
                 break;
             case "worried":
-                cousinNeutral.SetActive(false);
-                cousinAnnoyed.SetActive(false);
-                cousinWorried.SetActive(true);
-                cousinHappy.SetActive(false);
+                jasmine.transform.GetChild(2).gameObject.SetActive(true);
+                break;
+            case "happy":
+                jasmine.transform.GetChild(3).gameObject.SetActive(true);
                 break;
             case "none":
-                cousinNeutral.SetActive(false);
-                cousinAnnoyed.SetActive(false);
-                cousinWorried.SetActive(false);
-                cousinHappy.SetActive(false);
+                break;
+            default:
                 break;
         }
     }
@@ -251,6 +236,11 @@ public class DialogueManager : MonoBehaviour
                 break;
             case "annoyed":
                 jayce.transform.GetChild(4).gameObject.SetActive(true);
+                break;
+            case "shocked":
+                jayce.transform.GetChild(5).gameObject.SetActive(true);
+                break;
+            default:
                 break;
         }
     }
