@@ -80,7 +80,7 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
             // raw spaghetti
             if (currentIngredient == "raw spaghetti" && currIngredientLayer == 0)
             {
-                potCooking.transform.GetChild(5).gameObject.SetActive(true);
+                potCooking.transform.GetChild(3).gameObject.SetActive(true);
                 StartCoroutine(CookSpaghetti(5.0f));
                 draggedObject.SetActive(false);
                 //currentIngredient.SetActive(false);
@@ -95,7 +95,25 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
             {
                 saucePot.SetActive(true);
                 draggedObject.SetActive(false);
+<<<<<<< HEAD
                 greenlight.SetActive(true);
+=======
+            }
+
+            // fill collander with spaghetti 
+            else if (currentIngredient == "potFilled X")
+            {
+                //collander.SetActive(false);
+                filledCollander.SetActive(true);
+                draggedObject.SetActive(false);
+
+                greenlight.SetActive(false);
+
+                if (potReset.activeSelf == false)
+                {
+                    potReset.SetActive(true);
+                }
+>>>>>>> c277f3e9739564e6fc861fd4235737c75697d2c1
 
             }
  
@@ -170,8 +188,8 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
         redlight.SetActive(false);
         greenlight.SetActive(true);
 
-        potCooking.transform.GetChild(5).gameObject.SetActive(false);
-        potCooking.transform.GetChild(3).gameObject.SetActive(true);
+        potCooking.transform.GetChild(3).gameObject.SetActive(false);
+        underwaterSpaghetti.SetActive(true);
 
     }
 }
