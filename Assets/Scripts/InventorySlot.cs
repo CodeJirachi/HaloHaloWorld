@@ -17,6 +17,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             currentItem = eventData.pointerDrag.GetComponent<RectTransform>().name;
             Debug.Log(currentItem);
 
+            //** jira check these 
             //ANOTHER TEMPORARY CONDITIONAL CHECK HERE- gonna generalize this to check tags also maybe
             if(eventData.pointerDrag.GetComponent<RectTransform>().name == "rice cooker")
             {
@@ -44,6 +45,16 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 GameObject.Find("chopped garlic icon").GetComponent<IngredientDragDrop>().inSlot = true;
                 GameObject.Find("chopped garlic icon").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
                 GameObject.Find("chopped garlic icon").GetComponent<Image>().raycastTarget = true;
+            }
+            // jira try this
+            // big object
+            else if (currentItem == "potFilled X")
+            {
+                GameObject.Find("sauce spaghetti").SetActive(true);
+                GameObject.Find("sauce spaghetti").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("sauce spaghetti").GetComponent<IngredientDragDrop>().inSlot = true;
+                GameObject.Find("sauce spaghetti").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("sauce spaghetti").GetComponent<Image>().raycastTarget = true;
             }
 
             else
