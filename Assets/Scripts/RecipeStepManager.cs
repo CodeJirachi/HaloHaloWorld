@@ -36,6 +36,18 @@ public class RecipeStepManager : MonoBehaviour
     //for fusion final plating
     public GameObject plating;
 
+    //must be a better way to do this...
+    public GameObject bar1;
+    public GameObject bar2;
+    public GameObject bar3;
+    public GameObject bar4;
+    public GameObject bar5;
+    public GameObject bar6;
+    public GameObject bar7;
+    public GameObject bar8;
+    public GameObject bar9;
+    public GameObject bar10;
+
     public int step; // to check which step you're on? 
     string scene_name;
 
@@ -44,6 +56,11 @@ public class RecipeStepManager : MonoBehaviour
         //check what scene/recipe it is
         scene_name = SceneManager.GetActiveScene().name;
         step = 1;
+
+        if (scene_name == "FusionDish")
+        {
+            //set first step with rice cooking stuff
+        }
     }
 
     private void Update()
@@ -53,9 +70,11 @@ public class RecipeStepManager : MonoBehaviour
             switch(step)
             {
                 case 1: //the step of the final dish
-                    if(GameObject.Find("cooked rice icon") != null && GameObject.Find("cooked rice icon").activeSelf) //end condition
+                    //end condition
+                    if (GameObject.Find("cooked rice") != null && GameObject.Find("cooked rice").activeSelf && GameObject.Find("cooked rice").GetComponent<IngredientDragDrop>().inSlot) 
                     {
                         setButton(new string[]{"cutting board"}, new string[] { }, false);
+                        step++;
                     }
                     break;
                 default:
@@ -73,7 +92,6 @@ public class RecipeStepManager : MonoBehaviour
         nextButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(348, 0);
 
         nextButton.GetComponent<Button>().onClick.AddListener(deactivateAll);
-        nextButton.GetComponent<Button>().onClick.AddListener(delegate { step++; });
 
         //maybe a better way to do this somehow??
         foreach (string k in kitchenware)
@@ -104,12 +122,12 @@ public class RecipeStepManager : MonoBehaviour
 
     void deactivateAll()
     {
-        riceCooker.SetActive(false);
-        cuttingBoard.SetActive(false);
-        stovetop.SetActive(false);
-        mixingBowl.SetActive(false);
-        saucepan.SetActive(false);
-        plating.SetActive(false);
+        if(riceCooker != null)riceCooker.SetActive(false);
+        if (cuttingBoard != null) cuttingBoard.SetActive(false);
+        if (stovetop != null) stovetop.SetActive(false);
+        if (mixingBowl != null) mixingBowl.SetActive(false);
+        if (saucepan != null) saucepan.SetActive(false);
+        if (plating != null) plating.SetActive(false);
     }
 
 }
