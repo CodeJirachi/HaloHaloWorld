@@ -108,7 +108,7 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
     public void OnBeginDrag(PointerEventData eventData)
     {
         //without this the items generated from the stove won't move once they have been placed in the inventory bar 
-        resultIcon.GetComponent<IngredientDragDrop>().inSlot = true;
+        //resultIcon.GetComponent<IngredientDragDrop>().inSlot = true;
         
         if (greenlight.activeSelf && !resultIcon.GetComponent<IngredientDragDrop>().inSlot)
         {
