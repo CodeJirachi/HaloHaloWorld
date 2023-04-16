@@ -9,27 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 7aaaae71ff471bb41889cf328a407b45
   - enabled: 1
-    path: Assets/Scenes/VN testing.unity
-    guid: 74a87477cb60ce449bcd5e46cb870bbf
-  - enabled: 1
-    path: Assets/Scenes/HaloHalo.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/UI testing.unity
-    guid: 44062c05cb077ef4ab63ed9e9acdcaca
-  - enabled: 1
     path: Assets/Scenes/PreHaloHalo.unity
     guid: c3f0feddf91d7934e9ab3b0d62ace4f5
   - enabled: 1
-    path: Assets/Scenes/PreSpaghetti.unity
-    guid: 6806c163b9bf7ec48a1e796672424f46
-  - enabled: 1
-    path: Assets/Scenes/Spaghetti1.unity
-    guid: 36dd72aef7266aa4fb8db6f4ec2f09db
-  - enabled: 1
-    path: Assets/Scenes/Spaghetti2.unity
-    guid: 91d8cbf578aaa4c4ba551c4809f9cbcd
-  - enabled: 1
     path: Assets/Scenes/HaloHalo 1.unity
     guid: dbcc46c214613064aaab6a49278fb086
+  - enabled: 1
+    path: Assets/Scenes/PreSpaghetti.unity
+    guid: 6106b489d6440a64999fbfdfeffa219e
+  - enabled: 1
+    path: Assets/Scenes/Spaghetti 1.unity
+    guid: 60915207d8a55af41afc60183e036eca
   m_configObjects: {}

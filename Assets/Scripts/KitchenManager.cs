@@ -54,6 +54,8 @@ public class KitchenManager : MonoBehaviour
         ingredientStageMax = ingredient.GetComponent<FoodDragTrigger>().ingredientMaxStage;
 
         //EXTREMELY HACK-Y WAY
+        //if (knife.activeSelf && ingredientStage < ingredientStageMax)
+        // if (tool.activeSelf && spoon.activeSelf && ingredientStage < ingredientStageMax)
         if (knife.activeSelf && ingredientStage < ingredientStageMax)
         {
             ingredient.transform.GetChild(ingredientStage).gameObject.SetActive(false);
