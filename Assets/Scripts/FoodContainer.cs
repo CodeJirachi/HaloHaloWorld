@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class FoodContainer : MonoBehaviour, IDropHandler
 {
@@ -152,6 +155,8 @@ public class FoodContainer : MonoBehaviour, IDropHandler
                 halohalo.transform.GetChild(12).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
+
+                StartCoroutine(delaySceneSwitch(5.0f));
             }
             else
             {
@@ -165,6 +170,14 @@ public class FoodContainer : MonoBehaviour, IDropHandler
 
 
         }
+    }
+
+    private IEnumerator delaySceneSwitch(float seconds)
+    {
+
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("PreSpaghetti");
+
     }
 
 }

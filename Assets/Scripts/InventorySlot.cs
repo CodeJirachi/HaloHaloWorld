@@ -46,6 +46,25 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 GameObject.Find("chopped garlic icon").GetComponent<Image>().raycastTarget = true;
             }
 
+            else if (currentItem == "potFilled")
+            //else if (eventData.pointerDrag.GetComponent<RectTransform>().name == "spaghetti pot")
+            {
+                GameObject.Find("spaghetti pot").SetActive(true);
+                GameObject.Find("spaghetti pot").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("spaghetti pot").GetComponent<IngredientDragDrop>().inSlot = true;
+                GameObject.Find("spaghetti pot").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("spaghetti pot").GetComponent<Image>().raycastTarget = true;
+            }
+
+            else if (currentItem == "potFilled2")
+            {
+                GameObject.Find("sauce pot").SetActive(true);
+                GameObject.Find("sauce pot").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("sauce pot").GetComponent<IngredientDragDrop>().inSlot = true;
+                GameObject.Find("sauce pot").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("sauce pot").GetComponent<Image>().raycastTarget = true;
+            }
+
             else
             {
                 //set new position in slot
