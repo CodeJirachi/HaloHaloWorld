@@ -1362,6 +1362,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  hoverLabelPrefab: {fileID: 0}
 --- !u!114 &367025674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8443,13 +8444,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
   m_AnchoredPosition: {x: 10.4, y: 62.1}
   m_SizeDelta: {x: 61, y: 10}
-=======
-  m_AnchoredPosition: {x: 7.2449975, y: 63.011}
-  m_SizeDelta: {x: 75.31, y: 12.346}
->>>>>>> 9905698432e25720e01045c8ae47aea032f1975a
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752623120
 MonoBehaviour:
@@ -9399,6 +9395,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  hoverLabelPrefab: {fileID: 0}
 --- !u!114 &1861967428
 MonoBehaviour:
   m_ObjectHideFlags: 0

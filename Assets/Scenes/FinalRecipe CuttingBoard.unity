@@ -243,7 +243,7 @@ RectTransform:
   - {fileID: 681510911}
   - {fileID: 1726562999}
   m_Father: {fileID: 607260748}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -262,7 +262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed72510c4275b7429e0d89a9089802b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient_icon: {fileID: 164450051}
+  ingredient_icon_prefab: {fileID: 8565405448770184542, guid: 29dd20acafc828b418270771d39266a1, type: 3}
+  ingredient_icon: {fileID: 0}
   canvas: {fileID: 607260747}
   ingredientFinalStage: {fileID: 681510910}
   ingredientCurrStage: 0
@@ -304,6 +305,8 @@ MonoBehaviour:
   recipePage: {fileID: 658421051}
   recipeTitle: {fileID: 1137126630}
   recipeContent: {fileID: 765900018}
+  cuttingBoard: {fileID: 0}
+  mixingBowl: {fileID: 0}
 --- !u!4 &118347637
 Transform:
   m_ObjectHideFlags: 0
@@ -363,117 +366,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca26cc6d32b4e5244979e7abf61ec46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knife: {fileID: 1701381205}
-  spoon: {fileID: 1276813192}
+  knife: {fileID: 880998850}
+  spoon: {fileID: 0}
   ingredientStage: 0
   ingredientStageMax: 0
---- !u!1 &164450051
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 164450052}
-  - component: {fileID: 164450056}
-  - component: {fileID: 164450055}
-  - component: {fileID: 164450054}
-  - component: {fileID: 164450053}
-  m_Layer: 5
-  m_Name: chopped garlic icon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &164450052
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164450051}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.0000212, y: 2.0000212, z: 2.0000212}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 607260748}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 538, y: 119}
-  m_SizeDelta: {x: 32, y: 28}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!225 &164450053
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164450051}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!114 &164450054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164450051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b11688593126e03438aa9f71d15716ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 0}
-  canvasGroup: {fileID: 0}
-  canvas: {fileID: 607260747}
-  inSlot: 0
-  prev_pos: {x: 0, y: 0}
---- !u!114 &164450055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164450051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 56749550a3dd2444ba69ed85ebab9cb5, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &164450056
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164450051}
-  m_CullTransparentMesh: 1
+  mixingStage: 0
+  mixingTriggerStage: 0
 --- !u!1 &235328259
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed72510c4275b7429e0d89a9089802b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient_icon: {fileID: 1881107320}
+  ingredient_icon_prefab: {fileID: 1508449517128465755, guid: 3a606796400e36441b7452f23ec6c0fa, type: 3}
+  ingredient_icon: {fileID: 0}
   canvas: {fileID: 607260747}
   ingredientFinalStage: {fileID: 854172871}
   ingredientCurrStage: 0
@@ -1390,10 +1289,8 @@ RectTransform:
   - {fileID: 1701381206}
   - {fileID: 1276813197}
   - {fileID: 348192653}
-  - {fileID: 1881107321}
   - {fileID: 1850003677}
   - {fileID: 117471751}
-  - {fileID: 164450052}
   - {fileID: 994002605}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -2405,7 +2302,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 607260748}
-  m_RootOrder: 14
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2441,6 +2338,7 @@ MonoBehaviour:
   canvas: {fileID: 607260747}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  hoverLabelPrefab: {fileID: 0}
 --- !u!114 &994002608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4333,7 +4231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 369730.47, y: 55736.21}
+  m_AnchoredPosition: {x: -543, y: 144.7}
   m_SizeDelta: {x: 17, y: 121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1701381207
@@ -4906,7 +4804,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 607260748}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4942,6 +4840,7 @@ MonoBehaviour:
   canvas: {fileID: 607260747}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  hoverLabelPrefab: {fileID: 0}
 --- !u!114 &1850003680
 MonoBehaviour:
   m_ObjectHideFlags: 0
