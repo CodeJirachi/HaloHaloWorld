@@ -50,6 +50,8 @@ public class cookingManager : MonoBehaviour
             
             //yay this works, nice 
             recipeTitle.text = "Halo Halo";
+
+            // add multiple pages
             recipeContent.text = "You will need a Spoon for this recipe!! \n" + "1. pour Ice in the glass \n\n" +
                 "2. scoop in a layer of Beans \n\n" + "3. scoop in a few slices of Jackfruit \n\n" +
                 "4. follow with a nice layer of Nata De Coco \n\n" + "5. scoop in some Banana Slices \n\n" + "6. follow with a nice scoop of " + choiceText +

@@ -244,6 +244,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 1542314842}
 --- !u!114 &22663140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,6 +442,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 0
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 0}
 --- !u!114 &55628828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,6 +993,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 1542314842}
 --- !u!114 &165555861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3462,6 +3465,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 1542314842}
 --- !u!114 &954040042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4395,6 +4399,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 1542314842}
 --- !u!114 &1225962907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4629,6 +4634,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 1542314842}
 --- !u!114 &1268436914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4724,6 +4730,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 1542314842}
 --- !u!114 &1292712377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4891,6 +4898,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 0
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 0}
 --- !u!114 &1311039971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6004,6 +6012,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 1542314842}
 --- !u!114 &1413558732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6207,6 +6216,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 1542314842}
 --- !u!114 &1483771881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6974,6 +6984,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 1542314842}
 --- !u!114 &1662487544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7093,6 +7104,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 0}
 --- !u!114 &1719906915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7523,6 +7535,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  spoon: {fileID: 1542314842}
 --- !u!114 &1778047374
 MonoBehaviour:
   m_ObjectHideFlags: 0
