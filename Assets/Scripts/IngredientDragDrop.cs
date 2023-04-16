@@ -26,7 +26,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        //Debug.Log("OnBeginDrag");
+        Debug.Log("OnBeginDrag IngredientDragDrop");
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
     }
