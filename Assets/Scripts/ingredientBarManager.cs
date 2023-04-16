@@ -7,7 +7,6 @@ public class ingredientBarManager : MonoBehaviour
 {
     [SerializeField] GameObject bar1;
     [SerializeField] GameObject bar2;
-    [SerializeField] GameObject bar3;
     
     public void Awake()
     {
@@ -25,11 +24,6 @@ public class ingredientBarManager : MonoBehaviour
         else if (bar2.activeInHierarchy == true)
         {
             bar2.SetActive(false);
-            bar3.SetActive(true);
-        }
-        else if (bar3.activeInHierarchy == true)
-        {
-            bar3.SetActive(false);
             bar1.SetActive(true);
         }
 
@@ -40,17 +34,12 @@ public class ingredientBarManager : MonoBehaviour
         if (bar1.activeInHierarchy == true)
         {
             bar1.SetActive(false);
-            bar3.SetActive(true);
+            bar2.SetActive(true);
         }
         else if (bar2.activeInHierarchy == true)
         {
             bar2.SetActive(false);
             bar1.SetActive(true);
-        }
-        else if (bar3.activeInHierarchy == true)
-        {
-            bar3.SetActive(false);
-            bar2.SetActive(true);
         }
     }
 }

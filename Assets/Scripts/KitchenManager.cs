@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class KitchenManager : MonoBehaviour
 {
-    //public GameObject tool;
+    public GameObject tool;
     //tools: 
     public GameObject knife;
     public GameObject spoon;
@@ -24,18 +24,10 @@ public class KitchenManager : MonoBehaviour
         switch(name)
         {
             case "knife":
-                //tool.SetActive(!tool.activeSelf);
-                knife.SetActive(!knife.activeSelf);
-                break;
-            //case "spoon":
-            case "no knife":
-                knife.SetActive(false);
+                tool.SetActive(!tool.activeSelf);
                 break;
             case "spoon":
-                spoon.SetActive(!spoon.activeSelf);
-                break;
-            case "no spoon":
-                spoon.SetActive(false);
+                tool.SetActive(false);
                 break;
             //case "pot":
                 //tool.SetActive(!tool.activeSelf);
@@ -51,8 +43,6 @@ public class KitchenManager : MonoBehaviour
         ingredientStageMax = ingredient.GetComponent<FoodDragTrigger>().ingredientMaxStage;
 
         //EXTREMELY HACK-Y WAY
-        //if (knife.activeSelf && ingredientStage < ingredientStageMax)
-        // if (tool.activeSelf && spoon.activeSelf && ingredientStage < ingredientStageMax)
         if (knife.activeSelf && ingredientStage < ingredientStageMax)
         {
             ingredient.transform.GetChild(ingredientStage).gameObject.SetActive(false);
@@ -67,7 +57,5 @@ public class KitchenManager : MonoBehaviour
         }
 
     }
-
-
     
 }

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 
 public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
@@ -17,9 +16,6 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     public Vector2 prev_pos;
 
-    //spoon for halo halo 
-    public GameObject spoon;
-
     public void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -30,50 +26,15 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-
-       // if halo halo scene, 
-            // if spoon active, then allow
-        if (sceneName == "HaloHalo 1")
-        {
-            if (spoon.activeSelf == true)
-            {
-            Debug.Log("OnBeginDrag IngredientDragDrop");
-            canvasGroup.alpha = .6f;
-            canvasGroup.blocksRaycasts = false;
-            }
-        }
-        // else, not halo halo scene
-        // allow
-        else {
-        Debug.Log("OnBeginDrag IngredientDragDrop");
+        //Debug.Log("OnBeginDrag");
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
-        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-
-       // if halo halo scene, 
-            // if spoon active, then allow
-        if (sceneName == "HaloHalo 1")
-        {
-            if (spoon.activeSelf == true)
-            {
         //Debug.Log("OnDrag");
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-            }
-        }
-        // else, not halo halo scene
-        // allow
-        else
-        {
-            rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-        }
     }
 
     public void OnEndDrag(PointerEventData eventData)

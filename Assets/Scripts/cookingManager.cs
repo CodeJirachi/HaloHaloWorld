@@ -38,10 +38,9 @@ public class cookingManager : MonoBehaviour
             //
             if (ChoiceTracker.CT.choice == "Ube, always have it on me!")
             {
-                choiceText = "Ube";
+                choiceText = "ube";
                 //this works 
             }
-
             else
             {
                 //default
@@ -50,30 +49,17 @@ public class cookingManager : MonoBehaviour
             
             //yay this works, nice 
             recipeTitle.text = "Halo Halo";
-
-            // add multiple pages
-            recipeContent.text = "You will need a Spoon for this recipe!! \n" + "1. pour Ice in the glass \n\n" +
-                "2. scoop in a layer of Beans \n\n" + "3. scoop in a few slices of Jackfruit \n\n" +
-                "4. follow with a nice layer of Nata De Coco \n\n" + "5. scoop in some Banana Slices \n\n" + "6. follow with a nice scoop of " + choiceText +
-                " Ice Cream \n\n" + "7. add in some Leche Flan \n\n" + "8. spoon over a nice drizzle of Evaporated Milk \n\n" + "9. lastly, finish with a Sticko to top it all off!";
+            recipeContent.text = "1. use the ice machine to shave down ice \n" + 
+                "2. scoop shaved ice into glass \n" + "3. follow with beans \n" + "4. follow with nata de coco \n" + "5. follow with leche flan \n" + 
+                "6. follow with " + choiceText + " ice cream \n" + "7. finally, finish with a sticko on top!";
         }
          
         //spaghetti gameplay scenes: 
         //else if (sceneName == "Spaghetti0" || || || )
         else if (sceneName == "Spaghetti0")
         {
-            if (ChoiceTracker.CT.choice == "Thai Basil")
-            {
-                choiceText = "thai basil";
-            }
-            else
-            {
-                //default
-                choiceText = "???";
-            }
-
             recipeTitle.text = "Thai Style Spaghetti";
-            recipeContent.text = "I cooka da spaghett with " + choiceText;
+            recipeContent.text = "";
             // recipe + choice 
         }
          
