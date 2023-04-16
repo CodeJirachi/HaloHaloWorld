@@ -5,10 +5,8 @@
 \*knocking*
 
 #speaker Jayce
-#jayce annoyed
 Wha… is someone there?
 
-#jayce neutral
 ...
 
 #speaker clear
@@ -32,21 +30,17 @@ Interrupt? I mean sure I would, but I even waited an extra hour before droppin�
 
 #cousin neutral
 #speaker Jayce
-#jayce shocked
 Oh man, I must’ve slept through my alarms…
 
 #speaker Jasmine
 Busy huh? Well if you wanna crash for longer I can swing by another time or somethin’.
 
-#jayce neutral
 #speaker Jayce
 No, no, thank you actually. Can’t have another sleepless night ‘cause of an extended nap…
 
-#jayce excited
-How about I treat you to some <b>halo halo</b> as an apology for that, Ate?
+How about I treat you to some <b>halo halo</b> as an apology for that?
 
 #speaker Jasmine
-#jayce neutral
 Is it still an apology if I was gonna get it anyway?
 
 #speaker Jayce
@@ -88,7 +82,6 @@ Wait a second… what do we even have in the fridge again…? Right, um, let’s
 
 === after_choice ===
 #speaker Jasmine
-#cousin happy
 Sounds good!
 -> DONE
 
