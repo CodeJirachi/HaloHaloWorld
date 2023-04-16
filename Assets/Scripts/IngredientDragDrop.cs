@@ -12,12 +12,10 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
     public CanvasGroup canvasGroup;
     public Canvas canvas;
 
+    public static IngredientDragDrop ING;
     public bool inSlot;
 
     public Vector2 prev_pos;
-
-    public GameObject hoverLabelPrefab;
-    GameObject text_label;
 
     //spoon for halo halo 
     public GameObject spoon;
@@ -32,10 +30,6 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-
-        Debug.Log("OnBeginDrag");
-        Destroy(text_label);
-
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
@@ -54,7 +48,6 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
         // allow
         else {
         Debug.Log("OnBeginDrag IngredientDragDrop");
-
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
         }
@@ -62,10 +55,6 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     public void OnDrag(PointerEventData eventData)
     {
-
-        Debug.Log("OnDrag");
-        Destroy(text_label);
-
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
@@ -76,7 +65,6 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
             if (spoon.activeSelf == true)
             {
         //Debug.Log("OnDrag");
-
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
             }
         }
@@ -90,8 +78,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("OnEndDrag");
-        Destroy(text_label);
+        //Debug.Log("OnEndDrag");
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         //rectTransform.localScale = new Vector2(0, 0);
@@ -107,37 +94,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
     public void OnPointerDown(PointerEventData eventData)
     {
         //Debug.Log("OnPointerDown");
-    }
-
-    void OnMouseEnter()
-    {
-        Debug.Log(this.gameObject.name);
-        Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousepos.x += 1;
-        mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
-
-        text_label = Instantiate(hoverLabelPrefab, mousepos, Quaternion.identity, canvas.transform);
-        text_label.GetComponent<TMPro.TextMeshProUGUI>().text = "<mark=#c0bfde>" + this.gameObject.name + "</mark>"; //for background of text
-        text_label.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = this.gameObject.name;
-    }
-
-    void OnMouseOver()
-    {
-        Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousepos.x += 1;
-        mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
-        //text_label.SetActive(false);
-
-        if(text_label != null)
-        {
-            text_label.transform.position = mousepos;
-        }
-        //text_label.SetActive(true);
-    }
-
-    void OnMouseExit()
-    {
-        Destroy(text_label);
+        
     }
 
 }
