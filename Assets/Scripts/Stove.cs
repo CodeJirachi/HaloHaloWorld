@@ -43,6 +43,12 @@ public class Stove : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDra
                 pot2.SetActive(true);
             }
 
+            else if (currentItem == "empty pan")
+            {
+                currentIngredient.SetActive(false);
+                pan.SetActive(true);
+            }
+
             Debug.Log(currentItem);
         }
     }

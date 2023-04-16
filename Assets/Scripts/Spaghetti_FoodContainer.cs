@@ -18,8 +18,8 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
     [SerializeField] GameObject resultIcon;
 
     [SerializeField] GameObject potReset;
-    [SerializeField] GameObject collander;
-    [SerializeField] GameObject filledCollander;
+    //[SerializeField] GameObject collander;
+    //[SerializeField] GameObject filledCollander;
 
     //pot not done 
     public GameObject redlight;
@@ -54,6 +54,7 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
         {
             draggedObject = eventData.pointerDrag;
             currentIngredient = draggedObject.name;
+
             //currentIngredient = draggedObject.name;
             //currentItem = currentIngredient.GetComponent<RectTransform>().name;
             //currentPrevPosition = currentIngredient.GetComponent<IngredientDragDrop>().prev_pos;
@@ -106,6 +107,9 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        //without this the items generated from the stove won't move once they have been placed in the inventory bar 
+        resultIcon.GetComponent<IngredientDragDrop>().inSlot = true;
+        
         if (greenlight.activeSelf && !resultIcon.GetComponent<IngredientDragDrop>().inSlot)
         {
             Debug.Log("begindrag");
@@ -116,20 +120,26 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
             resultIcon.SetActive(true);
             resultIcon.GetComponent<IngredientDragDrop>().inSlot = false;
             resultIcon.GetComponent<RectTransform>().position = mousepos;
-            resultIcon.GetComponent<Image>().raycastTarget = false;
+            resultIcon.GetComponent<Image>().raycastTarget = false; 
         }
+
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+
+
         if (greenlight.activeSelf && !resultIcon.GetComponent<IngredientDragDrop>().inSlot)
         {
             resultIcon.GetComponent<RectTransform>().anchoredPosition += eventData.delta / canvas.scaleFactor;
         }
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        resultIcon.GetComponent<IngredientDragDrop>().inSlot = true;
+
         if (greenlight.activeSelf)
         {
             if (!resultIcon.GetComponent<IngredientDragDrop>().inSlot)
@@ -137,6 +147,10 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
                 resultIcon.SetActive(false);
             }
         }
+
+        potEmpty.SetActive(false);
+        greenlight.SetActive(false);
+         
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -149,6 +163,7 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
         redlight.SetActive(true);
 
         yield return new WaitForSeconds(seconds);
+        
         redlight.SetActive(false);
         greenlight.SetActive(true);
 
