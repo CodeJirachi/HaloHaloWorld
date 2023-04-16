@@ -244,6 +244,8 @@ MonoBehaviour:
   recipePage: {fileID: 658421051}
   recipeTitle: {fileID: 1137126630}
   recipeContent: {fileID: 765900018}
+  cuttingBoard: {fileID: 0}
+  mixingBowl: {fileID: 0}
 --- !u!4 &118347637
 Transform:
   m_ObjectHideFlags: 0
@@ -304,9 +306,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knife: {fileID: 880998850}
-  chili: {fileID: 348192652}
+  spoon: {fileID: 0}
   ingredientStage: 0
   ingredientStageMax: 0
+  mixingStage: 0
+  mixingTriggerStage: 0
 --- !u!1 &235328259
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed72510c4275b7429e0d89a9089802b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingredient_icon_prefab: {fileID: 0}
   ingredient_icon: {fileID: 1881107320}
   canvas: {fileID: 607260747}
   ingredientFinalStage: {fileID: 854172871}
@@ -2722,6 +2727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chili: {fileID: 348192652}
+  garlic: {fileID: 0}
   currentItemName: 
 --- !u!225 &1207027919
 CanvasGroup:
@@ -3453,7 +3459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1701381206
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3471,7 +3477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 369730.47, y: 55736.21}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 17, y: 121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1701381207
@@ -3863,6 +3869,7 @@ MonoBehaviour:
   canvas: {fileID: 607260747}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
+  hoverLabelPrefab: {fileID: 0}
 --- !u!114 &1850003680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3970,6 +3977,7 @@ MonoBehaviour:
   canvas: {fileID: 607260747}
   inSlot: 0
   prev_pos: {x: 0, y: 0}
+  hoverLabelPrefab: {fileID: 0}
 --- !u!114 &1881107324
 MonoBehaviour:
   m_ObjectHideFlags: 0

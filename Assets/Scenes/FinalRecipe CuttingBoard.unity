@@ -305,6 +305,8 @@ MonoBehaviour:
   recipePage: {fileID: 658421051}
   recipeTitle: {fileID: 1137126630}
   recipeContent: {fileID: 765900018}
+  cuttingBoard: {fileID: 0}
+  mixingBowl: {fileID: 0}
 --- !u!4 &118347637
 Transform:
   m_ObjectHideFlags: 0
