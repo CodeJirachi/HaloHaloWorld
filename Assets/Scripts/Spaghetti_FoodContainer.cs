@@ -14,10 +14,6 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
     [SerializeField] GameObject underwaterSpaghetti;
     [SerializeField] GameObject saucePot;
 
-    // populate the new ingredient from the pot
-    // result of cooking stage 
-    [SerializeField] GameObject resultIcon;
-
     [SerializeField] GameObject potReset;
     [SerializeField] GameObject collander;
     [SerializeField] GameObject filledCollander;
@@ -59,24 +55,6 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
             //currentItem = currentIngredient.GetComponent<RectTransform>().name;
             //currentPrevPosition = currentIngredient.GetComponent<IngredientDragDrop>().prev_pos;
 
-            // fill collander with spaghetti 
-            /*
-            if (currentIngredient == "spaghetti pot")
-            {
-                //collander.SetActive(false);
-                filledCollander.SetActive(true);
-                draggedObject.SetActive(false);
-
-                //greenlight.SetActive(false);
-
-                if (potReset.activeSelf == false)
-                {
-                    potReset.SetActive(true);
-                }
-
-            }
-             * */
-
             // raw spaghetti
             if (currentIngredient == "raw spaghetti" && currIngredientLayer == 0)
             {
@@ -96,12 +74,19 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
                 saucePot.SetActive(true);
                 draggedObject.SetActive(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 greenlight.SetActive(true);
 =======
             }
 
             // fill collander with spaghetti 
             else if (currentIngredient == "potFilled X")
+=======
+            }
+
+            // fill collander with spaghetti 
+            else if (currentIngredient == "potFilled")
+>>>>>>> parent of ee534a2 (spaghetti works but slight bug)
             {
                 //collander.SetActive(false);
                 filledCollander.SetActive(true);
@@ -113,10 +98,12 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
                 {
                     potReset.SetActive(true);
                 }
+<<<<<<< HEAD
 >>>>>>> c277f3e9739564e6fc861fd4235737c75697d2c1
+=======
+>>>>>>> parent of ee534a2 (spaghetti works but slight bug)
 
             }
- 
             else
             {
                 Debug.Log(currentIngredient);
@@ -128,50 +115,37 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
-            if (greenlight.activeSelf && resultIcon.GetComponent<IngredientDragDrop>().inSlot)
-            {
-                Debug.Log("begindrag");
+        if (greenlight.activeSelf && !underwaterSpaghetti.GetComponent<IngredientDragDrop>().inSlot)
+        {
+            Debug.Log("begindrag");
 
-                Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
+            Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
 
-                resultIcon.SetActive(true);
-                
-                resultIcon.GetComponent<IngredientDragDrop>().inSlot = false;
-                resultIcon.GetComponent<RectTransform>().position = mousepos;
-                resultIcon.GetComponent<Image>().raycastTarget = false;
-            }
-
-            //without this it wont drag after apparently idfk    
-            //resultIcon.GetComponent<IngredientDragDrop>().inSlot = true;
+            underwaterSpaghetti.SetActive(true);
+            underwaterSpaghetti.GetComponent<IngredientDragDrop>().inSlot = false;
+            underwaterSpaghetti.GetComponent<RectTransform>().position = mousepos;
+            underwaterSpaghetti.GetComponent<Image>().raycastTarget = false;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        //resultIcon.GetComponent<IngredientDragDrop>().inSlot = true;
-
-        if (greenlight.activeSelf && !resultIcon.GetComponent<IngredientDragDrop>().inSlot)
+        if (greenlight.activeSelf && !underwaterSpaghetti.GetComponent<IngredientDragDrop>().inSlot)
         {
-            resultIcon.GetComponent<RectTransform>().anchoredPosition += eventData.delta / canvas.scaleFactor;
-
+            underwaterSpaghetti.GetComponent<RectTransform>().anchoredPosition += eventData.delta / canvas.scaleFactor;
         }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        resultIcon.GetComponent<IngredientDragDrop>().inSlot = true;
-        potEmpty.SetActive(false);
-       /*if (greenlight.activeSelf)
+        if (greenlight.activeSelf)
         {
-            if (!resultIcon.GetComponent<IngredientDragDrop>().inSlot)
+            if (!underwaterSpaghetti.GetComponent<IngredientDragDrop>().inSlot)
             {
-                resultIcon.SetActive(false);
+                underwaterSpaghetti.SetActive(false);
             }
         }
-        
-       
-        */
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -184,7 +158,6 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
         redlight.SetActive(true);
 
         yield return new WaitForSeconds(seconds);
-
         redlight.SetActive(false);
         greenlight.SetActive(true);
 
