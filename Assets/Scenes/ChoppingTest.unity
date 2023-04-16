@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knife: {fileID: 880998850}
-  spoon: {fileID: 0}
+  chili: {fileID: 348192652}
   ingredientStage: 0
   ingredientStageMax: 0
 --- !u!1 &235328259
@@ -2722,7 +2722,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chili: {fileID: 348192652}
-  garlic: {fileID: 0}
   currentItemName: 
 --- !u!225 &1207027919
 CanvasGroup:
