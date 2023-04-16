@@ -2571,7 +2571,6 @@ GameObject:
   - component: {fileID: 660433115}
   - component: {fileID: 660433114}
   - component: {fileID: 660433116}
-  - component: {fileID: 660433118}
   - component: {fileID: 660433119}
   m_Layer: 5
   m_Name: potFilled
@@ -2657,23 +2656,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &660433118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660433111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b11688593126e03438aa9f71d15716ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 0}
-  canvasGroup: {fileID: 0}
-  canvas: {fileID: 1368548038}
-  inSlot: 1
-  prev_pos: {x: 0, y: 0}
 --- !u!114 &660433119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2691,6 +2673,7 @@ MonoBehaviour:
   rawSpaghetti: {fileID: 785321579}
   underwaterSpaghetti: {fileID: 1752623118}
   saucePot: {fileID: 0}
+  resultIcon: {fileID: 0}
   potReset: {fileID: 0}
   collander: {fileID: 0}
   filledCollander: {fileID: 0}
@@ -6052,7 +6035,6 @@ GameObject:
   - component: {fileID: 1328329282}
   - component: {fileID: 1328329281}
   - component: {fileID: 1328329280}
-  - component: {fileID: 1328329279}
   - component: {fileID: 1328329278}
   m_Layer: 5
   m_Name: potFilled2
@@ -6101,6 +6083,7 @@ MonoBehaviour:
   rawSpaghetti: {fileID: 0}
   underwaterSpaghetti: {fileID: 0}
   saucePot: {fileID: 858022370}
+  resultIcon: {fileID: 0}
   potReset: {fileID: 0}
   collander: {fileID: 0}
   filledCollander: {fileID: 0}
@@ -6110,23 +6093,6 @@ MonoBehaviour:
   potCooking: {fileID: 1328329276}
   panCooking: {fileID: 0}
   currentIngredient: 
---- !u!114 &1328329279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328329276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b11688593126e03438aa9f71d15716ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 0}
-  canvasGroup: {fileID: 0}
-  canvas: {fileID: 1368548038}
-  inSlot: 1
-  prev_pos: {x: 0, y: 0}
 --- !u!225 &1328329280
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8111,6 +8077,7 @@ MonoBehaviour:
   rawSpaghetti: {fileID: 1228478073}
   underwaterSpaghetti: {fileID: 1657802801}
   saucePot: {fileID: 0}
+  resultIcon: {fileID: 0}
   potReset: {fileID: 0}
   collander: {fileID: 0}
   filledCollander: {fileID: 0}
@@ -8582,6 +8549,7 @@ MonoBehaviour:
   rawSpaghetti: {fileID: 0}
   underwaterSpaghetti: {fileID: 0}
   saucePot: {fileID: 0}
+  resultIcon: {fileID: 0}
   potReset: {fileID: 882591801}
   collander: {fileID: 1861967424}
   filledCollander: {fileID: 543286865}

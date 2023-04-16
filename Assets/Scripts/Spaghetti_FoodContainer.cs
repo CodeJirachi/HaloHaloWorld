@@ -14,6 +14,9 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
     [SerializeField] GameObject underwaterSpaghetti;
     [SerializeField] GameObject saucePot;
 
+    // result that comes out of pot and pan 
+    [SerializeField] GameObject resultIcon;
+
     [SerializeField] GameObject potReset;
     [SerializeField] GameObject collander;
     [SerializeField] GameObject filledCollander;
@@ -76,6 +79,7 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
             }
 
             // fill collander with spaghetti 
+            /*
             else if (currentIngredient == "potFilled")
             {
                 //collander.SetActive(false);
@@ -88,6 +92,7 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
                 {
                     potReset.SetActive(true);
                 }
+             */
 
             }
             else
@@ -96,30 +101,30 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
             }
 
         }
-    }
+    
 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (greenlight.activeSelf && !underwaterSpaghetti.GetComponent<IngredientDragDrop>().inSlot)
+        if (greenlight.activeSelf && !resultIcon.GetComponent<IngredientDragDrop>().inSlot)
         {
             Debug.Log("begindrag");
 
             Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
 
-            underwaterSpaghetti.SetActive(true);
-            underwaterSpaghetti.GetComponent<IngredientDragDrop>().inSlot = false;
-            underwaterSpaghetti.GetComponent<RectTransform>().position = mousepos;
-            underwaterSpaghetti.GetComponent<Image>().raycastTarget = false;
+            resultIcon.SetActive(true);
+            resultIcon.GetComponent<IngredientDragDrop>().inSlot = false;
+            resultIcon.GetComponent<RectTransform>().position = mousepos;
+            resultIcon.GetComponent<Image>().raycastTarget = false;
         }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (greenlight.activeSelf && !underwaterSpaghetti.GetComponent<IngredientDragDrop>().inSlot)
+        if (greenlight.activeSelf && !resultIcon.GetComponent<IngredientDragDrop>().inSlot)
         {
-            underwaterSpaghetti.GetComponent<RectTransform>().anchoredPosition += eventData.delta / canvas.scaleFactor;
+            resultIcon.GetComponent<RectTransform>().anchoredPosition += eventData.delta / canvas.scaleFactor;
         }
     }
 
@@ -127,9 +132,9 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
     {
         if (greenlight.activeSelf)
         {
-            if (!underwaterSpaghetti.GetComponent<IngredientDragDrop>().inSlot)
+            if (!resultIcon.GetComponent<IngredientDragDrop>().inSlot)
             {
-                underwaterSpaghetti.SetActive(false);
+                resultIcon.SetActive(false);
             }
         }
     }
@@ -152,4 +157,5 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
 
     }
 }
+
 
