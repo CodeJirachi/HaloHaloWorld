@@ -27,6 +27,12 @@ public class RecipeStepManager : MonoBehaviour
     //for stove cooking
     public GameObject stovetop;
 
+    //for pot cookin
+    public GameObject pot;
+
+    //for pan frying
+    public GameObject pan;
+
     //for mixing 1
     public GameObject mixingBowl;
 
@@ -37,6 +43,7 @@ public class RecipeStepManager : MonoBehaviour
     public GameObject plating;
 
     //must be a better way to do this...
+    //SET THESE IN INSPECTOR for each individual recipe - Final Recipe's bars will look different than Spaghetti's
     public GameObject bar1;
 
     public GameObject bar2;
@@ -54,6 +61,7 @@ public class RecipeStepManager : MonoBehaviour
 
     public GameObject bar10;
 
+    public GameObject toolbar;
     public GameObject barEmpty;
 
     public int step; // to check which step you're on? 
@@ -63,12 +71,7 @@ public class RecipeStepManager : MonoBehaviour
     {
         //check what scene/recipe it is
         scene_name = SceneManager.GetActiveScene().name;
-        step = 1;
-
-        if (scene_name == "FusionDish")
-        {
-            //set first step with rice cooking stuff
-        }
+        step = 0;
     }
 
     private void Update()
@@ -77,7 +80,18 @@ public class RecipeStepManager : MonoBehaviour
         {
             switch(step)
             {
-                case 1: //the step of the final dish
+                //each case is a step of the final dish
+                case 0:
+                    //set first step with rice cooking stuff
+                    riceCooker.SetActive(true);
+
+                    //set inventory
+                    bar1.SetActive(true);
+                    barEmpty.SetActive(true);
+                    toolbar.SetActive(true);
+
+                    break;
+                case 1: 
                     //end condition
                     if (GameObject.Find("cooked rice") != null && GameObject.Find("cooked rice").activeSelf && GameObject.Find("cooked rice").GetComponent<IngredientDragDrop>().inSlot) 
                     {
@@ -86,12 +100,16 @@ public class RecipeStepManager : MonoBehaviour
                     }
 
                     //set up inventory here
-                    
-
                     break;
                 default:
                     break;
             }
+        }
+
+        else if(scene_name == "Spaghetti 1")
+        {
+            //do spaghetti steps + checks here
+            //mirror what was done for Fusion Dish, just change it to fit your steps
         }
     }
 
@@ -140,6 +158,22 @@ public class RecipeStepManager : MonoBehaviour
         if (mixingBowl != null) mixingBowl.SetActive(false);
         if (saucepan != null) saucepan.SetActive(false);
         if (plating != null) plating.SetActive(false);
+    }
+
+    void deactivateAllBars()
+    {
+        if (bar1 != null) bar1.SetActive(false);
+        if (bar2 != null) bar2.SetActive(false);
+        if (bar3 != null) bar3.SetActive(false);
+        if (bar4 != null) bar4.SetActive(false);
+        if (bar5 != null) bar5.SetActive(false);
+        if (bar6 != null) bar6.SetActive(false);
+        if (bar7 != null) bar7.SetActive(false);
+        if (bar8 != null) bar8.SetActive(false);
+        if (bar9 != null) bar9.SetActive(false);
+        if (bar10 != null) bar10.SetActive(false);
+        if (toolbar != null) toolbar.SetActive(false);
+        if (barEmpty != null) barEmpty.SetActive(false);
     }
 
 }
