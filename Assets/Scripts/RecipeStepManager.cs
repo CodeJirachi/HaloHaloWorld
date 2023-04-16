@@ -38,15 +38,23 @@ public class RecipeStepManager : MonoBehaviour
 
     //must be a better way to do this...
     public GameObject bar1;
+
     public GameObject bar2;
     public GameObject bar3;
+
     public GameObject bar4;
     public GameObject bar5;
+
     public GameObject bar6;
     public GameObject bar7;
+
     public GameObject bar8;
+
     public GameObject bar9;
+
     public GameObject bar10;
+
+    public GameObject barEmpty;
 
     public int step; // to check which step you're on? 
     string scene_name;
@@ -76,6 +84,10 @@ public class RecipeStepManager : MonoBehaviour
                         setButton(new string[]{"cutting board"}, new string[] { }, false);
                         step++;
                     }
+
+                    //set up inventory here
+                    
+
                     break;
                 default:
                     break;

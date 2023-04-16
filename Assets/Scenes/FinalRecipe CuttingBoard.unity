@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed72510c4275b7429e0d89a9089802b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient_icon_prefab: {fileID: 8006867175786275040, guid: 3a606796400e36441b7452f23ec6c0fa, type: 3}
+  ingredient_icon_prefab: {fileID: 1508449517128465755, guid: 3a606796400e36441b7452f23ec6c0fa, type: 3}
   ingredient_icon: {fileID: 0}
   canvas: {fileID: 607260747}
   ingredientFinalStage: {fileID: 854172871}
