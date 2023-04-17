@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Recipe/FusionDish Boiling Lechon.unity
     guid: 643d8253a8d353844b4083506144cd35
+  - enabled: 1
+    path: Assets/Scenes/Final Recipe/FusionDish MixingNamPrikPla.unity
+    guid: d9982c84e1d41974fb17caacc769d9ea
   m_configObjects: {}

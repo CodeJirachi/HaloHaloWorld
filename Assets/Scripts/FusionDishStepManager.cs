@@ -15,11 +15,13 @@ public class FusionDishStepManager : MonoBehaviour
 
     string scene_name;
     bool stepFinished; //for end condition of scene
+    public bool finishTrigger;
 
     void Start()
     {
         scene_name = SceneManager.GetActiveScene().name;
         stepFinished = false;
+        finishTrigger = false;
     }
 
     void Update()
@@ -35,6 +37,17 @@ public class FusionDishStepManager : MonoBehaviour
                 nextButton = Instantiate(nextButtonPrefab, canvas.transform);
                 nextButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(348, 0);
                 nextButton.GetComponent<Button>().onClick.AddListener(delegate { SceneManager.LoadScene("FusionDish Boiling Lechon"); });
+            }
+        } else if(scene_name == "FusionDish Boiling Lechon")
+        {
+            if(!stepFinished && finishTrigger) {
+                stepFinished = true;
+                finishTrigger=false;
+                Debug.Log("yooosakdo"); 
+
+                nextButton = Instantiate(nextButtonPrefab, canvas.transform);
+                nextButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(348, 0);
+                nextButton.GetComponent<Button>().onClick.AddListener(delegate { SceneManager.LoadScene("FusionDish MixingNamPrikPla"); });
             }
         }
     }

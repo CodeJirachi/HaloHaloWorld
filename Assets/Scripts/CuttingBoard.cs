@@ -20,16 +20,18 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
         currentItem = eventData.pointerDrag;
         currentItemName = currentItem.GetComponent<RectTransform>().name;
 
-        if (currentItemName == "red chili icon")
+        Debug.Log("hi");
+
+        if (currentItemName == "red thai chili")
         {
             chili.SetActive(true);
             currentItem.SetActive(false);
-        } else if (currentItemName == "garlic icon")
+        } else if (currentItemName == "garlic")
         {
             garlic.SetActive(true);
             currentItem.SetActive(false);
         }
-        else if (currentItemName == "green onion icon")
+        else if (currentItemName == "green onion")
         {
             greenOnion.SetActive(true);
             currentItem.SetActive(false);

@@ -18,6 +18,8 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject cuttingBoard;
     [SerializeField] GameObject mixingBowl;
 
+    public GameObject sinkFront; //for hiding sink front when cutting board opens
+
     public void Awake()
     {
         //for testing choice tracking
@@ -114,6 +116,7 @@ public class ButtonManager : MonoBehaviour
         {
             case "cutting board":
                 cuttingBoard.SetActive(true);
+                sinkFront.SetActive(false);
                 break;
             case "mixing bowl":
                 mixingBowl.SetActive(true);
@@ -126,9 +129,10 @@ public class ButtonManager : MonoBehaviour
 
     public void closeView()
     {
-        if(GameObject.Find("cutting board top view").activeInHierarchy)
+        if(GameObject.Find("cutting board open").activeInHierarchy)
         {
-            GameObject.Find("cutting board top view").SetActive(false);
+            GameObject.Find("cutting board open").SetActive(false);
+            sinkFront.SetActive(true);
         }
     }
 
