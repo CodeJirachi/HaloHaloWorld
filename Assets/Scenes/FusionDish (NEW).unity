@@ -248,9 +248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5066f1598b159d44ba753cf6a8345a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar1: {fileID: 0}
-  bar2: {fileID: 0}
-  bar3: {fileID: 0}
+  bar1: {fileID: 1467739249}
+  bar2: {fileID: 1929818351}
+  bar3: {fileID: 1013660465}
 --- !u!1 &21442855
 GameObject:
   m_ObjectHideFlags: 0
@@ -6475,7 +6475,7 @@ RectTransform:
   - {fileID: 326239060}
   - {fileID: 1576242326}
   m_Father: {fileID: 1368548039}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6619,7 +6619,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 963784764}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 12417757}
+        m_TargetAssemblyTypeName: ingredientBarManager, Assembly-CSharp
+        m_MethodName: upArrow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &963784764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9608,8 +9620,8 @@ RectTransform:
   - {fileID: 741181387}
   - {fileID: 392453335}
   - {fileID: 309254937}
-  - {fileID: 279844905}
   - {fileID: 941082122}
+  - {fileID: 279844905}
   - {fileID: 1467739250}
   - {fileID: 1754487545}
   - {fileID: 1891879347}
@@ -11055,6 +11067,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1156378197}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1614663308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1614663310}
+  - component: {fileID: 1614663309}
+  m_Layer: 0
+  m_Name: FusionDishStepManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1614663309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614663308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7da70befb51fe1448b1d65628cd831d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  step: 0
+  canvas: {fileID: 1368548038}
+  nextButtonPrefab: {fileID: 8980869814197757511, guid: ed7ff6f723777864dbb56ea129c79bc5, type: 3}
+--- !u!4 &1614663310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614663308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.188056, y: 0.7320311, z: -0.039282706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1639433489
 GameObject:
@@ -13981,7 +14040,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2113322268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 12417757}
+        m_TargetAssemblyTypeName: ingredientBarManager, Assembly-CSharp
+        m_MethodName: downArrow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2113322268
 MonoBehaviour:
   m_ObjectHideFlags: 0
