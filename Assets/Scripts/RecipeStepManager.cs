@@ -64,14 +64,19 @@ public class RecipeStepManager : MonoBehaviour
     public GameObject toolbar;
     public GameObject barEmpty;
 
+    public GameObject inventoryUp;
+    public GameObject inventoryDown;
+
     public int step; // to check which step you're on? 
     string scene_name;
+    bool isSetup; //to help with setting up recipe step only once
 
     void Start()
     {
         //check what scene/recipe it is
         scene_name = SceneManager.GetActiveScene().name;
         step = 0;
+        isSetup = false;
     }
 
     private void Update()
@@ -82,24 +87,86 @@ public class RecipeStepManager : MonoBehaviour
             {
                 //each case is a step of the final dish
                 case 0:
-                    //set first step with rice cooking stuff
-                    riceCooker.SetActive(true);
-
-                    //set inventory
-                    bar1.SetActive(true);
-                    barEmpty.SetActive(true);
-                    toolbar.SetActive(true);
-
-                    break;
-                case 1: 
                     //end condition
-                    if (GameObject.Find("cooked rice") != null && GameObject.Find("cooked rice").activeSelf && GameObject.Find("cooked rice").GetComponent<IngredientDragDrop>().inSlot) 
+                    if (GameObject.Find("cooked rice") != null && GameObject.Find("cooked rice").activeSelf && GameObject.Find("cooked rice").GetComponent<IngredientDragDrop>().inSlot)
                     {
-                        setButton(new string[]{"cutting board"}, new string[] { }, false);
-                        step++;
+                        isSetup = false;
+                        setButton(new string[] { "cutting board" }, new string[] { }, false);
+                        incrementStep();
                     }
 
-                    //set up inventory here
+                    if (!isSetup)
+                    {
+                        //set first step with rice cooking stuff
+                        riceCooker.SetActive(true);
+
+                        //set inventory
+                        bar1.SetActive(true);
+                        //barEmpty.SetActive(true);
+                        //toolbar.SetActive(true);
+                        isSetup = true;
+                    }
+
+                    //horrid, horrid code to copy for every step
+                    //set up inventory buttons here
+                    if (bar1.activeInHierarchy)
+                    {
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { toolbar.SetActive(true); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { barEmpty.SetActive(true); });
+
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { bar1.SetActive(false); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { bar1.SetActive(false); });
+                    } else if(barEmpty.activeInHierarchy)
+                    {
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { bar1.SetActive(true); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { toolbar.SetActive(true); });
+
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { barEmpty.SetActive(false); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { barEmpty.SetActive(false); });
+                    } else if(toolbar.activeInHierarchy)
+                    {
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { barEmpty.SetActive(true); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { bar1.SetActive(true); });
+
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { toolbar.SetActive(false); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { toolbar.SetActive(false); });
+                    }
+
+                    break;
+
+                case 1:
+                    if (!isSetup) //why doesnt this work?
+                    {
+                        Debug.Log("???");
+                        bar2.SetActive(true);
+                        isSetup = true;
+                    }
+
+                    if (bar2.activeInHierarchy)
+                    {
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { toolbar.SetActive(true); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { bar3.SetActive(true); });
+
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { bar2.SetActive(false); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { bar2.SetActive(false); });
+                    }
+                    else if (bar3.activeInHierarchy)
+                    {
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { bar2.SetActive(true); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { toolbar.SetActive(true); });
+
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { bar3.SetActive(false); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { bar3.SetActive(false); });
+                    }
+                    else if (toolbar.activeInHierarchy)
+                    {
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { bar3.SetActive(true); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { bar2.SetActive(true); });
+
+                        inventoryUp.GetComponent<Button>().onClick.AddListener(delegate { toolbar.SetActive(false); });
+                        inventoryDown.GetComponent<Button>().onClick.AddListener(delegate { toolbar.SetActive(false); });
+                    }
+
                     break;
                 default:
                     break;
@@ -122,6 +189,8 @@ public class RecipeStepManager : MonoBehaviour
         nextButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(348, 0);
 
         nextButton.GetComponent<Button>().onClick.AddListener(deactivateAll);
+        nextButton.GetComponent<Button>().onClick.AddListener(deactivateAllBars);
+        nextButton.GetComponent<Button>().onClick.AddListener(removeListenersFromInventory);
 
         //maybe a better way to do this somehow??
         foreach (string k in kitchenware)
@@ -148,6 +217,7 @@ public class RecipeStepManager : MonoBehaviour
                     break;
             }
         }
+
     }
 
     void deactivateAll()
@@ -176,4 +246,14 @@ public class RecipeStepManager : MonoBehaviour
         if (barEmpty != null) barEmpty.SetActive(false);
     }
 
+    void removeListenersFromInventory()
+    {
+        inventoryUp.GetComponent<Button>().onClick.RemoveAllListeners();
+        inventoryDown.GetComponent<Button>().onClick.RemoveAllListeners();
+    }
+
+    void incrementStep()
+    {
+        step++;
+    }
 }
