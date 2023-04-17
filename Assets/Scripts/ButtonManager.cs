@@ -32,8 +32,8 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler
         menuHover.Play();
     }
 
-    //[SerializeField] GameObject cuttingBoard;
-    //[SerializeField] GameObject mixingBowl;
+    [SerializeField] GameObject cuttingBoard;
+    [SerializeField] GameObject mixingBowl;
 
 
     public void Awake()
