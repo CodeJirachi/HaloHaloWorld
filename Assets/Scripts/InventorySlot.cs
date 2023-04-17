@@ -31,7 +31,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             }
 
             //checking if its a chopped ingredient being dragged in
-            else if(currentItem == "chili" || currentItem == "garlic")
+            else if(currentItem == "chili" || currentItem == "garlic" || currentItem == "green onion")
             {
                 ingredient_icon = ingredient.gameObject.GetComponent<FoodDragTrigger>().ingredient_icon;
 
@@ -40,6 +40,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 ingredient_icon.GetComponent<IngredientDragDrop>().inSlot = true;
                 ingredient_icon.GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
                 ingredient_icon.GetComponent<Image>().raycastTarget = true;
+                ingredient_icon.gameObject.transform.SetParent(this.gameObject.transform.parent.parent, false);
             }
 
             else if (currentItem == "potFilled")

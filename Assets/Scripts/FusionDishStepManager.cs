@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class FusionDishStepManager : MonoBehaviour
 {
     public static FusionDishStepManager FSM; //for accessing this class's variables
-
-    public int step;
     public Canvas canvas;
 
     public GameObject nextButtonPrefab;
@@ -21,7 +19,6 @@ public class FusionDishStepManager : MonoBehaviour
     void Start()
     {
         scene_name = SceneManager.GetActiveScene().name;
-        step = 0;
         stepFinished = false;
     }
 

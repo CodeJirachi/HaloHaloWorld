@@ -117,12 +117,19 @@ public class ButtonManager : MonoBehaviour
                 break;
             case "mixing bowl":
                 mixingBowl.SetActive(true);
+                self.SetActive(false);
                 break;
             case "saucepan":
                 break;
         }
+    }
 
-        self.SetActive(false);
+    public void closeView()
+    {
+        if(GameObject.Find("cutting board top view").activeInHierarchy)
+        {
+            GameObject.Find("cutting board top view").SetActive(false);
+        }
     }
 
     public void startGame(Object nextScene)
