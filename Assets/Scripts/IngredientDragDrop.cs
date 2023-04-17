@@ -56,7 +56,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
         */
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
-        }
+        
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -66,21 +66,21 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
        // if halo halo scene, 
             // if spoon active, then allow
-        if (sceneName == "HaloHalo 1")
-        {
-            if (spoon.activeSelf == true)
-            {
+        //if (sceneName == "HaloHalo 1")
+        //{
+        //    if (spoon.activeSelf == true)
+        //    {
         //Debug.Log("OnDrag");
         Destroy(text_label);
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-            }
-        }
+        //    }
+        //}
         // else, not halo halo scene
         // allow
-        else
-        {
-            rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-        }
+        //else
+        //{
+         //   rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+       // }
     }
 
     public void OnEndDrag(PointerEventData eventData)
