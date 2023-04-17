@@ -88,6 +88,8 @@ public class DialogueManager : MonoBehaviour
                         break;
                     case 2:
                         //spaghetti
+                        SceneManager.LoadScene("Spaghetti 1");
+                        Debug.Log("scene is " + ChoiceTracker.CT.scene);
                         break;
                 }
             }
