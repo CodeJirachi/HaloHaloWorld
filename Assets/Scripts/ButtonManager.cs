@@ -15,6 +15,9 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject recipeTitle;
     [SerializeField] GameObject recipeContent;
 
+    [SerializeField] GameObject cuttingBoard;
+    [SerializeField] GameObject mixingBowl;
+
     public void Awake()
     {
         //for testing choice tracking
@@ -102,6 +105,24 @@ public class ButtonManager : MonoBehaviour
     public void openSettings()
     {
         //use prefab of settings/menus, or LoadLevelAdditive
+    }
+
+    //for opening the chopping board/mixing bowl bird's eye view
+    public void openView(GameObject self)
+    {  
+        switch(self.name)
+        {
+            case "cutting board":
+                cuttingBoard.SetActive(true);
+                break;
+            case "mixing bowl":
+                mixingBowl.SetActive(true);
+                break;
+            case "saucepan":
+                break;
+        }
+
+        self.SetActive(false);
     }
 
     public void startGame(Object nextScene)

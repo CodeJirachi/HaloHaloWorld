@@ -12,6 +12,7 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
     //TEMPORARY SOLUTION - how to get the game object without having to put it in inspector? maybe make it active off screen and change its position?
     public GameObject chili;
     public GameObject garlic;
+    public GameObject greenOnion;
     public string currentItemName;
 
     public void OnDrop(PointerEventData eventData)
@@ -26,6 +27,11 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
         } else if (currentItemName == "garlic icon")
         {
             garlic.SetActive(true);
+            currentItem.SetActive(false);
+        }
+        else if (currentItemName == "green onion icon")
+        {
+            greenOnion.SetActive(true);
             currentItem.SetActive(false);
         }
     }
