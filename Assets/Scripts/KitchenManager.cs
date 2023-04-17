@@ -14,8 +14,17 @@ public class KitchenManager : MonoBehaviour
     //these are public just so i can see for testing
     public int ingredientStage;
     public int ingredientStageMax;
+
+    public int mixingStage; //for the sprite changing of the mixing
+    public int mixingTriggerStage; //for the star triggers
+
+    public void Start()
+    {
+        mixingStage = 0;
+        mixingTriggerStage = 0;
+    }
     //audrey code is above this
-    
+
 
     //affected by tool Item not needed in kitchen manager
 
@@ -24,18 +33,12 @@ public class KitchenManager : MonoBehaviour
         switch(name)
         {
             case "knife":
-                //tool.SetActive(!tool.activeSelf);
                 knife.SetActive(!knife.activeSelf);
-                break;
-            //case "spoon":
-            case "no knife":
-                knife.SetActive(false);
+                spoon.SetActive(false);
                 break;
             case "spoon":
                 spoon.SetActive(!spoon.activeSelf);
-                break;
-            case "no spoon":
-                spoon.SetActive(false);
+                knife.SetActive(false);
                 break;
             //case "pot":
                 //tool.SetActive(!tool.activeSelf);
@@ -68,6 +71,24 @@ public class KitchenManager : MonoBehaviour
 
     }
 
+    public void Mix(GameObject ingredient)
+    {
+        ingredientStage = ingredient.GetComponent<FoodDragTrigger>().ingredientCurrStage;
+        ingredientStageMax = ingredient.GetComponent<FoodDragTrigger>().ingredientMaxStage;
 
-    
+        //EXTREMELY HACK-Y WAY
+        if (spoon.activeSelf && ingredientStage < ingredientStageMax)
+        {
+            ingredient.transform.GetChild(ingredientStage).gameObject.SetActive(false);
+            ingredient.GetComponent<FoodDragTrigger>().ingredientCurrStage++;
+            ingredient.transform.GetChild(ingredient.GetComponent<FoodDragTrigger>().ingredientCurrStage).gameObject.SetActive(true);
+
+            if (ingredientStage == ingredientStageMax)
+            {
+                ingredient.GetComponent<FoodDragTrigger>().ingredientCurrStage = 0;
+            }
+
+        }
+
+    }
 }
