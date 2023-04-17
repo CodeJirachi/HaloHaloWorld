@@ -21,7 +21,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             Debug.Log(currentItem);
 
             //ANOTHER TEMPORARY CONDITIONAL CHECK HERE- gonna generalize this to check tags also maybe
-            if(eventData.pointerDrag.GetComponent<RectTransform>().name == "rice cooker")
+            if (eventData.pointerDrag.GetComponent<RectTransform>().name == "rice cooker")
             {
                 GameObject.Find("cooked rice").SetActive(true);
                 GameObject.Find("cooked rice").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
@@ -31,7 +31,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             }
 
             //checking if its a chopped ingredient being dragged in
-            else if(currentItem == "chili" || currentItem == "garlic" || currentItem == "green onion")
+            else if (currentItem == "chili" || currentItem == "garlic" || currentItem == "green onion" || currentItem == "green chili" || currentItem == "lechon")
             {
                 ingredient_icon = ingredient.gameObject.GetComponent<FoodDragTrigger>().ingredient_icon;
 

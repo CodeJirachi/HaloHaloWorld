@@ -13,6 +13,8 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
     public GameObject chili;
     public GameObject garlic;
     public GameObject greenOnion;
+    public GameObject greenChili;
+    public GameObject lechon;
     public string currentItemName;
 
     public void OnDrop(PointerEventData eventData)
@@ -34,6 +36,16 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
         else if (currentItemName == "green onion")
         {
             greenOnion.SetActive(true);
+            currentItem.SetActive(false);
+        }
+        else if(currentItemName == "green thai chili")
+        {
+            greenChili.SetActive(true);
+            currentItem.SetActive(false);
+        }
+        else if(currentItemName == "cooked lechon")
+        {
+            lechon.SetActive(true);
             currentItem.SetActive(false);
         }
     }

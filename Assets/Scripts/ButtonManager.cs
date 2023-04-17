@@ -17,6 +17,7 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] GameObject cuttingBoard;
     [SerializeField] GameObject mixingBowl;
+    public GameObject mixingArrow;
 
     public GameObject sinkFront; //for hiding sink front when cutting board opens
 
@@ -118,11 +119,16 @@ public class ButtonManager : MonoBehaviour
                 cuttingBoard.SetActive(true);
                 sinkFront.SetActive(false);
                 break;
-            case "mixing bowl":
-                mixingBowl.SetActive(true);
-                self.SetActive(false);
+            case "nam prik pla":
+                if(self.GetComponent<NamPrikPla>().completed)
+                {
+                    mixingBowl.SetActive(true);
+                    mixingArrow.SetActive(true);
+                    self.SetActive(false);
+                }
                 break;
-            case "saucepan":
+            case "lechon sauce":
+
                 break;
         }
     }

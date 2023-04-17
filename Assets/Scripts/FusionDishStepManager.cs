@@ -43,11 +43,21 @@ public class FusionDishStepManager : MonoBehaviour
             if(!stepFinished && finishTrigger) {
                 stepFinished = true;
                 finishTrigger=false;
-                Debug.Log("yooosakdo"); 
 
                 nextButton = Instantiate(nextButtonPrefab, canvas.transform);
                 nextButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(348, 0);
                 nextButton.GetComponent<Button>().onClick.AddListener(delegate { SceneManager.LoadScene("FusionDish MixingNamPrikPla"); });
+            }
+        } else if(scene_name == "FusionDish MixingNamPrikPla")
+        {
+            if(!stepFinished && finishTrigger)
+            {
+                stepFinished = true;
+                finishTrigger = false;
+
+                nextButton = Instantiate(nextButtonPrefab, canvas.transform);
+                nextButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(348, 0);
+                nextButton.GetComponent<Button>().onClick.AddListener(delegate { SceneManager.LoadScene("FusionDish MixingLechonSauce"); });
             }
         }
     }

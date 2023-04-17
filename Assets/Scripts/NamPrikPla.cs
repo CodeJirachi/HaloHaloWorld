@@ -4,26 +4,35 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class LechonPot : MonoBehaviour, IDropHandler
+public class NamPrikPla : MonoBehaviour, IDropHandler
 {
-    public Canvas canvas;
+    public bool completed;
 
-    public GameObject lechonLayer;
-    public GameObject starAniseLayer;
-    public GameObject chiliLayer;
+    public GameObject sugarLayer;
+    public GameObject greenChiliLayer;
+    public GameObject redChiliLayer;
     public GameObject garlicLayer;
-    public GameObject greenOnionLayer;
+    public GameObject fishSauceLayer;
 
-    //fake layers
-    public GameObject saltLayer;
-    public GameObject pepperLayer;
-
+    //fake layer just for checking
+    public GameObject limeLayer;
+    
     GameObject currentIngredient;
     string currIngredientName;
 
-    //for end condition of scene
-    public int tracker; 
-    public FusionDishStepManager fdsm;
+    public int tracker;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        completed = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(tracker == 6) completed = true;
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -33,20 +42,15 @@ public class LechonPot : MonoBehaviour, IDropHandler
             currentIngredient = eventData.pointerDrag;
             currIngredientName = currentIngredient.GetComponent<RectTransform>().name;
 
-            switch(currIngredientName)
+            switch (currIngredientName)
             {
-                case "raw pork belly":
-                    lechonLayer.SetActive(true);
-                    currentIngredient.SetActive(false);
-                    tracker++;
-                    break;
-                case "star anise":
-                    starAniseLayer.SetActive(true);
-                    currentIngredient.SetActive(false);
-                    tracker++;
-                    break;
                 case "chili icon(Clone)":
-                    chiliLayer.SetActive(true);
+                    redChiliLayer.SetActive(true);
+                    currentIngredient.SetActive(false);
+                    tracker++;
+                    break;
+                case "green chili icon(Clone)":
+                    greenChiliLayer.SetActive(true);
                     currentIngredient.SetActive(false);
                     tracker++;
                     break;
@@ -55,27 +59,23 @@ public class LechonPot : MonoBehaviour, IDropHandler
                     currentIngredient.SetActive(false);
                     tracker++;
                     break;
-                case "chopped green onion(Clone)":
-                    greenOnionLayer.SetActive(true);
+                case "sugar":
+                    sugarLayer.SetActive(true);
                     currentIngredient.SetActive(false);
                     tracker++;
                     break;
-                case "salt":
-                    saltLayer.SetActive(true);
+                case "fish sauce":
+                    fishSauceLayer.SetActive(true);
                     currentIngredient.SetActive(false);
                     tracker++;
                     break;
-                case "peppercorn":
-                    pepperLayer.SetActive(true);
+                case "lime":
+                    limeLayer.SetActive(true);
                     currentIngredient.SetActive(false);
                     tracker++;
                     break;
             }
-        }
-    }
 
-    void Update()
-    {
-        if (tracker == 7) fdsm.finishTrigger = true;
+        }
     }
 }

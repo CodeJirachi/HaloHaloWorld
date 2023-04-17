@@ -18,6 +18,7 @@ public class KitchenManager : MonoBehaviour
     public int mixingStage; //for the sprite changing of the mixing
     public int mixingTriggerStage; //for the star triggers
 
+    public FusionDishStepManager fdsm;
     public void Start()
     {
         mixingStage = 0;
@@ -90,5 +91,10 @@ public class KitchenManager : MonoBehaviour
 
         }
 
+    }
+
+    private void Update()
+    {
+        if (mixingStage > 6) fdsm.finishTrigger = true;
     }
 }
