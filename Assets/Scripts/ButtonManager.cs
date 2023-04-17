@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
-public class ButtonManager : MonoBehaviour
+public class ButtonManager : MonoBehaviour, IPointerEnterHandler
 {
     [SerializeField] GameObject recipeButton;
     [SerializeField] GameObject settingsButton;
@@ -14,6 +15,21 @@ public class ButtonManager : MonoBehaviour
     //[SerializeField] Object nextScene;
     [SerializeField] GameObject recipeTitle;
     [SerializeField] GameObject recipeContent;
+
+    //audio
+    public AudioSource menuSelect;
+    public AudioSource menuHover;
+
+    //menu select
+    public void playMenuSelect()
+    {
+        menuSelect.Play();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        menuHover.Play();
+    }
 
     public void Awake()
     {
@@ -106,13 +122,21 @@ public class ButtonManager : MonoBehaviour
 
     public void startGame(Object nextScene)
     {
+        //menuSelect.Play();
         //temp name
-        SceneManager.LoadScene("PreHaloHalo");
+        //SceneManager.LoadScene("PreHaloHalo");
+        StartCoroutine(DelaySceneLoad("PreHaloHalo"));
     }
 
     public void quitGame()
     {
         Application.Quit(); //use this for when actually deploying game
         //UnityEditor.EditorApplication.isPlaying = false; //this is temporary, just for editor purposes
+    }
+
+    IEnumerator DelaySceneLoad(string scene)
+    {
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene(scene);
     }
 }
