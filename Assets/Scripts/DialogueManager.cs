@@ -83,7 +83,8 @@ public class DialogueManager : MonoBehaviour
                 switch(ChoiceTracker.CT.scene)
                 {
                     case 1:
-                        SceneManager.LoadScene("HaloHalo 1");
+                        //SceneManager.LoadScene("HaloHalo 1");
+                        SceneManager.LoadScene("HaloHalo Final (audrey)");
                         Debug.Log("scene is " + ChoiceTracker.CT.scene);
                         break;
                     case 2:

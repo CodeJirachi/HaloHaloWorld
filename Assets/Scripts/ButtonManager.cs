@@ -12,9 +12,13 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler
     [SerializeField] GameObject leftButton;
     [SerializeField] GameObject rightButton;
     [SerializeField] GameObject recipePage;
+    [SerializeField] GameObject recipeNext;
+    [SerializeField] GameObject recipePrev;
+    
     //[SerializeField] Object nextScene;
     [SerializeField] GameObject recipeTitle;
-    [SerializeField] GameObject recipeContent;
+    [SerializeField] GameObject recipeContent1;
+    [SerializeField] GameObject recipeContent2;
 
 
     //audio
@@ -30,6 +34,7 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         menuHover.Play();
+
     }
 
     [SerializeField] GameObject cuttingBoard;
@@ -56,11 +61,12 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler
         //settingsButton.SetActive(false);
        
         exitButton.SetActive(true);
+        recipeNext.SetActive(true);
 
         //recipe page opens + its contents show with it dynamically (HMM) 
         recipePage.SetActive(true);
         recipeTitle.SetActive(true);
-        recipeContent.SetActive(true);
+        recipeContent1.SetActive(true);
         //recipe page must hold values that are set true or false depending on whether/ how they are toggled in VN gameplay 0
     }
 
@@ -72,9 +78,50 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler
         //recipe page closes
         recipePage.SetActive(false);
         recipeTitle.SetActive(false);
-        recipeContent.SetActive(false);
+        recipeContent1.SetActive(false);
+        recipeContent2.SetActive(false);
 
         exitButton.SetActive(false);
+        recipeNext.SetActive(false);
+        recipePrev.SetActive(false);
+        //ensures the contents of it, closes with it
+
+    }
+
+    public void nextPage()
+    {
+        recipeButton.SetActive(false);
+        //settingsButton.SetActive(true);
+
+        //recipe page closes
+        //recipePage.SetActive(false);
+        recipeTitle.SetActive(false);
+        recipeContent1.SetActive(false);
+
+        recipePage.SetActive(true);
+        recipeContent2.SetActive(true);
+
+        recipeNext.SetActive(false);
+        recipePrev.SetActive(true);
+        exitButton.SetActive(true);
+        //ensures the contents of it, closes with it
+
+    }
+
+    public void prevPage()
+    {
+        recipeButton.SetActive(false);
+        //settingsButton.SetActive(true);
+
+        recipeTitle.SetActive(true);
+        recipeContent1.SetActive(true);
+
+        recipePage.SetActive(true);
+        recipeContent2.SetActive(false);
+
+        recipeNext.SetActive(true);
+        recipePrev.SetActive(false);
+        exitButton.SetActive(true);
         //ensures the contents of it, closes with it
 
     }

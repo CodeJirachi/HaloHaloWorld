@@ -93,13 +93,13 @@ public class FoodContainer : MonoBehaviour, IDropHandler
             }
             */
 
-            if(currentIngredient == "TEMP ice" && currIngredientLayer == 0)
+            if(currentIngredient == "shaved ice" && currIngredientLayer == 0)
             {
                 halohalo.transform.GetChild(11).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
                 currIngredientLayer++;
             }
-            else if (currentIngredient == "TEMP beans" && currIngredientLayer == 1)
+            else if (currentIngredient == "sweetened beans" && currIngredientLayer == 1)
             {
                 halohalo.transform.GetChild(10).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
