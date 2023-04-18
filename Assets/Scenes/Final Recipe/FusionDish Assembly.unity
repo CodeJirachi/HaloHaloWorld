@@ -4545,7 +4545,6 @@ GameObject:
   - component: {fileID: 841656708}
   - component: {fileID: 841656712}
   - component: {fileID: 841656711}
-  - component: {fileID: 841656710}
   - component: {fileID: 841656709}
   m_Layer: 5
   m_Name: tool button
@@ -4631,19 +4630,6 @@ MonoBehaviour:
           m_StringArgument: spoon
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &841656710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841656707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1be3a90409b82a4a95113d5242b683c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentItem: 
 --- !u!114 &841656711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8736,7 +8722,6 @@ GameObject:
   - component: {fileID: 1441030396}
   - component: {fileID: 1441030400}
   - component: {fileID: 1441030399}
-  - component: {fileID: 1441030398}
   - component: {fileID: 1441030397}
   m_Layer: 5
   m_Name: tool button (1)
@@ -8822,19 +8807,6 @@ MonoBehaviour:
           m_StringArgument: knife
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1441030398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441030395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1be3a90409b82a4a95113d5242b683c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentItem: 
 --- !u!114 &1441030399
 MonoBehaviour:
   m_ObjectHideFlags: 0
