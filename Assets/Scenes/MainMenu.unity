@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54764c83a7df002419f54326be7ffede, type: 2}
   m_sharedMaterial: {fileID: 4624364039032476276, guid: 54764c83a7df002419f54326be7ffede, type: 2}
@@ -503,6 +503,8 @@ MonoBehaviour:
   recipeContent: {fileID: 0}
   menuSelect: {fileID: 0}
   menuHover: {fileID: 1977908768}
+  cuttingBoard: {fileID: 0}
+  mixingBowl: {fileID: 0}
 --- !u!1 &630799641
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +674,8 @@ MonoBehaviour:
   recipeContent: {fileID: 0}
   menuSelect: {fileID: 0}
   menuHover: {fileID: 1977908768}
+  cuttingBoard: {fileID: 0}
+  mixingBowl: {fileID: 0}
 --- !u!1 &663344062
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +690,7 @@ GameObject:
   - component: {fileID: 663344064}
   - component: {fileID: 663344067}
   m_Layer: 5
-  m_Name: SettingsButton
+  m_Name: CreditsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -829,6 +833,8 @@ MonoBehaviour:
   recipeContent: {fileID: 0}
   menuSelect: {fileID: 0}
   menuHover: {fileID: 1977908768}
+  cuttingBoard: {fileID: 0}
+  mixingBowl: {fileID: 0}
 --- !u!1 &799614082
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +930,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 781eb2de7c8b94340832e6ad9d52df5e, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.51
   m_Pitch: 1
@@ -1177,6 +1183,8 @@ MonoBehaviour:
   recipeContent: {fileID: 0}
   menuSelect: {fileID: 1537552457}
   menuHover: {fileID: 1977908768}
+  cuttingBoard: {fileID: 0}
+  mixingBowl: {fileID: 0}
 --- !u!4 &1550419180
 Transform:
   m_ObjectHideFlags: 0
@@ -1269,7 +1277,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1642299320}
-  - component: {fileID: 1642299323}
   - component: {fileID: 1642299322}
   - component: {fileID: 1642299321}
   m_Layer: 5
@@ -1396,28 +1403,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642299319}
   m_CullTransparentMesh: 1
---- !u!114 &1642299323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642299319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcaf4151390853849a98a4e1e2fc4fc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recipeButton: {fileID: 0}
-  settingsButton: {fileID: 0}
-  exitButton: {fileID: 0}
-  leftButton: {fileID: 0}
-  rightButton: {fileID: 0}
-  recipePage: {fileID: 0}
-  recipeTitle: {fileID: 0}
-  recipeContent: {fileID: 0}
-  menuSelect: {fileID: 0}
-  menuHover: {fileID: 1537552457}
 --- !u!1 &1798822762
 GameObject:
   m_ObjectHideFlags: 0
