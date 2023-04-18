@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Recipe/FusionDish MixingLechonSauce.unity
     guid: 16708e23d5dc3834483c91969b8f5091
+  - enabled: 1
+    path: Assets/Scenes/Final Recipe/FusionDish Frying.unity
+    guid: d199f4e87d9295a4097a991ff8a9e521
+  - enabled: 1
+    path: Assets/Scenes/Final Recipe/FusionDish Assembly.unity
+    guid: 6047d412023925543b290d3d2beb016b
   m_configObjects: {}

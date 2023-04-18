@@ -86,10 +86,10 @@ public class LechonPan : MonoBehaviour, IDropHandler, IPointerDownHandler, IBegi
             if (!friedBelly.GetComponent<IngredientDragDrop>().inSlot)
             {
                 friedBelly.SetActive(false);
+            } else
+            {
+                friedBellyLayer.SetActive(false);
             }
-        } else
-        {
-            friedBellyLayer.SetActive(false);
         }
     }
 
