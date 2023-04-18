@@ -128,7 +128,12 @@ public class ButtonManager : MonoBehaviour
                 }
                 break;
             case "lechon sauce":
-
+                if(self.GetComponent<LechonSauce>().completed)
+                {
+                    mixingBowl.SetActive(true);
+                    mixingArrow.SetActive(true);
+                    self.SetActive(false);
+                }
                 break;
         }
     }

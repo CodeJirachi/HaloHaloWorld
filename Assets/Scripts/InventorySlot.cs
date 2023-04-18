@@ -29,9 +29,17 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 GameObject.Find("cooked rice").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
                 GameObject.Find("cooked rice").GetComponent<Image>().raycastTarget = true;
             }
+            else if(eventData.pointerDrag.GetComponent<RectTransform>().name == "lechon pan")
+            {
+                GameObject.Find("crispy pork belly").SetActive(true);
+                GameObject.Find("crispy pork belly").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("crispy pork belly").GetComponent<IngredientDragDrop>().inSlot = true;
+                GameObject.Find("crispy pork belly").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("crispy pork belly").GetComponent<Image>().raycastTarget = true;
+            }
 
             //checking if its a chopped ingredient being dragged in
-            else if (currentItem == "chili" || currentItem == "garlic" || currentItem == "green onion" || currentItem == "green chili" || currentItem == "lechon")
+            else if (currentItem == "chili" || currentItem == "garlic" || currentItem == "green onion" || currentItem == "green chili" || currentItem == "onion" || currentItem == "lechon")
             {
                 ingredient_icon = ingredient.gameObject.GetComponent<FoodDragTrigger>().ingredient_icon;
 

@@ -59,6 +59,31 @@ public class FusionDishStepManager : MonoBehaviour
                 nextButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(348, 0);
                 nextButton.GetComponent<Button>().onClick.AddListener(delegate { SceneManager.LoadScene("FusionDish MixingLechonSauce"); });
             }
+        } else if(scene_name == "FusionDish MixingLechonSauce")
+        {
+            if(!stepFinished && finishTrigger)
+            {
+                stepFinished = true;
+                finishTrigger = false;
+
+                nextButton = Instantiate(nextButtonPrefab, canvas.transform);
+                nextButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(348, 0);
+                nextButton.GetComponent<Button>().onClick.AddListener(delegate { SceneManager.LoadScene("FusionDish Frying"); });
+            }
+        } else if(scene_name == "FusionDish Frying")
+        {
+            if (!stepFinished && GameObject.Find("chopped lechon icon(Clone)") != null && GameObject.Find("chopped lechon icon(Clone)").activeSelf && GameObject.Find("chopped lechon icon(Clone)").GetComponent<IngredientDragDrop>().inSlot)
+            {
+                stepFinished = true;
+
+                //spawn next button
+                nextButton = Instantiate(nextButtonPrefab, canvas.transform);
+                nextButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(348, 0);
+                nextButton.GetComponent<Button>().onClick.AddListener(delegate { SceneManager.LoadScene("FusionDish Assembly"); });
+            }
+        } else if(scene_name == "FusionDish Assembly")
+        {
+
         }
     }
 }

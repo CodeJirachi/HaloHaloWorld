@@ -106,28 +106,34 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     void OnMouseEnter()
     {
-        Debug.Log(this.gameObject.name);
-        Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousepos.x += 1;
-        mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
+        if (inSlot)
+        {
+            Debug.Log(this.gameObject.name);
+            Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousepos.x += 1;
+            mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
 
-        text_label = Instantiate(hoverLabelPrefab, mousepos, Quaternion.identity, canvas.transform);
-        text_label.GetComponent<TMPro.TextMeshProUGUI>().text = "<mark=#c0bfde>" + this.gameObject.name + "</mark>"; //for background of text
-        text_label.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = this.gameObject.name;
+            text_label = Instantiate(hoverLabelPrefab, mousepos, Quaternion.identity, canvas.transform);
+            text_label.GetComponent<TMPro.TextMeshProUGUI>().text = "<mark=#c0bfde>" + this.gameObject.name + "</mark>"; //for background of text
+            text_label.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = this.gameObject.name;
+        }
     }
 
     void OnMouseOver()
     {
-        Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousepos.x += 1;
-        mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
-        //text_label.SetActive(false);
-
-        if(text_label != null)
+        if (inSlot)
         {
-            text_label.transform.position = mousepos;
+            Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousepos.x += 1;
+            mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
+            //text_label.SetActive(false);
+
+            if (text_label != null)
+            {
+                text_label.transform.position = mousepos;
+            }
+            //text_label.SetActive(true);
         }
-        //text_label.SetActive(true);
     }
 
     void OnMouseExit()
