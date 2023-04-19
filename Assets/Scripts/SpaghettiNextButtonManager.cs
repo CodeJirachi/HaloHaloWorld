@@ -11,6 +11,10 @@ public class SpaghettiNextButtonManager : MonoBehaviour
 
     public GameObject nextStageButton1;
     public GameObject nextStageButton2;
+
+
+    public AudioSource Celebration;
+
     //public GameObject nextStageButton3;
 
     // scene starts this way
@@ -56,6 +60,7 @@ public class SpaghettiNextButtonManager : MonoBehaviour
 
         complete.SetActive(true);
 
+        Celebration.Play();
         nextStageButton2.SetActive(false);
 
         //go to next scene code: 
