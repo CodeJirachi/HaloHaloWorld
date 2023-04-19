@@ -76,6 +76,12 @@ public class cookingManager : MonoBehaviour
             recipeContent.text = "I cooka da spaghett with " + choiceText;
             // recipe + choice 
         }
+
+        else if(sceneName == "FusionDish (NEW)")
+        {
+            recipeTitle.text = "<size=80%>Fusion Dish";
+            recipeContent.text = "1. Cook the rice\n2. Chop garlic, green onion, and red thai chili\n3. Boil water\n4. Add raw pork belly, chopped ingredients, star anise, salt, and peppercorn to pot\n";
+        }
          
     }
     
