@@ -57,5 +57,8 @@ public class SpaghettiNextButtonManager : MonoBehaviour
         complete.SetActive(true);
 
         nextStageButton2.SetActive(false);
+
+        //go to next scene code: 
+
     }
 }
