@@ -44,22 +44,22 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/VN_FusionFlashback.unity
     guid: 785c22401c244bc49a2dd00b5e548939
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/FusionDish (NEW).unity
     guid: d5aaa52a7dd961341a313e88044430e0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Final Recipe/FusionDish Boiling Lechon.unity
     guid: 643d8253a8d353844b4083506144cd35
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Final Recipe/FusionDish MixingNamPrikPla.unity
     guid: d9982c84e1d41974fb17caacc769d9ea
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Final Recipe/FusionDish MixingLechonSauce.unity
     guid: 16708e23d5dc3834483c91969b8f5091
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Final Recipe/FusionDish Frying.unity
     guid: d199f4e87d9295a4097a991ff8a9e521
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Final Recipe/FusionDish Assembly.unity
     guid: 6047d412023925543b290d3d2beb016b
   - enabled: 0
