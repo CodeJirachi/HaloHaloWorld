@@ -11,7 +11,7 @@ public class SpaghettiNextButtonManager : MonoBehaviour
 
     public GameObject nextStageButton1;
     public GameObject nextStageButton2;
-    public GameObject nextStageButton3;
+    //public GameObject nextStageButton3;
 
     // scene starts this way
     /*
@@ -22,7 +22,8 @@ public class SpaghettiNextButtonManager : MonoBehaviour
     }
      * */
 
-    // 1
+    // 
+    /*
     public void spaghettiCooking()
     {
         cuttingBoard.SetActive(false);
@@ -33,19 +34,20 @@ public class SpaghettiNextButtonManager : MonoBehaviour
         nextStageButton1.SetActive(false);
         nextStageButton2.SetActive(true);
     }
+     * */
 
-    // 2
+    // 1
     public void spaghettiPlating()
     {
         cuttingBoard.SetActive(false);
         stovetop.SetActive(true);
         plating.SetActive(true);
 
-        nextStageButton2.SetActive(false);
-        nextStageButton3.SetActive(true);
+        nextStageButton1.SetActive(false);
+        nextStageButton2.SetActive(true);
     }
 
-    // 3
+    // 2
     public void spaghettiCompletion()
     {
         cuttingBoard.SetActive(false);
@@ -54,6 +56,6 @@ public class SpaghettiNextButtonManager : MonoBehaviour
 
         complete.SetActive(true);
 
-        nextStageButton3.SetActive(false);
+        nextStageButton2.SetActive(false);
     }
 }

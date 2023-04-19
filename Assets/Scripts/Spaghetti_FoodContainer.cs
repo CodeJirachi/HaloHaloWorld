@@ -24,6 +24,8 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
     [SerializeField] GameObject pan5;
     [SerializeField] GameObject pan6;
 
+    public GameObject nextButton1;
+
     // result that comes out of pot and pan 
     [SerializeField] GameObject resultIcon;
 
@@ -159,6 +161,8 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
             {
                 pan6.SetActive(true);
                 draggedObject.SetActive(false);
+
+                nextButton1.SetActive(true);
             }
 
             else

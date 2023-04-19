@@ -30,12 +30,12 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
 
         Debug.Log("hi");
 
-        if (currentItemName == "red thai chili")
+        if (currentItemName == "red thai chili" || currentItemName == "red chili icon")
         {
             chili.SetActive(true);
             currentItem.SetActive(false);
         } 
-        else if (currentItemName == "garlic")
+        else if (currentItemName == "garlic icon" || currentItemName == "garlic")
         {
             garlic.SetActive(true);
             currentItem.SetActive(false);

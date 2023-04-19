@@ -1234,6 +1234,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &139611917
 MonoBehaviour:
@@ -1546,6 +1547,7 @@ GameObject:
   - component: {fileID: 169138929}
   - component: {fileID: 169138928}
   - component: {fileID: 169138927}
+  - component: {fileID: 169138931}
   m_Layer: 5
   m_Name: bell pepper chopped
   m_TagString: Untagged
@@ -1602,7 +1604,8 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 0
   prev_pos: {x: 0, y: 0}
-  hoverLabelPrefab: {fileID: 0}
+  hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &169138929
 MonoBehaviour:
@@ -1642,6 +1645,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169138925}
   m_CullTransparentMesh: 1
+--- !u!61 &169138931
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169138925}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &180597159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,7 +2109,7 @@ RectTransform:
   - {fileID: 1052983860}
   - {fileID: 597774816}
   m_Father: {fileID: 1368548039}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2475,6 +2504,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &275502173
 MonoBehaviour:
@@ -3019,6 +3049,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &367025674
 MonoBehaviour:
@@ -3823,6 +3854,7 @@ MonoBehaviour:
   ingredientStageMax: 0
   mixingStage: 0
   mixingTriggerStage: 0
+  fdsm: {fileID: 0}
 --- !u!4 &434580753
 Transform:
   m_ObjectHideFlags: 0
@@ -5598,6 +5630,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &664795358
 MonoBehaviour:
@@ -6014,6 +6047,7 @@ MonoBehaviour:
   inSlot: 0
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &698733980
 MonoBehaviour:
@@ -6212,6 +6246,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &716925964
 MonoBehaviour:
@@ -7026,7 +7061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &809377553
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7184,6 +7219,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &882591804
 MonoBehaviour:
@@ -7315,6 +7351,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &890394814
 MonoBehaviour:
@@ -8063,6 +8100,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &943157511
 MonoBehaviour:
@@ -8447,6 +8485,7 @@ MonoBehaviour:
   inSlot: 0
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &985004856
 MonoBehaviour:
@@ -10082,6 +10121,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1101112331
 MonoBehaviour:
@@ -10292,7 +10332,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e5dd05157a5643b4ebdbc323e74409a8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7b54efe06cec91c45bba586ef09130bb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.283
   m_Pitch: 1
@@ -10880,6 +10920,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1227537820
 MonoBehaviour:
@@ -12211,6 +12252,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1362129302
 MonoBehaviour:
@@ -12367,8 +12409,8 @@ RectTransform:
   - {fileID: 204883188}
   - {fileID: 1755154473}
   - {fileID: 1013660466}
-  - {fileID: 2124334392}
   - {fileID: 235809312}
+  - {fileID: 2124334392}
   - {fileID: 809377553}
   - {fileID: 1754487545}
   - {fileID: 1608599873}
@@ -12653,6 +12695,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1487782081
 MonoBehaviour:
@@ -12715,6 +12758,7 @@ GameObject:
   - component: {fileID: 1488580064}
   - component: {fileID: 1488580065}
   - component: {fileID: 1488580066}
+  - component: {fileID: 1488580067}
   m_Layer: 5
   m_Name: bell pepper
   m_TagString: Untagged
@@ -12760,7 +12804,8 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
-  hoverLabelPrefab: {fileID: 0}
+  hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!225 &1488580066
 CanvasGroup:
@@ -12774,6 +12819,32 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!61 &1488580067
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488580063}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1493122026
 GameObject:
   m_ObjectHideFlags: 0
@@ -13021,6 +13092,7 @@ MonoBehaviour:
   inSlot: 0
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!1 &1523623370
 GameObject:
@@ -13081,6 +13153,8 @@ MonoBehaviour:
   menuHover: {fileID: 0}
   cuttingBoard: {fileID: 0}
   mixingBowl: {fileID: 0}
+  mixingArrow: {fileID: 0}
+  sinkFront: {fileID: 0}
 --- !u!1 &1531369266
 GameObject:
   m_ObjectHideFlags: 0
@@ -13786,6 +13860,7 @@ MonoBehaviour:
   inSlot: 0
   prev_pos: {x: 538, y: 207}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1608599876
 MonoBehaviour:
@@ -13895,6 +13970,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1634995351
 MonoBehaviour:
@@ -14757,6 +14833,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!225 &1755154476
 CanvasGroup:
@@ -15441,6 +15518,7 @@ MonoBehaviour:
   inSlot: 0
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1818765717
 MonoBehaviour:
@@ -15794,6 +15872,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1861967428
 MonoBehaviour:
@@ -16488,6 +16567,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1954048048
 MonoBehaviour:
@@ -16600,6 +16680,7 @@ MonoBehaviour:
   inSlot: 0
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1957620255
 MonoBehaviour:
@@ -17027,6 +17108,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!225 &2067469977
 CanvasGroup:
@@ -17460,7 +17542,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1368548039}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17520,6 +17602,9 @@ MonoBehaviour:
   chili: {fileID: 1762803731}
   garlic: {fileID: 271181028}
   greenOnion: {fileID: 0}
+  greenChili: {fileID: 0}
+  onion: {fileID: 0}
+  lechon: {fileID: 0}
   bellPepper: {fileID: 131078583}
   hotdog: {fileID: 602524165}
   currentItemName: 

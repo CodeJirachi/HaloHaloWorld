@@ -2870,6 +2870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeTitle: {fileID: 1706449513}
   recipeContent: {fileID: 1757111555}
+  recipeContent2: {fileID: 0}
 --- !u!1 &367025670
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,6 +2949,7 @@ MonoBehaviour:
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
   text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &367025674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3122,6 +3124,8 @@ MonoBehaviour:
   greenChili: {fileID: 0}
   onion: {fileID: 0}
   lechon: {fileID: 0}
+  bellPepper: {fileID: 0}
+  hotdog: {fileID: 0}
   currentItemName: 
 --- !u!1 &396930924
 GameObject:
@@ -4581,6 +4585,7 @@ MonoBehaviour:
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
   text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &660433119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4598,8 +4603,19 @@ MonoBehaviour:
   rawSpaghetti: {fileID: 785321579}
   underwaterSpaghetti: {fileID: 1752623118}
   saucePot: {fileID: 0}
+  saucePot2: {fileID: 0}
+  saucePot3: {fileID: 0}
+  saucePot4: {fileID: 0}
+  pan: {fileID: 0}
+  pan2: {fileID: 0}
+  pan3: {fileID: 0}
+  pan4: {fileID: 0}
+  pan5: {fileID: 0}
+  pan6: {fileID: 0}
   resultIcon: {fileID: 0}
   potReset: {fileID: 0}
+  collander: {fileID: 0}
+  filledCollander: {fileID: 0}
   redlight: {fileID: 296363093}
   greenlight: {fileID: 923908934}
   canvas: {fileID: 1368548038}
@@ -5749,6 +5765,7 @@ MonoBehaviour:
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
   text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &865126950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7906,12 +7923,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149634226}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a627acd6277339e488ab84b97e01d8b2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7b54efe06cec91c45bba586ef09130bb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.243
+  m_Volume: 0.21
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -8561,6 +8578,7 @@ MonoBehaviour:
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
   text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &1253545416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10093,6 +10111,7 @@ MonoBehaviour:
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
   text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &1487782081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10418,8 +10437,13 @@ MonoBehaviour:
   leftButton: {fileID: 1903746949}
   rightButton: {fileID: 688755858}
   recipePage: {fileID: 2090850681}
+  recipeNext: {fileID: 0}
+  recipePrev: {fileID: 0}
   recipeTitle: {fileID: 0}
-  recipeContent: {fileID: 0}
+  recipeContent1: {fileID: 0}
+  recipeContent2: {fileID: 0}
+  menuSelect: {fileID: 0}
+  menuHover: {fileID: 0}
   cuttingBoard: {fileID: 0}
   mixingBowl: {fileID: 0}
   mixingArrow: {fileID: 0}
@@ -10871,8 +10895,13 @@ MonoBehaviour:
   leftButton: {fileID: 0}
   rightButton: {fileID: 0}
   recipePage: {fileID: 1170337343}
+  recipeNext: {fileID: 0}
+  recipePrev: {fileID: 0}
   recipeTitle: {fileID: 1706449512}
-  recipeContent: {fileID: 1757111554}
+  recipeContent1: {fileID: 0}
+  recipeContent2: {fileID: 0}
+  menuSelect: {fileID: 0}
+  menuHover: {fileID: 0}
   cuttingBoard: {fileID: 392453334}
   mixingBowl: {fileID: 0}
   mixingArrow: {fileID: 0}
@@ -11132,6 +11161,7 @@ MonoBehaviour:
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
   text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &1639944079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12255,6 +12285,7 @@ MonoBehaviour:
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
   text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &1861967428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12272,8 +12303,19 @@ MonoBehaviour:
   rawSpaghetti: {fileID: 0}
   underwaterSpaghetti: {fileID: 0}
   saucePot: {fileID: 0}
+  saucePot2: {fileID: 0}
+  saucePot3: {fileID: 0}
+  saucePot4: {fileID: 0}
+  pan: {fileID: 0}
+  pan2: {fileID: 0}
+  pan3: {fileID: 0}
+  pan4: {fileID: 0}
+  pan5: {fileID: 0}
+  pan6: {fileID: 0}
   resultIcon: {fileID: 0}
   potReset: {fileID: 0}
+  collander: {fileID: 0}
+  filledCollander: {fileID: 0}
   redlight: {fileID: 0}
   greenlight: {fileID: 0}
   canvas: {fileID: 0}
@@ -12331,6 +12373,7 @@ MonoBehaviour:
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
   text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &1877981514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12816,6 +12859,7 @@ MonoBehaviour:
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
   text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &1929906484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13618,6 +13662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeTitle: {fileID: 154062877}
   recipeContent: {fileID: 0}
+  recipeContent2: {fileID: 0}
 --- !u!1 &2113322265
 GameObject:
   m_ObjectHideFlags: 0
