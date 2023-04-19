@@ -64,7 +64,7 @@ public class cookingManager : MonoBehaviour
          
         //spaghetti gameplay scenes: 
         //else if (sceneName == "Spaghetti0" || || || )
-        else if (sceneName == "Spaghetti0")
+        else if (sceneName == "Spaghetti 1(COPY) (JIRA)")
         {
             if (ChoiceTracker.CT.choice == "Thai Basil")
             {

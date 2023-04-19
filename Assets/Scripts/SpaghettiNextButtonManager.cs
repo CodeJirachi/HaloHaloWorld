@@ -38,7 +38,7 @@ public class SpaghettiNextButtonManager : MonoBehaviour
     public void spaghettiPlating()
     {
         cuttingBoard.SetActive(false);
-        stovetop.SetActive(false);
+        stovetop.SetActive(true);
         plating.SetActive(true);
 
         nextStageButton2.SetActive(false);
