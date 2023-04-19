@@ -102,6 +102,7 @@ public class DialogueManager : MonoBehaviour
         message.text = currentSentence;
         ParseTags();
         StopAllCoroutines();
+        StartCoroutine(TypeSentence(currentSentence));
     }
 
     void FinishDialogue()
@@ -262,6 +263,17 @@ public class DialogueManager : MonoBehaviour
         if(speakerName.text == "")
         {
             nameBox.SetActive(false);
+        }
+    }
+
+    //once again thank you and credits to Phantom Game Designs for their Inky integration help: https://github.com/RisingArtist/Ink-with-Unity-2019.3
+    IEnumerator TypeSentence(string sentence)
+    {
+        message.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            message.text += letter;
+            yield return null;
         }
     }
 
