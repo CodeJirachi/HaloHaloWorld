@@ -42,6 +42,7 @@ public class SpaghettiNextButtonManager : MonoBehaviour
         plating.SetActive(true);
 
         nextStageButton2.SetActive(false);
+        nextStageButton3.SetActive(true);
     }
 
     // 3

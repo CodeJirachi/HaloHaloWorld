@@ -13,13 +13,25 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
     [SerializeField] GameObject rawSpaghetti;
     [SerializeField] GameObject underwaterSpaghetti;
     [SerializeField] GameObject saucePot;
+    [SerializeField] GameObject saucePot2;
+    [SerializeField] GameObject saucePot3;
+    [SerializeField] GameObject saucePot4;
+
+    [SerializeField] GameObject pan;
+    [SerializeField] GameObject pan2;
+    [SerializeField] GameObject pan3;
+    [SerializeField] GameObject pan4;
+    [SerializeField] GameObject pan5;
+    [SerializeField] GameObject pan6;
 
     // result that comes out of pot and pan 
     [SerializeField] GameObject resultIcon;
 
     [SerializeField] GameObject potReset;
-    //[SerializeField] GameObject collander;
-    //[SerializeField] GameObject filledCollander;
+
+    //collander stuff
+    [SerializeField] GameObject collander;
+    [SerializeField] GameObject filledCollander;
 
     //pot not done 
     public GameObject redlight;
@@ -40,6 +52,7 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
 
     Vector2 currentPrevPosition;
 
+    //curr ingredient layer
     private int currIngredientLayer;
 
     public void Awake()
@@ -60,7 +73,7 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
             //currentPrevPosition = currentIngredient.GetComponent<IngredientDragDrop>().prev_pos;
 
             // raw spaghetti
-            if (currentIngredient == "raw spaghetti" && currIngredientLayer == 0)
+            if (currentIngredient == "raw spaghetti")
             {
                 potCooking.transform.GetChild(5).gameObject.SetActive(true);
                 StartCoroutine(CookSpaghetti(5.0f));
@@ -73,15 +86,39 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
                 Debug.Log(currentIngredient);
             }
 
-            else if (currentIngredient == "sauce")
+            else if (currentIngredient == "ketchup icon" && currIngredientLayer == 0)
             {
                 saucePot.SetActive(true);
                 draggedObject.SetActive(false);
-            }
 
+                greenlight.SetActive(true);
+                currIngredientLayer++;
+            }
+            else if (currentIngredient == "soy sauce icon" && currIngredientLayer == 1)
+            {
+                saucePot2.SetActive(true);
+                draggedObject.SetActive(false);
+
+                currIngredientLayer++;
+            }
+            else if (currentIngredient == "oyster sauce icon" && currIngredientLayer == 2)
+            {
+                saucePot3.SetActive(true);
+                draggedObject.SetActive(false);
+
+                currIngredientLayer++;
+            }
+            else if (currentIngredient == "sugar icon" && currIngredientLayer == 3)
+            {
+                saucePot4.SetActive(true);
+                draggedObject.SetActive(false);
+
+                greenlight.SetActive(false);
+                currIngredientLayer++;
+            }
             // fill collander with spaghetti 
-            /*
-            else if (currentIngredient == "potFilled")
+
+            else if (currentIngredient == "spaghetti pot")
             {
                 //collander.SetActive(false);
                 filledCollander.SetActive(true);
@@ -93,15 +130,44 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
                 {
                     potReset.SetActive(true);
                 }
-             */
+            }
+            else if (currentIngredient == "garlic chopped")
+            {
+                pan.SetActive(true);
+                draggedObject.SetActive(false);
+                greenlight.SetActive(true);
+                StartCoroutine(CookGarlic(1.0f));
 
             }
+            //pan3
+            else if (currentIngredient == "thai basil")
+            {
+                pan3.SetActive(true);
+                draggedObject.SetActive(false);
+            }
+            else if (currentIngredient == "bell pepper chopped")
+            {
+                pan4.SetActive(true);
+                draggedObject.SetActive(false);
+            }
+            else if (currentIngredient == "red chili chopped")
+            {
+                pan5.SetActive(true);
+                draggedObject.SetActive(false);
+            }
+            else if (currentIngredient == "hot dog chopped")
+            {
+                pan6.SetActive(true);
+                draggedObject.SetActive(false);
+            }
+
             else
             {
                 Debug.Log(currentIngredient);
             }
 
         }
+    }
     
 
 
@@ -127,7 +193,6 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
 
     public void OnDrag(PointerEventData eventData)
     {
-
 
         if (greenlight.activeSelf && !resultIcon.GetComponent<IngredientDragDrop>().inSlot)
         {
@@ -169,6 +234,17 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
 
         potCooking.transform.GetChild(5).gameObject.SetActive(false);
         potCooking.transform.GetChild(3).gameObject.SetActive(true);
+
+    }
+
+    private IEnumerator CookGarlic(float seconds)
+    {
+
+
+        yield return new WaitForSeconds(seconds);
+
+        pan2.SetActive(true);
+      
 
     }
 }
