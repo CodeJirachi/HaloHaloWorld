@@ -208,8 +208,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -293,8 +293,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0079312, y: -0.0019569993}
-  m_SizeDelta: {x: 1919.9, y: 1080.1}
+  m_AnchoredPosition: {x: -0.36926, y: 29}
+  m_SizeDelta: {x: 1920.1, y: 1278.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &488030631
 MonoBehaviour:
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0d87603466f075d4c9a9243f04d2ef19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1e89caf63238c74439c36857b5005e59, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -372,8 +372,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 171.99998, y: 419.83002}
-  m_SizeDelta: {x: 535.36, y: 100.38}
+  m_AnchoredPosition: {x: 192, y: 187.87003}
+  m_SizeDelta: {x: 265.8, y: 59.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &506276374
 MonoBehaviour:
@@ -499,8 +499,11 @@ MonoBehaviour:
   leftButton: {fileID: 0}
   rightButton: {fileID: 0}
   recipePage: {fileID: 0}
+  recipeNext: {fileID: 0}
+  recipePrev: {fileID: 0}
   recipeTitle: {fileID: 0}
-  recipeContent: {fileID: 0}
+  recipeContent1: {fileID: 0}
+  recipeContent2: {fileID: 0}
   menuSelect: {fileID: 0}
   menuHover: {fileID: 1977908768}
   cuttingBoard: {fileID: 0}
@@ -524,7 +527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &630799642
 RectTransform:
   m_ObjectHideFlags: 0
@@ -543,8 +546,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 171.99998, y: 152.13998}
-  m_SizeDelta: {x: 535.36, y: 100.38}
+  m_AnchoredPosition: {x: 192, y: 45.09}
+  m_SizeDelta: {x: 265.8, y: 59.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &630799643
 MonoBehaviour:
@@ -670,8 +673,11 @@ MonoBehaviour:
   leftButton: {fileID: 0}
   rightButton: {fileID: 0}
   recipePage: {fileID: 0}
+  recipeNext: {fileID: 0}
+  recipePrev: {fileID: 0}
   recipeTitle: {fileID: 0}
-  recipeContent: {fileID: 0}
+  recipeContent1: {fileID: 0}
+  recipeContent2: {fileID: 0}
   menuSelect: {fileID: 0}
   menuHover: {fileID: 1977908768}
   cuttingBoard: {fileID: 0}
@@ -714,8 +720,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 172, y: 286}
-  m_SizeDelta: {x: 535.36, y: 100.38}
+  m_AnchoredPosition: {x: 192, y: 109}
+  m_SizeDelta: {x: 265.8, y: 59.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &663344064
 MonoBehaviour:
@@ -829,8 +835,11 @@ MonoBehaviour:
   leftButton: {fileID: 0}
   rightButton: {fileID: 0}
   recipePage: {fileID: 0}
+  recipeNext: {fileID: 0}
+  recipePrev: {fileID: 0}
   recipeTitle: {fileID: 0}
-  recipeContent: {fileID: 0}
+  recipeContent1: {fileID: 0}
+  recipeContent2: {fileID: 0}
   menuSelect: {fileID: 0}
   menuHover: {fileID: 1977908768}
   cuttingBoard: {fileID: 0}
@@ -1179,8 +1188,11 @@ MonoBehaviour:
   leftButton: {fileID: 0}
   rightButton: {fileID: 0}
   recipePage: {fileID: 0}
+  recipeNext: {fileID: 0}
+  recipePrev: {fileID: 0}
   recipeTitle: {fileID: 0}
-  recipeContent: {fileID: 0}
+  recipeContent1: {fileID: 0}
+  recipeContent2: {fileID: 0}
   menuSelect: {fileID: 1537552457}
   menuHover: {fileID: 1977908768}
   cuttingBoard: {fileID: 0}
@@ -1303,7 +1315,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.4, y: 271.63}
+  m_AnchoredPosition: {x: 210, y: 321}
   m_SizeDelta: {x: 876.93, y: 134.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642299321
@@ -1353,8 +1365,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1488,8 +1500,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1656,8 +1668,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

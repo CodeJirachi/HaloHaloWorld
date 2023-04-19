@@ -13,6 +13,9 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
     public GameObject chili;
     public GameObject garlic;
     public GameObject greenOnion;
+    public GameObject bellPepper;
+    public GameObject hotdog;
+
     public string currentItemName;
 
     public void OnDrop(PointerEventData eventData)
@@ -32,6 +35,16 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
         else if (currentItemName == "green onion icon")
         {
             greenOnion.SetActive(true);
+            currentItem.SetActive(false);
+        }
+        else if (currentItemName == "bell pepper")
+        {
+            bellPepper.SetActive(true);
+            currentItem.SetActive(false);
+        }
+        else if (currentItemName == "hot dog")
+        {
+            hotdog.SetActive(true);
             currentItem.SetActive(false);
         }
     }

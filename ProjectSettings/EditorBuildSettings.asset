@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HaloHalo Final (audrey).unity
     guid: 7571e2d100c71be4f8406db186b228c6
+  - enabled: 1
+    path: Assets/Scenes/PreSpaghetti.unity
+    guid: a7497c08931e14f4f9806aef453e414b
   m_configObjects: {}
