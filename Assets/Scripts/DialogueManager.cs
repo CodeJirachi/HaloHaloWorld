@@ -32,6 +32,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject customButton;
     static Choice choiceSelected;
 
+    //copy blackscreen gameobject to all scenes that need it
     public GameObject blackScreen;
 
     public GameObject finalscene;
@@ -92,14 +93,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     if (!finalscene.activeSelf)
                     {
-                        blackScreen.GetComponent<FadeInOut>().fadeIn = true;
-                    }
-
-                    if(blackScreen.GetComponent<SpriteRenderer>().color.a > 1)
-                    {
-                        blackScreen.GetComponent<FadeInOut>().fadeIn = false;
-                        finalscene.SetActive(true);
-                        blackScreen.GetComponent<FadeInOut>().fadeOut = true;
+                        StartCoroutine(FadeToFinal(1.5f));
                     }
                 }
                 else
@@ -389,6 +383,22 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }
         yield return null;
+    }
+
+    IEnumerator FadeToFinal(float seconds)
+    {
+        blackScreen.GetComponent<FadeInOut>().fadeIn = true;
+        yield return new WaitForSeconds(seconds);
+        blackScreen.GetComponent<FadeInOut>().fadeIn = false;
+        finalscene.SetActive(true);
+        blackScreen.GetComponent<FadeInOut>().fadeOut = true;
+    }
+
+    IEnumerator FadeToScene(float seconds, string scene_name)
+    {
+        blackScreen.GetComponent<FadeInOut>().fadeIn = true;
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(scene_name);
     }
 
     //function TBA - fast forward for VN
