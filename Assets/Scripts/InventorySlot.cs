@@ -75,6 +75,15 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 GameObject.Find("sauce pot").GetComponent<Image>().raycastTarget = true;
             }
 
+            else if (currentItem == "panFilled")
+            {
+                GameObject.Find("filled pan").SetActive(true);
+                GameObject.Find("filled pan").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("filled pan").GetComponent<IngredientDragDrop>().inSlot = true;
+                GameObject.Find("filled pan").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("filled pan").GetComponent<Image>().raycastTarget = true;
+            }
+
             else
             {
                 //set new position in slot
