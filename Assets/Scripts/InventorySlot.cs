@@ -66,11 +66,11 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 
             else if (currentItem == "hot dog")
             {
-                GameObject.Find("bell pepper chopped").SetActive(true);
-                GameObject.Find("bell pepper chopped").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-                GameObject.Find("bell pepper chopped").GetComponent<IngredientDragDrop>().inSlot = true;
-                GameObject.Find("bell pepper chopped").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
-                GameObject.Find("bell pepper chopped").GetComponent<Image>().raycastTarget = true;
+                GameObject.Find("hot dog chopped").SetActive(true);
+                GameObject.Find("hot dog chopped").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("hot dog chopped").GetComponent<IngredientDragDrop>().inSlot = true;
+                GameObject.Find("hot dog chopped").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("hot dog chopped").GetComponent<Image>().raycastTarget = true;
             }
             else if (currentItem == "potFilled")
             //else if (eventData.pointerDrag.GetComponent<RectTransform>().name == "spaghetti pot")

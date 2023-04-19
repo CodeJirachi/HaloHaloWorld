@@ -116,7 +116,7 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
                 draggedObject.SetActive(false);
 
                 greenlight.SetActive(false);
-                currIngredientLayer++;
+                currIngredientLayer = 0;
             }
             // fill collander with spaghetti 
 
@@ -133,36 +133,45 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
                     potReset.SetActive(true);
                 }
             }
-            else if (currentIngredient == "garlic chopped")
+            else if (currentIngredient == "garlic chopped" && currIngredientLayer == 1)
             {
                 pan.SetActive(true);
                 draggedObject.SetActive(false);
                 greenlight.SetActive(true);
                 StartCoroutine(CookGarlic(1.0f));
 
+                currIngredientLayer++;
             }
             //pan3
-            else if (currentIngredient == "thai basil")
+            else if (currentIngredient == "thai basil" && currIngredientLayer == 2)
             {
                 pan3.SetActive(true);
                 draggedObject.SetActive(false);
+
+                currIngredientLayer++;
             }
-            else if (currentIngredient == "bell pepper chopped")
+            else if (currentIngredient == "bell pepper chopped" && currIngredientLayer == 3)
             {
                 pan4.SetActive(true);
                 draggedObject.SetActive(false);
+
+                currIngredientLayer++;
             }
-            else if (currentIngredient == "red chili chopped")
+            else if (currentIngredient == "red chili chopped" && currIngredientLayer == 4)
             {
                 pan5.SetActive(true);
                 draggedObject.SetActive(false);
+
+                currIngredientLayer++;
             }
-            else if (currentIngredient == "hot dog chopped")
+            else if (currentIngredient == "hot dog chopped" && currIngredientLayer == 5)
             {
                 pan6.SetActive(true);
                 draggedObject.SetActive(false);
 
                 nextButton1.SetActive(true);
+
+                currIngredientLayer = 0;
             }
 
             else
