@@ -15,6 +15,8 @@ public class FinalDishPlating : MonoBehaviour, IDropHandler
     public GameObject thaiSauceLayer;
     public GameObject filipinoSauceLayer;
 
+    public FusionDishStepManager fdsm;
+
     void Start()
     {
         ricePlated = false;
@@ -22,7 +24,7 @@ public class FinalDishPlating : MonoBehaviour, IDropHandler
 
     void Update()
     {
-        
+        if (riceLayer.activeInHierarchy && lechonLayer.activeInHierarchy && thaiSauceLayer.activeInHierarchy && filipinoSauceLayer.activeInHierarchy) fdsm.finishTrigger = true;
     }
 
     public void OnDrop(PointerEventData eventData)

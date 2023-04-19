@@ -500,6 +500,8 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &48739012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2541,6 +2543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeTitle: {fileID: 1706449513}
   recipeContent: {fileID: 1757111555}
+  recipeContent2: {fileID: 0}
 --- !u!1 &367025670
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,6 +2621,8 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &367025674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2714,6 +2719,7 @@ MonoBehaviour:
   lechonLayer: {fileID: 1360445378}
   thaiSauceLayer: {fileID: 914005128}
   filipinoSauceLayer: {fileID: 1852381824}
+  fdsm: {fileID: 344081828}
 --- !u!1 &391878412
 GameObject:
   m_ObjectHideFlags: 0
@@ -6732,6 +6738,8 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &1157841605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9196,8 +9204,13 @@ MonoBehaviour:
   leftButton: {fileID: 1903746949}
   rightButton: {fileID: 688755858}
   recipePage: {fileID: 2090850681}
+  recipeNext: {fileID: 0}
+  recipePrev: {fileID: 0}
   recipeTitle: {fileID: 0}
-  recipeContent: {fileID: 0}
+  recipeContent1: {fileID: 0}
+  recipeContent2: {fileID: 0}
+  menuSelect: {fileID: 0}
+  menuHover: {fileID: 0}
   cuttingBoard: {fileID: 0}
   mixingBowl: {fileID: 0}
   mixingArrow: {fileID: 0}
@@ -9623,8 +9636,13 @@ MonoBehaviour:
   leftButton: {fileID: 0}
   rightButton: {fileID: 0}
   recipePage: {fileID: 1170337343}
+  recipeNext: {fileID: 0}
+  recipePrev: {fileID: 0}
   recipeTitle: {fileID: 1706449512}
-  recipeContent: {fileID: 1757111554}
+  recipeContent1: {fileID: 0}
+  recipeContent2: {fileID: 0}
+  menuSelect: {fileID: 0}
+  menuHover: {fileID: 0}
   cuttingBoard: {fileID: 0}
   mixingBowl: {fileID: 1435194134}
   mixingArrow: {fileID: 1046944879}
@@ -11137,6 +11155,8 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &1870039163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11648,6 +11668,8 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
+  spoon: {fileID: 0}
 --- !u!114 &1930130913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12611,6 +12633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeTitle: {fileID: 154062877}
   recipeContent: {fileID: 0}
+  recipeContent2: {fileID: 0}
 --- !u!1 &2113322265
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,19 +29,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VN_SpaghettiFlashback.unity
     guid: 6daf6560115d403478c641ae86567fc7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VN_PreBibingka.unity
     guid: f6f35105f2003f943b5a319e817009fb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VN_BibingkaFlashback.unity
     guid: edb653ca233aa07438a2c3ef2ed5f4c0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VN_PostBibingka.unity
     guid: a9b57432416db4d45a2e1a5d71342ec1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VN_PreFusion.unity
     guid: 9f0f5618f4730ac43995888380980653
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VN_FusionFlashback.unity
     guid: 785c22401c244bc49a2dd00b5e548939
   - enabled: 1
@@ -62,13 +62,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Recipe/FusionDish Assembly.unity
     guid: 6047d412023925543b290d3d2beb016b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VN_PostFusion.unity
     guid: 0bba95c4dc6cfb54ba4e3cf5a10858f7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VN_Final1.unity
     guid: 46bb452e83c9af343b2c96c2f176689f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VN_Final2.unity
     guid: ce8649e4b7ac32e43add29528045b77a
   - enabled: 0

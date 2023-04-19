@@ -41,8 +41,11 @@ public class DialogueManager : MonoBehaviour
 
     public bool inChoices;
 
+    string scene_name;
+
     void Start()
     {
+        scene_name = SceneManager.GetActiveScene().name;
         story = new Story(inkFile.text);
         speakerName = nameText.GetComponent<TMPro.TextMeshProUGUI>();
         message = dialogueText.GetComponent<TMPro.TextMeshProUGUI>();
@@ -98,20 +101,43 @@ public class DialogueManager : MonoBehaviour
                 }
                 else
                 {
-                    ChoiceTracker.CT.scene += 1;
-                    switch (ChoiceTracker.CT.scene)
+                    switch (scene_name)
                     {
-                    case 1:
-                        //SceneManager.LoadScene("HaloHalo 1");
-                        SceneManager.LoadScene("HaloHalo Final (audrey)");
-                        Debug.Log("scene is " + ChoiceTracker.CT.scene);
-                        break;
-                    case 2:
-                        //spaghetti
-                        //SceneManager.LoadScene("Spaghetti 1");
-                        SceneManager.LoadScene("Spaghetti 1(COPY) (JIRA) 1 COPY SAFE");
-                        Debug.Log("scene is " + ChoiceTracker.CT.scene);
-                        break;
+                        case "PreHaloHalo":
+                            //SceneManager.LoadScene("HaloHalo 1");
+                            SceneManager.LoadScene("HaloHalo Final (audrey)");
+                            //Debug.Log("scene is " + ChoiceTracker.CT.scene);
+                            break;
+                        case "PreSpaghetti":
+                            //spaghetti
+                            //SceneManager.LoadScene("Spaghetti 1");
+                            SceneManager.LoadScene("Spaghetti 1(COPY) (JIRA) 1 COPY SAFE");
+                            //Debug.Log("scene is " + ChoiceTracker.CT.scene);
+                            break;
+                        case "VN_SpaghettiFlashback":
+                            SceneManager.LoadScene("VN_PreBibingka");
+                            break;
+                        case "VN_PreBibingka":
+                            SceneManager.LoadScene("VN_BibingkaFlashback");
+                            break;
+                        case "VN_BibingkaFlashback":
+                            SceneManager.LoadScene("VN_PostBibingka");
+                            break;
+                        case "VN_PostBibingka":
+                            SceneManager.LoadScene("VN_PreFusion");
+                            break;
+                        case "VN_PreFusion":
+                            SceneManager.LoadScene("FusionDish (NEW)");
+                            break;
+                        case "VN_FusionFlashback":
+                            SceneManager.LoadScene("VN_PostFusion");
+                            break;
+                        case "VN_PostFusion":
+                            SceneManager.LoadScene("VN_Final1");
+                            break;
+                        case "VN_Final1":
+                            SceneManager.LoadScene("VN_Final2");
+                            break;
                      }
                 }
             }
