@@ -20,6 +20,9 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject jasmine;
     public GameObject jayce;
+    public GameObject youngJayce;
+    public GameObject mom;
+    public GameObject dad;
 
     static Story story;
     TextMeshProUGUI speakerName;
@@ -182,6 +185,15 @@ public class DialogueManager : MonoBehaviour
                 case "jayce":
                     jayceSpriteChange(param);
                     break;
+                case "youngjayce":
+                    youngJayceSpriteChange(param);
+                    break;
+                case "mom":
+                    momSpriteChange(param);
+                    break;
+                case "dad":
+                    dadSpriteChange(param);
+                    break;
             }
         }
     }
@@ -242,6 +254,84 @@ public class DialogueManager : MonoBehaviour
                 break;
             case "shocked":
                 jayce.transform.GetChild(5).gameObject.SetActive(true);
+                break;
+            default:
+                break;
+        }
+    }
+
+    void youngJayceSpriteChange(string expression)
+    {
+        foreach (Transform child in youngJayce.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        switch (expression)
+        {
+            case "neutral":
+                youngJayce.transform.GetChild(0).gameObject.SetActive(true);
+                break;
+            case "happy":
+                youngJayce.transform.GetChild(1).gameObject.SetActive(true);
+                break;
+            case "annoyed":
+                youngJayce.transform.GetChild(2).gameObject.SetActive(true);
+                break;
+            case "sad":
+                youngJayce.transform.GetChild(3).gameObject.SetActive(true);
+                break;
+            case "none":
+                break;
+            default:
+                break;
+        }
+    }
+
+    void momSpriteChange(string expression)
+    {
+        foreach (Transform child in mom.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        switch (expression)
+        {
+            case "neutral":
+                mom.transform.GetChild(0).gameObject.SetActive(true);
+                break;
+            case "happy":
+                mom.transform.GetChild(1).gameObject.SetActive(true);
+                break;
+            case "worry":
+                mom.transform.GetChild(2).gameObject.SetActive(true);
+                break;
+            case "none":
+                break;
+            default:
+                break;
+        }
+    }
+
+    void dadSpriteChange(string expression)
+    {
+        foreach (Transform child in dad.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        switch (expression)
+        {
+            case "neutral":
+                dad.transform.GetChild(0).gameObject.SetActive(true);
+                break;
+            case "happy":
+                dad.transform.GetChild(1).gameObject.SetActive(true);
+                break;
+            case "wink":
+                dad.transform.GetChild(2).gameObject.SetActive(true);
+                break;
+            case "none":
                 break;
             default:
                 break;

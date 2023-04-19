@@ -2,6 +2,7 @@
 
 //use kitchen background for this
 
+#youngjayce none
 #speaker Dad
 #dad neutral
 And here's the pork belly, crispy crispy!
