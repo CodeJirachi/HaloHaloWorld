@@ -32,7 +32,8 @@ public class FoodDragTrigger : MonoBehaviour, IPointerDownHandler, IBeginDragHan
 
     void Update()
     {
-        if (ingredient_icon.GetComponent<IngredientDragDrop>().inSlot)
+        //if (ingredient_icon.GetComponent<IngredientDragDrop>().inSlot)
+        if (ingredient_icon.GetComponent<IngredientDragDrop>().inSlot || ingredient_icon_prefab.GetComponent<IngredientDragDrop>().inSlot)
         {
             this.gameObject.SetActive(false);
         }

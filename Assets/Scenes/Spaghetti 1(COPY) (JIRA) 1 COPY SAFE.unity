@@ -1024,8 +1024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed72510c4275b7429e0d89a9089802b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient_icon_prefab: {fileID: 0}
-  ingredient_icon: {fileID: 169138925}
+  ingredient_icon_prefab: {fileID: 169138925}
+  ingredient_icon: {fileID: 0}
   canvas: {fileID: 1368548038}
   ingredientFinalStage: {fileID: 1346556707}
   ingredientCurrStage: 5
@@ -2406,8 +2406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed72510c4275b7429e0d89a9089802b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient_icon_prefab: {fileID: 0}
-  ingredient_icon: {fileID: 1818765713}
+  ingredient_icon_prefab: {fileID: 1818765713}
+  ingredient_icon: {fileID: 0}
   canvas: {fileID: 1368548038}
   ingredientFinalStage: {fileID: 985094026}
   ingredientCurrStage: 3
@@ -5519,8 +5519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed72510c4275b7429e0d89a9089802b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient_icon_prefab: {fileID: 0}
-  ingredient_icon: {fileID: 698733976}
+  ingredient_icon_prefab: {fileID: 698733976}
+  ingredient_icon: {fileID: 0}
   canvas: {fileID: 1368548038}
   ingredientFinalStage: {fileID: 99825663}
   ingredientCurrStage: 6
@@ -8496,7 +8496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &941884898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8544,7 +8544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87005759b34a10649a42ef6ca040f28c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78a6d7e1997e1ef499b33bc1a63ba1c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8580,7 +8580,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 369730.44, y: 55736.168}
-  m_SizeDelta: {x: 17, y: 121}
+  m_SizeDelta: {x: 8, y: 148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!210 &941884903
 SortingGroup:
@@ -15940,8 +15940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed72510c4275b7429e0d89a9089802b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient_icon_prefab: {fileID: 0}
-  ingredient_icon: {fileID: 985004853}
+  ingredient_icon_prefab: {fileID: 985004853}
+  ingredient_icon: {fileID: 0}
   canvas: {fileID: 1368548038}
   ingredientFinalStage: {fileID: 998122444}
   ingredientCurrStage: 6

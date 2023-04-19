@@ -109,7 +109,7 @@ public class DialogueManager : MonoBehaviour
                     case 2:
                         //spaghetti
                         //SceneManager.LoadScene("Spaghetti 1");
-                        SceneManager.LoadScene("Spaghetti 1(COPY) (JIRA)");
+                        SceneManager.LoadScene("Spaghetti 1(COPY) (JIRA) 1 COPY SAFE");
                         Debug.Log("scene is " + ChoiceTracker.CT.scene);
                         break;
                      }

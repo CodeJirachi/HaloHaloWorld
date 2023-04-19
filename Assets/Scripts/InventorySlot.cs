@@ -42,7 +42,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             }
 
             //checking if its a chopped ingredient being dragged in
-            else if (currentItem == "chili" || currentItem == "garlic" || currentItem == "green onion" || currentItem == "green chili" || currentItem == "onion" || currentItem == "lechon" || currentItem == "bell pepper" || currentItem == "hot dog")
+            else if (currentItem == "chili" || currentItem == "garlic" || currentItem == "green onion" || currentItem == "green chili" || currentItem == "onion" || currentItem == "lechon")
             {
                 ingredient_icon = ingredient.gameObject.GetComponent<FoodDragTrigger>().ingredient_icon;
 
@@ -54,8 +54,24 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 ingredient_icon.GetComponent<Image>().raycastTarget = true;
                 ingredient_icon.gameObject.transform.SetParent(this.gameObject.transform.parent.parent, false);
             }
+            //adding these in OR's above doesn't work, broke spaghetti gameplay
+            else if (currentItem == "bell pepper")
+            {
+                GameObject.Find("bell pepper chopped").SetActive(true);
+                GameObject.Find("bell pepper chopped").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("bell pepper chopped").GetComponent<IngredientDragDrop>().inSlot = true;
+                GameObject.Find("bell pepper chopped").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("bell pepper chopped").GetComponent<Image>().raycastTarget = true;
+            }
 
-
+            else if (currentItem == "hot dog")
+            {
+                GameObject.Find("bell pepper chopped").SetActive(true);
+                GameObject.Find("bell pepper chopped").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("bell pepper chopped").GetComponent<IngredientDragDrop>().inSlot = true;
+                GameObject.Find("bell pepper chopped").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("bell pepper chopped").GetComponent<Image>().raycastTarget = true;
+            }
             else if (currentItem == "potFilled")
             //else if (eventData.pointerDrag.GetComponent<RectTransform>().name == "spaghetti pot")
             {
