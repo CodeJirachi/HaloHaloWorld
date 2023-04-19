@@ -20,6 +20,9 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject jasmine;
     public GameObject jayce;
+    public GameObject youngJayce;
+    public GameObject mom;
+    public GameObject dad;
 
     static Story story;
     TextMeshProUGUI speakerName;
@@ -28,6 +31,11 @@ public class DialogueManager : MonoBehaviour
     public GameObject choicePanel;
     public GameObject customButton;
     static Choice choiceSelected;
+
+    //copy blackscreen gameobject to all scenes that need it
+    public GameObject blackScreen;
+
+    public GameObject finalscene;
 
     List<string> tags;
 
@@ -79,9 +87,20 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 //FinishDialogue();
-                ChoiceTracker.CT.scene += 1;
-                switch(ChoiceTracker.CT.scene)
+
+                //special case to end VN when over
+                if (SceneManager.GetActiveScene().name == "VN_Final2")
                 {
+                    if (!finalscene.activeSelf)
+                    {
+                        StartCoroutine(FadeToFinal(1.5f));
+                    }
+                }
+                else
+                {
+                    ChoiceTracker.CT.scene += 1;
+                    switch (ChoiceTracker.CT.scene)
+                    {
                     case 1:
                         //SceneManager.LoadScene("HaloHalo 1");
                         SceneManager.LoadScene("HaloHalo Final (audrey)");
@@ -93,6 +112,7 @@ public class DialogueManager : MonoBehaviour
                         SceneManager.LoadScene("Spaghetti 1(COPY) (JIRA)");
                         Debug.Log("scene is " + ChoiceTracker.CT.scene);
                         break;
+                     }
                 }
             }
         }
@@ -104,6 +124,7 @@ public class DialogueManager : MonoBehaviour
         message.text = currentSentence;
         ParseTags();
         StopAllCoroutines();
+        StartCoroutine(TypeSentence(currentSentence));
     }
 
     void FinishDialogue()
@@ -183,6 +204,15 @@ public class DialogueManager : MonoBehaviour
                 case "jayce":
                     jayceSpriteChange(param);
                     break;
+                case "youngjayce":
+                    youngJayceSpriteChange(param);
+                    break;
+                case "mom":
+                    momSpriteChange(param);
+                    break;
+                case "dad":
+                    dadSpriteChange(param);
+                    break;
             }
         }
     }
@@ -249,6 +279,84 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    void youngJayceSpriteChange(string expression)
+    {
+        foreach (Transform child in youngJayce.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        switch (expression)
+        {
+            case "neutral":
+                youngJayce.transform.GetChild(0).gameObject.SetActive(true);
+                break;
+            case "happy":
+                youngJayce.transform.GetChild(1).gameObject.SetActive(true);
+                break;
+            case "annoyed":
+                youngJayce.transform.GetChild(2).gameObject.SetActive(true);
+                break;
+            case "sad":
+                youngJayce.transform.GetChild(3).gameObject.SetActive(true);
+                break;
+            case "none":
+                break;
+            default:
+                break;
+        }
+    }
+
+    void momSpriteChange(string expression)
+    {
+        foreach (Transform child in mom.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        switch (expression)
+        {
+            case "neutral":
+                mom.transform.GetChild(0).gameObject.SetActive(true);
+                break;
+            case "happy":
+                mom.transform.GetChild(1).gameObject.SetActive(true);
+                break;
+            case "worry":
+                mom.transform.GetChild(2).gameObject.SetActive(true);
+                break;
+            case "none":
+                break;
+            default:
+                break;
+        }
+    }
+
+    void dadSpriteChange(string expression)
+    {
+        foreach (Transform child in dad.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        switch (expression)
+        {
+            case "neutral":
+                dad.transform.GetChild(0).gameObject.SetActive(true);
+                break;
+            case "happy":
+                dad.transform.GetChild(1).gameObject.SetActive(true);
+                break;
+            case "wink":
+                dad.transform.GetChild(2).gameObject.SetActive(true);
+                break;
+            case "none":
+                break;
+            default:
+                break;
+        }
+    }
+
     void changeSpeaker(string name)
     {
         if(name == "clear")
@@ -265,6 +373,34 @@ public class DialogueManager : MonoBehaviour
         {
             nameBox.SetActive(false);
         }
+    }
+
+    //once again thank you and credits to Phantom Game Designs for their Inky integration help: https://github.com/RisingArtist/Ink-with-Unity-2019.3
+    IEnumerator TypeSentence(string sentence)
+    {
+        message.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            message.text += letter;
+            yield return null;
+        }
+        yield return null;
+    }
+
+    IEnumerator FadeToFinal(float seconds)
+    {
+        blackScreen.GetComponent<FadeInOut>().fadeIn = true;
+        yield return new WaitForSeconds(seconds);
+        blackScreen.GetComponent<FadeInOut>().fadeIn = false;
+        finalscene.SetActive(true);
+        blackScreen.GetComponent<FadeInOut>().fadeOut = true;
+    }
+
+    IEnumerator FadeToScene(float seconds, string scene_name)
+    {
+        blackScreen.GetComponent<FadeInOut>().fadeIn = true;
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(scene_name);
     }
 
     //function TBA - fast forward for VN

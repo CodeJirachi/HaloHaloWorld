@@ -17,7 +17,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
     public Vector2 prev_pos;
 
     public GameObject hoverLabelPrefab;
-    GameObject text_label;
+    public GameObject text_label;
     //spoon for halo halo 
     public GameObject spoon;
     //public GameObject spoon;
@@ -34,7 +34,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
     {
 
         //Debug.Log("OnBeginDrag");
-        Destroy(text_label);
+        if (text_label != null) Destroy(text_label);
 
         //Scene currentScene = SceneManager.GetActiveScene();
         //string sceneName = currentScene.name;
@@ -84,7 +84,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
         // allow
         //else
         //{
-            Destroy(text_label);
+            if(text_label != null)Destroy(text_label);
             rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
         //}
     }
@@ -92,7 +92,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
     public void OnEndDrag(PointerEventData eventData)
     {
         //Debug.Log("OnEndDrag");
-        Destroy(text_label);
+        if (text_label != null) Destroy(text_label);
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         //rectTransform.localScale = new Vector2(0, 0);
@@ -112,28 +112,43 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     void OnMouseEnter()
     {
-        Debug.Log(this.gameObject.name);
-        Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousepos.x += 1;
-        mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
+        if (inSlot)
+        {
+            Debug.Log(this.gameObject.name);
+            Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousepos.x += 1;
+            mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
 
-        text_label = Instantiate(hoverLabelPrefab, mousepos, Quaternion.identity, canvas.transform);
-        text_label.GetComponent<TMPro.TextMeshProUGUI>().text = "<mark=#c0bfde>" + this.gameObject.name + "</mark>"; //for background of text
-        text_label.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = this.gameObject.name;
+            text_label = Instantiate(hoverLabelPrefab, mousepos, Quaternion.identity, canvas.transform);
+
+            //this almost works... trying to fix hover label bug
+            /*
+            text_label.transform.SetParent(this.gameObject.transform, true);
+            text_label.AddComponent<Canvas>();
+            text_label.GetComponent<Canvas>().overrideSorting = true;
+            text_label.GetComponent<Canvas>().sortingLayerName = "Above-Draggable";
+            */
+
+            text_label.GetComponent<TMPro.TextMeshProUGUI>().text = "<mark=#c0bfde>" + this.gameObject.name + "</mark>"; //for background of text
+            text_label.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = this.gameObject.name;
+        }
     }
 
     void OnMouseOver()
     {
-        Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousepos.x += 1;
-        mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
-        //text_label.SetActive(false);
-
-        if(text_label != null)
+        if (inSlot)
         {
-            text_label.transform.position = mousepos;
+            Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousepos.x += 1;
+            mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
+            //text_label.SetActive(false);
+
+            if (text_label != null)
+            {
+                text_label.transform.position = mousepos;
+            }
+            //text_label.SetActive(true);
         }
-        //text_label.SetActive(true);
     }
 
     void OnMouseExit()

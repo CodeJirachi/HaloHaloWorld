@@ -19,7 +19,7 @@ public class FoodDragTrigger : MonoBehaviour, IPointerDownHandler, IBeginDragHan
     public int ingredientMaxStage; //set in inspector; to determine how many sprites to go through
     bool finalStage;  
 
-    void Start()
+    void Awake()
     {
         ingredientCurrStage = 0;
 

@@ -39,6 +39,9 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler
 
     [SerializeField] GameObject cuttingBoard;
     [SerializeField] GameObject mixingBowl;
+    public GameObject mixingArrow;
+
+    public GameObject sinkFront; //for hiding sink front when cutting board opens
 
 
     public void Awake()
@@ -179,15 +182,34 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler
         {
             case "cutting board":
                 cuttingBoard.SetActive(true);
+                sinkFront.SetActive(false);
                 break;
-            case "mixing bowl":
-                mixingBowl.SetActive(true);
+            case "nam prik pla":
+                if(self.GetComponent<NamPrikPla>().completed)
+                {
+                    mixingBowl.SetActive(true);
+                    mixingArrow.SetActive(true);
+                    self.SetActive(false);
+                }
                 break;
-            case "saucepan":
+            case "lechon sauce":
+                if(self.GetComponent<LechonSauce>().completed)
+                {
+                    mixingBowl.SetActive(true);
+                    mixingArrow.SetActive(true);
+                    self.SetActive(false);
+                }
                 break;
         }
+    }
 
-        self.SetActive(false);
+    public void closeView()
+    {
+        if(GameObject.Find("cutting board open").activeInHierarchy)
+        {
+            GameObject.Find("cutting board open").SetActive(false);
+            sinkFront.SetActive(true);
+        }
     }
 
     public void startGame(Object nextScene)

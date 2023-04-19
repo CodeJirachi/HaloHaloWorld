@@ -13,6 +13,11 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
     public GameObject chili;
     public GameObject garlic;
     public GameObject greenOnion;
+
+    public GameObject greenChili;
+    public GameObject onion;
+    public GameObject lechon;
+
     public GameObject bellPepper;
     public GameObject hotdog;
 
@@ -23,20 +28,37 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
         currentItem = eventData.pointerDrag;
         currentItemName = currentItem.GetComponent<RectTransform>().name;
 
-        if (currentItemName == "red chili icon")
+        Debug.Log("hi");
+
+        if (currentItemName == "red thai chili")
         {
             chili.SetActive(true);
             currentItem.SetActive(false);
-        } else if (currentItemName == "garlic icon")
+        } else if (currentItemName == "garlic")
         {
             garlic.SetActive(true);
             currentItem.SetActive(false);
         }
-        else if (currentItemName == "green onion icon")
+        else if (currentItemName == "green onion")
         {
             greenOnion.SetActive(true);
             currentItem.SetActive(false);
         }
+
+        else if(currentItemName == "green thai chili")
+        {
+            greenChili.SetActive(true);
+            currentItem.SetActive(false);
+        }
+        else if(currentItemName == "onion")
+        {
+            onion.SetActive(true);
+            currentItem.SetActive(false);
+        }
+        else if(currentItemName == "crispy pork belly")
+        {
+            lechon.SetActive(true);
+
         else if (currentItemName == "bell pepper")
         {
             bellPepper.SetActive(true);

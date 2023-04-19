@@ -21,25 +21,38 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             Debug.Log(currentItem);
 
             //ANOTHER TEMPORARY CONDITIONAL CHECK HERE- gonna generalize this to check tags also maybe
-            if(eventData.pointerDrag.GetComponent<RectTransform>().name == "rice cooker")
+            if (eventData.pointerDrag.GetComponent<RectTransform>().name == "rice cooker")
             {
                 GameObject.Find("cooked rice").SetActive(true);
                 GameObject.Find("cooked rice").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
                 GameObject.Find("cooked rice").GetComponent<IngredientDragDrop>().inSlot = true;
                 GameObject.Find("cooked rice").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
                 GameObject.Find("cooked rice").GetComponent<Image>().raycastTarget = true;
+                GameObject.Find("cooked rice").gameObject.transform.SetParent(this.gameObject.transform.parent.parent, false);
+
+            }
+            else if(eventData.pointerDrag.GetComponent<RectTransform>().name == "lechon pan")
+            {
+                GameObject.Find("crispy pork belly").SetActive(true);
+                GameObject.Find("crispy pork belly").GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("crispy pork belly").GetComponent<IngredientDragDrop>().inSlot = true;
+                GameObject.Find("crispy pork belly").GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
+                GameObject.Find("crispy pork belly").GetComponent<Image>().raycastTarget = true;
+                GameObject.Find("crispy pork belly").gameObject.transform.SetParent(this.gameObject.transform.parent.parent, false);
             }
 
             //checking if its a chopped ingredient being dragged in
-            else if(currentItem == "chili" || currentItem == "garlic" || currentItem == "bell pepper" || currentItem == "hot dog")
+            else if (currentItem == "chili" || currentItem == "garlic" || currentItem == "green onion" || currentItem == "green chili" || currentItem == "onion" || currentItem == "lechon" || currentItem == "bell pepper" || currentItem == "hot dog")
             {
                 ingredient_icon = ingredient.gameObject.GetComponent<FoodDragTrigger>().ingredient_icon;
 
                 ingredient_icon.SetActive(true);
                 ingredient_icon.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                Destroy(ingredient_icon.GetComponent<IngredientDragDrop>().text_label);
                 ingredient_icon.GetComponent<IngredientDragDrop>().inSlot = true;
                 ingredient_icon.GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
                 ingredient_icon.GetComponent<Image>().raycastTarget = true;
+                ingredient_icon.gameObject.transform.SetParent(this.gameObject.transform.parent.parent, false);
             }
 
 

@@ -385,7 +385,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442586032}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &442586034
 Camera:
   m_ObjectHideFlags: 0
@@ -451,7 +451,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442586032}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e5dd05157a5643b4ebdbc323e74409a8, type: 3}
@@ -1397,7 +1397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03c391fd11ed3647949d311d14cc000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkFile: {fileID: 4900000, guid: c8436c3fd7f42e04490c30c0efd30bc3, type: 3}
+  inkFile: {fileID: 4900000, guid: 9e9764faa39ef814f871902882d5d2de, type: 3}
   dialogueText: {fileID: 2123689763}
   nameText: {fileID: 1469421579}
   nameBox: {fileID: 237861595}
