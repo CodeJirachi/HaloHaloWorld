@@ -45,6 +45,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 
                 ingredient_icon.SetActive(true);
                 ingredient_icon.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                Destroy(ingredient_icon.GetComponent<IngredientDragDrop>().text_label);
                 ingredient_icon.GetComponent<IngredientDragDrop>().inSlot = true;
                 ingredient_icon.GetComponent<IngredientDragDrop>().prev_pos = GetComponent<RectTransform>().anchoredPosition;
                 ingredient_icon.GetComponent<Image>().raycastTarget = true;

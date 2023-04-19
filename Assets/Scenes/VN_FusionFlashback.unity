@@ -658,7 +658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!210 &636627160
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -747,8 +747,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026421935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.74, y: -0.22175539, z: -700.9112}
-  m_LocalScale: {x: 4.2, y: 4.2, z: 4.2}
+  m_LocalPosition: {x: 6.5, y: -0.22175539, z: -700.9112}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 636627161}
@@ -795,7 +795,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 7c04a58e9a490934886db5e5ec6b5437, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac86d20be10b68b41af317cc13c08c3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1368,6 +1368,8 @@ MonoBehaviour:
   dad: {fileID: 636627159}
   choicePanel: {fileID: 1869226462}
   customButton: {fileID: 4655723026960085111, guid: 3b0dbf2de2196964291eba0e0107ef47, type: 3}
+  blackScreen: {fileID: 0}
+  finalscene: {fileID: 0}
   inChoices: 0
 --- !u!1 &1673436932
 GameObject:
@@ -1863,7 +1865,7 @@ GameObject:
   - component: {fileID: 1981482225}
   - component: {fileID: 1981482226}
   m_Layer: 0
-  m_Name: Mom Sprite - Neutral
+  m_Name: Dad Sprite - Neutral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1877,8 +1879,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981482224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.74, y: -0.22175539, z: -700.9112}
-  m_LocalScale: {x: 4.2, y: 4.2, z: 4.2}
+  m_LocalPosition: {x: 6.5, y: -0.22175539, z: -700.9112}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 636627161}
@@ -1925,7 +1927,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 76f6cb497d02b1c408007ed2c83172b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac86d20be10b68b41af317cc13c08c3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2116,7 +2118,7 @@ GameObject:
   - component: {fileID: 2029748507}
   - component: {fileID: 2029748508}
   m_Layer: 0
-  m_Name: Mom Sprite - Worry
+  m_Name: Mom Sprite - Wink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2130,8 +2132,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029748506}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.74, y: -0.22175539, z: -700.9112}
-  m_LocalScale: {x: 4.2, y: 4.2, z: 4.2}
+  m_LocalPosition: {x: 6.5, y: -0.22175539, z: -700.9112}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 636627161}
@@ -2178,7 +2180,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 6093293bcbf2e60438c86beb54609d16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8d2c835a7a98b541acff1389cfbaa6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
