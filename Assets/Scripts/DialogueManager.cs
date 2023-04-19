@@ -101,16 +101,18 @@ public class DialogueManager : MonoBehaviour
                     ChoiceTracker.CT.scene += 1;
                     switch (ChoiceTracker.CT.scene)
                     {
-                        case 1:
-                            SceneManager.LoadScene("HaloHalo 1");
-                            Debug.Log("scene is " + ChoiceTracker.CT.scene);
-                            break;
-                        case 2:
-                            //spaghetti
-                            SceneManager.LoadScene("Spaghetti 1");
-                            Debug.Log("scene is " + ChoiceTracker.CT.scene);
-                            break;
-                    }
+                    case 1:
+                        //SceneManager.LoadScene("HaloHalo 1");
+                        SceneManager.LoadScene("HaloHalo Final (audrey)");
+                        Debug.Log("scene is " + ChoiceTracker.CT.scene);
+                        break;
+                    case 2:
+                        //spaghetti
+                        //SceneManager.LoadScene("Spaghetti 1");
+                        SceneManager.LoadScene("Spaghetti 1(COPY) (JIRA)");
+                        Debug.Log("scene is " + ChoiceTracker.CT.scene);
+                        break;
+                     }
                 }
             }
         }

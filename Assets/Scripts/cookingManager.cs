@@ -19,6 +19,7 @@ public class cookingManager : MonoBehaviour
 
     [SerializeField] TMP_Text recipeTitle;
     [SerializeField] TMP_Text recipeContent;
+    [SerializeField] TMP_Text recipeContent2;
 
     public void Start()
     {
@@ -32,7 +33,8 @@ public class cookingManager : MonoBehaviour
         //default choice is "???"
         string choiceText = "???";
 
-        if (sceneName == "HaloHalo 1")
+        //if (sceneName == "HaloHalo 1")
+        if (sceneName == "HaloHalo Final (audrey)")
         {
             
             //
@@ -52,15 +54,17 @@ public class cookingManager : MonoBehaviour
             recipeTitle.text = "Halo Halo";
 
             // add multiple pages
-            recipeContent.text = "You will need a Spoon for this recipe!! \n" + "1. pour Ice in the glass \n\n" +
+            recipeContent.text = "You will need a Spoon for this recipe!! \n\n" + "1. pour Ice in the glass \n\n" +
                 "2. scoop in a layer of Beans \n\n" + "3. scoop in a few slices of Jackfruit \n\n" +
-                "4. follow with a nice layer of Nata De Coco \n\n" + "5. scoop in some Banana Slices \n\n" + "6. follow with a nice scoop of " + choiceText +
+                "4. follow with a nice layer of Nata De Coco \n\n" + "5. scoop in some Banana Slices \n\n"; 
+                
+             recipeContent2.text = "6. follow with a nice scoop of " + choiceText +
                 " Ice Cream \n\n" + "7. add in some Leche Flan \n\n" + "8. spoon over a nice drizzle of Evaporated Milk \n\n" + "9. lastly, finish with a Sticko to top it all off!";
         }
          
         //spaghetti gameplay scenes: 
         //else if (sceneName == "Spaghetti0" || || || )
-        else if (sceneName == "Spaghetti0")
+        else if (sceneName == "Spaghetti 1(COPY) (JIRA)")
         {
             if (ChoiceTracker.CT.choice == "Thai Basil")
             {
