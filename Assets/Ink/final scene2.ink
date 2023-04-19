@@ -2,7 +2,6 @@
 Hi mom… uh, it's been a while.
 
 #speaker Mom
-#mom neutral
 Yeah, it sure has. How’s school been? Graduation is soon, right?
 
 #speaker Jayce

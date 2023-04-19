@@ -32,6 +32,10 @@ public class DialogueManager : MonoBehaviour
     public GameObject customButton;
     static Choice choiceSelected;
 
+    public GameObject blackScreen;
+
+    public GameObject finalscene;
+
     List<string> tags;
 
     public bool inChoices;
@@ -82,18 +86,37 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 //FinishDialogue();
-                ChoiceTracker.CT.scene += 1;
-                switch(ChoiceTracker.CT.scene)
+
+                //special case to end VN when over
+                if (SceneManager.GetActiveScene().name == "VN_Final2")
                 {
-                    case 1:
-                        SceneManager.LoadScene("HaloHalo 1");
-                        Debug.Log("scene is " + ChoiceTracker.CT.scene);
-                        break;
-                    case 2:
-                        //spaghetti
-                        SceneManager.LoadScene("Spaghetti 1");
-                        Debug.Log("scene is " + ChoiceTracker.CT.scene);
-                        break;
+                    if (!finalscene.activeSelf)
+                    {
+                        blackScreen.GetComponent<FadeInOut>().fadeIn = true;
+                    }
+
+                    if(blackScreen.GetComponent<SpriteRenderer>().color.a > 1)
+                    {
+                        blackScreen.GetComponent<FadeInOut>().fadeIn = false;
+                        finalscene.SetActive(true);
+                        blackScreen.GetComponent<FadeInOut>().fadeOut = true;
+                    }
+                }
+                else
+                {
+                    ChoiceTracker.CT.scene += 1;
+                    switch (ChoiceTracker.CT.scene)
+                    {
+                        case 1:
+                            SceneManager.LoadScene("HaloHalo 1");
+                            Debug.Log("scene is " + ChoiceTracker.CT.scene);
+                            break;
+                        case 2:
+                            //spaghetti
+                            SceneManager.LoadScene("Spaghetti 1");
+                            Debug.Log("scene is " + ChoiceTracker.CT.scene);
+                            break;
+                    }
                 }
             }
         }
@@ -365,6 +388,7 @@ public class DialogueManager : MonoBehaviour
             message.text += letter;
             yield return null;
         }
+        yield return null;
     }
 
     //function TBA - fast forward for VN
