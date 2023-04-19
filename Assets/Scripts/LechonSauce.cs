@@ -80,7 +80,7 @@ public class LechonSauce : MonoBehaviour, IDropHandler
                 breadcrumbsLayer.SetActive(true);
                 currentIngredient.SetActive(false);
                 tracker++;
-            } else if(currIngredientName == "liver" && sauteed)
+            } else if(currIngredientName == "mashed chicken liver" && sauteed)
             {
                 liverLayer.SetActive(true);
                 currentIngredient.SetActive(false);

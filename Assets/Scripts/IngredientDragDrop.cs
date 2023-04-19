@@ -33,7 +33,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
     {
 
         //Debug.Log("OnBeginDrag");
-        Destroy(text_label);
+        if (text_label != null) Destroy(text_label);
         /*
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
@@ -71,7 +71,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
         //    if (spoon.activeSelf == true)
         //    {
         //Debug.Log("OnDrag");
-        Destroy(text_label);
+        if(text_label != null)Destroy(text_label);
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
         //    }
         //}
@@ -86,7 +86,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
     public void OnEndDrag(PointerEventData eventData)
     {
         //Debug.Log("OnEndDrag");
-        Destroy(text_label);
+        if (text_label != null) Destroy(text_label);
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         //rectTransform.localScale = new Vector2(0, 0);
@@ -114,7 +114,15 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
             mousepos.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
 
             text_label = Instantiate(hoverLabelPrefab, mousepos, Quaternion.identity, canvas.transform);
-            //text_label.transform.SetParent(this.gameObject.transform, true);
+
+            //this almost works... trying to fix hover label bug
+            /*
+            text_label.transform.SetParent(this.gameObject.transform, true);
+            text_label.AddComponent<Canvas>();
+            text_label.GetComponent<Canvas>().overrideSorting = true;
+            text_label.GetComponent<Canvas>().sortingLayerName = "Above-Draggable";
+            */
+
             text_label.GetComponent<TMPro.TextMeshProUGUI>().text = "<mark=#c0bfde>" + this.gameObject.name + "</mark>"; //for background of text
             text_label.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = this.gameObject.name;
         }
