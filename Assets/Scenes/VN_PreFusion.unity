@@ -1397,7 +1397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03c391fd11ed3647949d311d14cc000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkFile: {fileID: 4900000, guid: c919fdd4feb1d3345a199efbe62758a3, type: 3}
+  inkFile: {fileID: 4900000, guid: 8a2e3ba7c9bd6844c8193ed09ac9edb3, type: 3}
   dialogueText: {fileID: 2123689763}
   nameText: {fileID: 1469421579}
   nameBox: {fileID: 237861595}
