@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 
 public class FoodContainer : MonoBehaviour, IDropHandler
 {
+    // Halo Halo Only (Spoon scooping into glass)
+    public AudioSource Scoop;
+
     //serialize game obj for each input of ingred. in glass
     [SerializeField] GameObject glassEmpty;
     [SerializeField] GameObject ice;
@@ -97,12 +100,16 @@ public class FoodContainer : MonoBehaviour, IDropHandler
             {
                 halohalo.transform.GetChild(11).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
+
+                Scoop.Play();
                 currIngredientLayer++;
             }
             else if (currentIngredient == "sweetened beans" && currIngredientLayer == 1)
             {
                 halohalo.transform.GetChild(10).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
+
+                Scoop.Play();
                 currIngredientLayer++;
             }
            
@@ -111,24 +118,32 @@ public class FoodContainer : MonoBehaviour, IDropHandler
             {
                 halohalo.transform.GetChild(9).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
+
+                Scoop.Play();
                 currIngredientLayer++;
             }
             else if (currentIngredient == "nata de coco" && currIngredientLayer == 3)
             {
                 halohalo.transform.GetChild(8).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
+
+                Scoop.Play();
                 currIngredientLayer++;
             }
             else if (currentIngredient == "saba (banana)" && currIngredientLayer == 4)
             {
                 halohalo.transform.GetChild(7).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
+
+                Scoop.Play();
                 currIngredientLayer++;
             }
             else if (currentIngredient == "ube ice cream" && currIngredientLayer == 5)
             {
                 halohalo.transform.GetChild(4).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
+
+                Scoop.Play();
                 currIngredientLayer++;
             }
             // is allowed to be dragged in, this is THE WRONG CHOICE!!!!!!!! ITS WRONG YO!!! 
@@ -136,24 +151,32 @@ public class FoodContainer : MonoBehaviour, IDropHandler
             {
                 halohalo.transform.GetChild(5).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
+
+                Scoop.Play();
                 currIngredientLayer++;
             }
             else if (currentIngredient == "flan" && currIngredientLayer == 6)
             {
                 halohalo.transform.GetChild(6).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
+
+                Scoop.Play();
                 currIngredientLayer++;
             }
             else if (currentIngredient == "evaporated milk" && currIngredientLayer == 7)
             {
                 halohalo.transform.GetChild(3).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
+
+                Scoop.Play();
                 currIngredientLayer++;
             }
             else if (currentIngredient == "sticko" && currIngredientLayer == 8)
             {
                 halohalo.transform.GetChild(12).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
+
+                Scoop.Play();
                 currIngredientLayer++;
 
                 StartCoroutine(delaySceneSwitch(5.0f));
