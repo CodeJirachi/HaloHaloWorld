@@ -37,7 +37,7 @@ public class Sink : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeginDrag
                 //cookedRice.SetActive(true);
 
             }
-            else if (currentItem == "collanderParent")
+            else if (currentItem == "collander")
             {
                 //currentIngredient.SetActive(false);
 

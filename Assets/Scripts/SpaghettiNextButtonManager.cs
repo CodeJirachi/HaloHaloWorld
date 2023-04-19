@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class SpaghettiNextButtonManager : MonoBehaviour
 {
@@ -64,6 +66,15 @@ public class SpaghettiNextButtonManager : MonoBehaviour
         nextStageButton2.SetActive(false);
 
         //go to next scene code: 
+        StartCoroutine(delaySceneSwitch(8.0f));
+
+    }
+
+    private IEnumerator delaySceneSwitch(float seconds)
+    {
+
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("VN_SpaghettiFlashback");
 
     }
 }

@@ -31,7 +31,7 @@ public class SpaghettiPlateFoodContainer : MonoBehaviour, IDropHandler
 
             Debug.Log(currentIngredient);
 
-            if (currentIngredient == "collanderParent FILLED" && currIngredientLayer == 0)
+            if (currentIngredient == "collander with spaghetti" && currIngredientLayer == 0)
             {
                 plate.transform.GetChild(0).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
@@ -55,7 +55,7 @@ public class SpaghettiPlateFoodContainer : MonoBehaviour, IDropHandler
 
                 draggedObject.SetActive(false);
 
-                nextButton2.SetActive(true); ;
+                nextButton2.SetActive(true);
                 currIngredientLayer++;
             }
             else

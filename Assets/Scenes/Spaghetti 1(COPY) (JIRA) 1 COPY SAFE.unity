@@ -1921,7 +1921,8 @@ MonoBehaviour:
   pan4: {fileID: 1006870621}
   pan5: {fileID: 1531369266}
   pan6: {fileID: 434368693}
-  nextButton1: {fileID: 0}
+  choppingBoard: {fileID: 1151832155}
+  plate: {fileID: 180597159}
   resultIcon: {fileID: 2093879341}
   potReset: {fileID: 0}
   collander: {fileID: 0}
@@ -3260,7 +3261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &327740091
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3332,6 +3333,8 @@ GameObject:
   - component: {fileID: 367025674}
   - component: {fileID: 367025673}
   - component: {fileID: 367025672}
+  - component: {fileID: 367025677}
+  - component: {fileID: 367025676}
   m_Layer: 5
   m_Name: filled pot
   m_TagString: Untagged
@@ -3395,7 +3398,7 @@ MonoBehaviour:
   canvas: {fileID: 1368548038}
   inSlot: 1
   prev_pos: {x: 0, y: 0}
-  hoverLabelPrefab: {fileID: 0}
+  hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
   text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &367025674
@@ -3436,6 +3439,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367025670}
   m_CullTransparentMesh: 1
+--- !u!61 &367025676
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367025670}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 5.0853424, y: 8.899353}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 84.90814, y: 56.938766}
+  m_EdgeRadius: 0
+--- !u!114 &367025677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367025670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cecb1e8b9a27c741b6e122fad83ede6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Select: {fileID: 118999053}
+  Hover: {fileID: 1992174348}
+  Scoop: {fileID: 1599406078}
 --- !u!1 &367576810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3453,7 +3497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &367576811
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4107,7 +4151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &434368694
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6067,7 +6111,8 @@ MonoBehaviour:
   pan4: {fileID: 0}
   pan5: {fileID: 0}
   pan6: {fileID: 0}
-  nextButton1: {fileID: 0}
+  choppingBoard: {fileID: 0}
+  plate: {fileID: 0}
   resultIcon: {fileID: 1495535570}
   potReset: {fileID: 0}
   collander: {fileID: 0}
@@ -7953,6 +7998,7 @@ GameObject:
   - component: {fileID: 882591804}
   - component: {fileID: 882591803}
   - component: {fileID: 882591802}
+  - component: {fileID: 882591807}
   m_Layer: 5
   m_Name: empty pot 2
   m_TagString: Untagged
@@ -8052,6 +8098,21 @@ RectTransform:
   m_AnchoredPosition: {x: -230, y: 216}
   m_SizeDelta: {x: 80.16, y: 62.758}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &882591807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882591801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cecb1e8b9a27c741b6e122fad83ede6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Select: {fileID: 118999053}
+  Hover: {fileID: 1992174348}
+  Scoop: {fileID: 1599406078}
 --- !u!1 &890394810
 GameObject:
   m_ObjectHideFlags: 0
@@ -9985,7 +10046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1006870622
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11262,6 +11323,7 @@ GameObject:
   - component: {fileID: 1101112330}
   - component: {fileID: 1101112329}
   - component: {fileID: 1101112333}
+  - component: {fileID: 1101112334}
   m_Layer: 5
   m_Name: empty pan
   m_TagString: Untagged
@@ -11387,6 +11449,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 85.51482, y: 31.18692}
   m_EdgeRadius: 0
+--- !u!114 &1101112334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101112327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cecb1e8b9a27c741b6e122fad83ede6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Select: {fileID: 118999053}
+  Hover: {fileID: 1992174348}
+  Scoop: {fileID: 1599406078}
 --- !u!1 &1116105672
 GameObject:
   m_ObjectHideFlags: 0
@@ -13627,7 +13704,8 @@ MonoBehaviour:
   pan4: {fileID: 0}
   pan5: {fileID: 0}
   pan6: {fileID: 0}
-  nextButton1: {fileID: 0}
+  choppingBoard: {fileID: 0}
+  plate: {fileID: 0}
   resultIcon: {fileID: 1957620251}
   potReset: {fileID: 0}
   collander: {fileID: 0}
@@ -14672,6 +14750,7 @@ GameObject:
   - component: {fileID: 1487782080}
   - component: {fileID: 1487782083}
   - component: {fileID: 1487782084}
+  - component: {fileID: 1487782085}
   m_Layer: 5
   m_Name: empty pot
   m_TagString: Untagged
@@ -14797,6 +14876,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 78.94591, y: 62.19715}
   m_EdgeRadius: 0
+--- !u!114 &1487782085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487782078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cecb1e8b9a27c741b6e122fad83ede6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Select: {fileID: 118999053}
+  Hover: {fileID: 1992174348}
+  Scoop: {fileID: 1599406078}
 --- !u!1 &1488580063
 GameObject:
   m_ObjectHideFlags: 0
@@ -15249,7 +15343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1531369267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15937,7 +16031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16862,7 +16956,8 @@ MonoBehaviour:
   pan4: {fileID: 0}
   pan5: {fileID: 0}
   pan6: {fileID: 0}
-  nextButton1: {fileID: 0}
+  choppingBoard: {fileID: 0}
+  plate: {fileID: 0}
   resultIcon: {fileID: 0}
   potReset: {fileID: 0}
   collander: {fileID: 0}
@@ -17958,7 +18053,8 @@ MonoBehaviour:
   pan4: {fileID: 0}
   pan5: {fileID: 0}
   pan6: {fileID: 0}
-  nextButton1: {fileID: 0}
+  choppingBoard: {fileID: 0}
+  plate: {fileID: 0}
   resultIcon: {fileID: 0}
   potReset: {fileID: 882591801}
   collander: {fileID: 0}
@@ -19621,6 +19717,7 @@ GameObject:
   - component: {fileID: 2067469976}
   - component: {fileID: 2067469977}
   - component: {fileID: 2067469978}
+  - component: {fileID: 2067469979}
   m_Layer: 5
   m_Name: collander
   m_TagString: Untagged
@@ -19708,6 +19805,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 81.0908, y: 55.573326}
   m_EdgeRadius: 0
+--- !u!114 &2067469979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067469974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cecb1e8b9a27c741b6e122fad83ede6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Select: {fileID: 118999053}
+  Hover: {fileID: 1992174348}
+  Scoop: {fileID: 1599406078}
 --- !u!1 &2073161740
 GameObject:
   m_ObjectHideFlags: 0
@@ -19812,6 +19924,7 @@ GameObject:
   - component: {fileID: 2093879344}
   - component: {fileID: 2093879343}
   - component: {fileID: 2093879347}
+  - component: {fileID: 2093879348}
   m_Layer: 5
   m_Name: filled pan
   m_TagString: Untagged
@@ -19943,6 +20056,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 86.01582, y: 41.30928}
   m_EdgeRadius: 0
+--- !u!114 &2093879348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093879341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cecb1e8b9a27c741b6e122fad83ede6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Select: {fileID: 118999053}
+  Hover: {fileID: 1992174348}
+  Scoop: {fileID: 1599406078}
 --- !u!1 &2103083796
 GameObject:
   m_ObjectHideFlags: 0
@@ -19995,7 +20123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -20088,7 +20216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2115649727
 RectTransform:
   m_ObjectHideFlags: 0

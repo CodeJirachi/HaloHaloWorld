@@ -24,7 +24,9 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
     [SerializeField] GameObject pan5;
     [SerializeField] GameObject pan6;
 
-    public GameObject nextButton1;
+    [SerializeField] GameObject choppingBoard;
+    //[SerializeField] GameObject nextButton1;
+    [SerializeField] GameObject plate;
 
     // result that comes out of pot and pan 
     [SerializeField] GameObject resultIcon;
@@ -116,7 +118,7 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
                 draggedObject.SetActive(false);
 
                 greenlight.SetActive(false);
-                currIngredientLayer = 0;
+                currIngredientLayer++;
             }
             // fill collander with spaghetti 
 
@@ -132,46 +134,48 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
                 {
                     potReset.SetActive(true);
                 }
+                //currIngredientLayer = 0;
             }
-            else if (currentIngredient == "garlic chopped" && currIngredientLayer == 1)
+            else if (currentIngredient == "garlic chopped(Clone)" || currentIngredient == "garlic chopped")
             {
                 pan.SetActive(true);
                 draggedObject.SetActive(false);
                 greenlight.SetActive(true);
                 StartCoroutine(CookGarlic(1.0f));
-
-                currIngredientLayer++;
+                //currIngredientLayer++;
             }
             //pan3
-            else if (currentIngredient == "thai basil" && currIngredientLayer == 2)
+            else if (currentIngredient == "thai basil")
             {
                 pan3.SetActive(true);
                 draggedObject.SetActive(false);
 
                 currIngredientLayer++;
             }
-            else if (currentIngredient == "bell pepper chopped" && currIngredientLayer == 3)
+            else if (currentIngredient == "bell pepper chopped")
             {
                 pan4.SetActive(true);
                 draggedObject.SetActive(false);
 
                 currIngredientLayer++;
             }
-            else if (currentIngredient == "red chili chopped" && currIngredientLayer == 4)
+            else if (currentIngredient == "red chili chopped(Clone)" || currentIngredient == "red chili chopped")
             {
                 pan5.SetActive(true);
                 draggedObject.SetActive(false);
 
                 currIngredientLayer++;
             }
-            else if (currentIngredient == "hot dog chopped" && currIngredientLayer == 5)
+            else if (currentIngredient == "hot dog chopped")
             {
                 pan6.SetActive(true);
                 draggedObject.SetActive(false);
 
-                nextButton1.SetActive(true);
+                choppingBoard.SetActive(false);
+                plate.SetActive(true);
+                //nextButton1.SetActive(true);
 
-                currIngredientLayer = 0;
+                //currIngredientLayer = 0;
             }
 
             else
