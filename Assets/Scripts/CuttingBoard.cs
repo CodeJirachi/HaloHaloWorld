@@ -34,7 +34,8 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
         {
             chili.SetActive(true);
             currentItem.SetActive(false);
-        } else if (currentItemName == "garlic")
+        } 
+        else if (currentItemName == "garlic")
         {
             garlic.SetActive(true);
             currentItem.SetActive(false);
@@ -55,9 +56,10 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
             onion.SetActive(true);
             currentItem.SetActive(false);
         }
-        else if(currentItemName == "crispy pork belly")
+        else if (currentItemName == "crispy pork belly")
         {
             lechon.SetActive(true);
+        }
 
         else if (currentItemName == "bell pepper")
         {
@@ -69,5 +71,6 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
             hotdog.SetActive(true);
             currentItem.SetActive(false);
         }
-    }
+    
+}
 }
