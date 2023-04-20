@@ -1923,7 +1923,8 @@ MonoBehaviour:
   pan4: {fileID: 1006870621}
   pan5: {fileID: 1531369266}
   pan6: {fileID: 434368693}
-  nextButton1: {fileID: 0}
+  choppingBoard: {fileID: 0}
+  plate: {fileID: 0}
   resultIcon: {fileID: 1957620251}
   potReset: {fileID: 0}
   collander: {fileID: 0}
@@ -4376,6 +4377,7 @@ MonoBehaviour:
   complete: {fileID: 8121957}
   nextStageButton1: {fileID: 1638871429}
   nextStageButton2: {fileID: 56792573}
+  Celebration: {fileID: 0}
 --- !u!224 &483097477
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5550,7 +5552,8 @@ MonoBehaviour:
   pan4: {fileID: 0}
   pan5: {fileID: 0}
   pan6: {fileID: 0}
-  nextButton1: {fileID: 0}
+  choppingBoard: {fileID: 0}
+  plate: {fileID: 0}
   resultIcon: {fileID: 1495535570}
   potReset: {fileID: 0}
   collander: {fileID: 0}
@@ -11816,7 +11819,8 @@ MonoBehaviour:
   pan4: {fileID: 0}
   pan5: {fileID: 0}
   pan6: {fileID: 0}
-  nextButton1: {fileID: 0}
+  choppingBoard: {fileID: 0}
+  plate: {fileID: 0}
   resultIcon: {fileID: 1957620251}
   potReset: {fileID: 0}
   collander: {fileID: 0}
@@ -14807,7 +14811,8 @@ MonoBehaviour:
   pan4: {fileID: 0}
   pan5: {fileID: 0}
   pan6: {fileID: 0}
-  nextButton1: {fileID: 0}
+  choppingBoard: {fileID: 0}
+  plate: {fileID: 0}
   resultIcon: {fileID: 0}
   potReset: {fileID: 0}
   collander: {fileID: 0}
@@ -15903,7 +15908,8 @@ MonoBehaviour:
   pan4: {fileID: 0}
   pan5: {fileID: 0}
   pan6: {fileID: 0}
-  nextButton1: {fileID: 0}
+  choppingBoard: {fileID: 0}
+  plate: {fileID: 0}
   resultIcon: {fileID: 0}
   potReset: {fileID: 882591801}
   collander: {fileID: 0}
