@@ -76,7 +76,7 @@ public class cookingManager : MonoBehaviour
                 choiceText = "???";
             }
 
-            recipeTitle.text = "<size=36%>Thai Style Spaghetti";
+            recipeTitle.text ="<size=36%>Thai Style Spaghetti";
             recipeContent.text = "1. Bring the pot to sink and fill with water, then bring this over to the stovetop to boil \n" + "2. Put the colander in the sink to prep for straining \n"
                 + "3. Put raw spaghetti in the boiling pot to cook \n" + "4. Drain the spaghetti filled pot in the colander \n" + "5. remove the colander from the sink into inventory \n"
                 + "6. Drag the pot again to the stovetop, this time to cook the sauce \n" + "7. to the pot, add tomato ketchup first \n";
@@ -90,11 +90,16 @@ public class cookingManager : MonoBehaviour
 
         else if(sceneName == "FusionDish (NEW)" || sceneName == "FusionDish Assembly" || sceneName == "FusionDish Boiling Lechon" || sceneName == "FusionDish Frying" || sceneName == "FusionDish MixingLechonSauce" || sceneName == "FusionDish MixingNamPrikPla")
         {
-            recipeTitle.text = "<size=36%>Moo Kob Nam Prik/Lechon Kawali Fusion";
+
+            if (ChoiceTracker.CT.choice == null){
+                choiceText = "";
+            
+            recipeTitle.text = "<size=36%>Moo Kob Nam Prik/Lechon Kawali Fusion" + choiceText;
             recipeContent.text = "1. Cook the rice.\n2. Chop garlic, green onion, and red thai chili.\n3. Boil water.\n4. Add raw pork belly, chopped ingredients, star anise, salt, and peppercorn to pot.\n5. While belly boils, make Nam Prik Pla - chop thai chilies and garlic.";
             recipeContent2.text = "6. Mix together chopped ingredients, sugar, fish suace, and lime.\n7. Make lechon sauce - chop and saute onion and garlic.\n8. After sauteing, add vinegar, water, chicken liver, & breadcrumbs.\n9. Stir sauce until it thickens.\n10. After belly boils, put oil in pan and fry pork belly.\n11. Chop fried pork belly.\n12. Assemble and enjoy!";
+        
+            }
         }
-         
     }
     
 }

@@ -246,6 +246,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &22663140
 MonoBehaviour:
@@ -471,6 +472,7 @@ MonoBehaviour:
   inSlot: 0
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &55628828
 MonoBehaviour:
@@ -568,7 +570,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f803a55409edd484698aa27b3254c2a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 20cc4c3ca8047c8409d07bc1721766ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1211,6 +1213,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &165555861
 MonoBehaviour:
@@ -3209,6 +3212,7 @@ MonoBehaviour:
   ingredientStageMax: 0
   mixingStage: 0
   mixingTriggerStage: 0
+  fdsm: {fileID: 0}
 --- !u!4 &550850676
 Transform:
   m_ObjectHideFlags: 0
@@ -4252,6 +4256,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &954040042
 MonoBehaviour:
@@ -5315,6 +5320,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1225962907
 MonoBehaviour:
@@ -5578,6 +5584,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1268436914
 MonoBehaviour:
@@ -5702,6 +5709,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1292712377
 MonoBehaviour:
@@ -5849,6 +5857,7 @@ MonoBehaviour:
   inSlot: 0
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1311039971
 MonoBehaviour:
@@ -6618,6 +6627,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 0}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1400989660
 MonoBehaviour:
@@ -6935,6 +6945,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1413558732
 MonoBehaviour:
@@ -7167,6 +7178,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1483771881
 MonoBehaviour:
@@ -7407,6 +7419,8 @@ MonoBehaviour:
   menuHover: {fileID: 0}
   cuttingBoard: {fileID: 0}
   mixingBowl: {fileID: 0}
+  mixingArrow: {fileID: 0}
+  sinkFront: {fileID: 0}
 --- !u!1 &1546764345
 GameObject:
   m_ObjectHideFlags: 0
@@ -8042,6 +8056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7513ab1e3be194b936591ff629dd4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Scoop: {fileID: 0}
   glassEmpty: {fileID: 0}
   ice: {fileID: 0}
   beans: {fileID: 0}
@@ -8150,6 +8165,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1662487544
 MonoBehaviour:
@@ -8621,6 +8637,7 @@ MonoBehaviour:
   inSlot: 1
   prev_pos: {x: 0, y: 0}
   hoverLabelPrefab: {fileID: 2902148719358311479, guid: 520cade98ea6aa848976cb12b6cb8cd9, type: 3}
+  text_label: {fileID: 0}
   spoon: {fileID: 0}
 --- !u!114 &1778047374
 MonoBehaviour:
@@ -9426,6 +9443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7513ab1e3be194b936591ff629dd4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Scoop: {fileID: 0}
   glassEmpty: {fileID: 0}
   ice: {fileID: 112656949}
   beans: {fileID: 579033875}
