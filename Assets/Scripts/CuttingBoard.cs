@@ -59,6 +59,7 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
         else if (currentItemName == "crispy pork belly")
         {
             lechon.SetActive(true);
+            currentItem.SetActive(false);
         }
 
         else if (currentItemName == "bell pepper")

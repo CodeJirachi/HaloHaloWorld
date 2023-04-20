@@ -212,6 +212,11 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler
         }
     }
 
+    public void skipToScene(string scene_name)
+    {
+        SceneManager.LoadScene(scene_name);
+    }
+
     public void startGame(Object nextScene)
     {
         //menuSelect.Play();

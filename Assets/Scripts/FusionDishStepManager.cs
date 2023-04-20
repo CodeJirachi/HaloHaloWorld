@@ -83,7 +83,15 @@ public class FusionDishStepManager : MonoBehaviour
             }
         } else if(scene_name == "FusionDish Assembly")
         {
+            if(!stepFinished && finishTrigger)
+            {
+                stepFinished = true;
+                finishTrigger = false;
 
+                nextButton = Instantiate(nextButtonPrefab, canvas.transform);
+                nextButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(348, 0);
+                nextButton.GetComponent<Button>().onClick.AddListener(delegate { SceneManager.LoadScene("VN_FusionFlashback"); });
+            }
         }
     }
 }
