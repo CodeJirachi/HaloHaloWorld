@@ -20,6 +20,8 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler
     [SerializeField] GameObject recipeContent1;
     [SerializeField] GameObject recipeContent2;
 
+    //needed for spaghetti
+    //[SerializeField] GameObject recipeContent3;
 
     //audio
     public AudioSource menuSelect;
@@ -93,17 +95,17 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler
 
     public void nextPage()
     {
+        recipeContent2.SetActive(true);
         recipeButton.SetActive(false);
+        recipeTitle.SetActive(false);
+        recipeContent1.SetActive(false);
+        recipePage.SetActive(true);
+ 
         //settingsButton.SetActive(true);
 
         //recipe page closes
         //recipePage.SetActive(false);
-        recipeTitle.SetActive(false);
-        recipeContent1.SetActive(false);
-
-        recipePage.SetActive(true);
-        recipeContent2.SetActive(true);
-
+        
         recipeNext.SetActive(false);
         recipePrev.SetActive(true);
         exitButton.SetActive(true);

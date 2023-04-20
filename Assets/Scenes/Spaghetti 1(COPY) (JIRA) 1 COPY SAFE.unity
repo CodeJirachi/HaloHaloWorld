@@ -252,7 +252,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 437434167}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.1882353, g: 0.11372549, b: 0.023529412, a: 1}
+  m_fontColor: {r: 0.23921569, g: 0.09411765, b: 0.09411765, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1801,7 +1801,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 437434167}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &167944000
 SpriteRenderer:
@@ -4370,11 +4370,11 @@ RectTransform:
   - {fileID: 2108819948}
   - {fileID: 1754211876}
   - {fileID: 1867745285}
-  - {fileID: 1842040972}
   - {fileID: 14410121}
   - {fileID: 1971239326}
   - {fileID: 1739021472}
   - {fileID: 167943999}
+  - {fileID: 1842040972}
   - {fileID: 1323558985}
   - {fileID: 1116137039}
   - {fileID: 1606636654}
@@ -14650,7 +14650,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278529615
-  m_fontColor: {r: 0.31132078, g: 0.1803311, b: 0.019607844, a: 1}
+  m_fontColor: {r: 0.23921569, g: 0.09411765, b: 0.09411765, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14667,8 +14667,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18047,7 +18047,7 @@ RectTransform:
   m_Children:
   - {fileID: 1889828515}
   m_Father: {fileID: 437434167}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19313,7 +19313,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 437434167}
-  m_RootOrder: 4
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19350,7 +19350,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278529615
-  m_fontColor: {r: 0.31132078, g: 0.1803311, b: 0.019607844, a: 1}
+  m_fontColor: {r: 0.23921569, g: 0.09411765, b: 0.09411765, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -19367,8 +19367,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21152,7 +21152,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 437434167}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1971239327
 SpriteRenderer:

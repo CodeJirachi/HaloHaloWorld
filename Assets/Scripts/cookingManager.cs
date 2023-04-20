@@ -64,7 +64,7 @@ public class cookingManager : MonoBehaviour
          
         //spaghetti gameplay scenes: 
         //else if (sceneName == "Spaghetti0" || || || )
-        else if (sceneName == "Spaghetti 1(COPY) (JIRA)")
+        else if (sceneName == "Spaghetti 1(COPY) (JIRA) 1 COPY SAFE")
         {
             if (ChoiceTracker.CT.choice == "Thai Basil")
             {
@@ -76,8 +76,15 @@ public class cookingManager : MonoBehaviour
                 choiceText = "???";
             }
 
-            recipeTitle.text = "Thai Style Spaghetti";
-            recipeContent.text = "I cooka da spaghett with " + choiceText;
+            recipeTitle.text = "<size=36%>Thai Style Spaghetti";
+            recipeContent.text = "1. Bring the pot to sink and fill with water, then bring this over to the stovetop to boil \n" + "2. Put the colander in the sink to prep for straining \n"
+                + "3. Put raw spaghetti in the boiling pot to cook \n" + "4. Drain the spaghetti filled pot in the colander \n" + "5. remove the colander from the sink into inventory \n"
+                + "6. Drag the pot again to the stovetop, this time to cook the sauce \n" + "7. to the pot, add tomato ketchup first \n";
+            recipeContent2.text = "8. then, add soy sauce \n"
+                + "9. add oyster sauce \n" + "10. add sugar, then drag off stovetop \n" + "11. bring up the cutting board to chop bell pepper, hot dog, garlic, and thai chili using the Knife \n" + "12. After cutting upe verything, put the cutting board away and drag the pan over to the stovetop \n"
+                + "13. First, cook the chopped garlic until it browns \n" + "14. Then add the thai chili, the " + choiceText + ", and the bell peppers \n" + "15. Lastly, add the hot dogs in to stir fry \n"
+                + "16. Drag the filled pan to the inventory to be ready to plate \n" + "17. Plate the cooked spaghetti first \n" + "18. Top with the sauce, followed by the cooked ingredients from the pan";
+                
             // recipe + choice 
         }
 
