@@ -44,12 +44,12 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
         // halo halo 1
         //if (sceneName == "HaloHalo Final (audrey)")
         //{
-        //    if (spoon.activeSelf == true)
-        //    {
-        //        Debug.Log("OnBeginDrag IngredientDragDrop");
-        //        canvasGroup.alpha = .6f;
-        //        canvasGroup.blocksRaycasts = false;
-        //    }
+        //   if (spoon.activeSelf == true)
+        //   {
+        //      Debug.Log("OnBeginDrag IngredientDragDrop");
+        //       canvasGroup.alpha = .6f;
+        //      canvasGroup.blocksRaycasts = false;
+          // }
         //}
         // else, not halo halo scene
         // allow
@@ -73,20 +73,20 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
         //if (sceneName == "HaloHalo 1")
         //if (sceneName == "HaloHalo Final (audrey)")
         //{
-        //    if (spoon.activeSelf == true)
-        //    {
+           //if (spoon.activeSelf == true)
+           //{
         //Debug.Log("OnDrag");
-        //    Destroy(text_label);
-        //    rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-        //    }
-        //}
+           // if(text_label != null)Destroy(text_label);
+         //  rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        //   }
+      //  }
         // else, not halo halo scene
         // allow
-        //else
-        //{
+       // else
+      //  {
             if(text_label != null)Destroy(text_label);
             rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-        //}
+       // }
     }
 
     public void OnEndDrag(PointerEventData eventData)
