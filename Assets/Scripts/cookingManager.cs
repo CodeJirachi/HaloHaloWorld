@@ -81,10 +81,11 @@ public class cookingManager : MonoBehaviour
             // recipe + choice 
         }
 
-        else if(sceneName == "FusionDish (NEW)")
+        else if(sceneName == "FusionDish (NEW)" || sceneName == "FusionDish Assembly" || sceneName == "FusionDish Boiling Lechon" || sceneName == "FusionDish Frying" || sceneName == "FusionDish MixingLechonSauce" || sceneName == "FusionDish MixingNamPrikPla")
         {
-            recipeTitle.text = "<size=80%>Fusion Dish";
-            recipeContent.text = "1. Cook the rice\n2. Chop garlic, green onion, and red thai chili\n3. Boil water\n4. Add raw pork belly, chopped ingredients, star anise, salt, and peppercorn to pot\n";
+            recipeTitle.text = "<size=36%>Moo Kob Nam Prik/Lechon Kawali Fusion";
+            recipeContent.text = "1. Cook the rice.\n2. Chop garlic, green onion, and red thai chili.\n3. Boil water.\n4. Add raw pork belly, chopped ingredients, star anise, salt, and peppercorn to pot.\n5. While belly boils, make Nam Prik Pla - chop thai chilies and garlic.";
+            recipeContent2.text = "6. Mix together chopped ingredients, sugar, fish suace, and lime.\n7. Make lechon sauce - chop and saute onion and garlic.\n8. After sauteing, add vinegar, water, chicken liver, & breadcrumbs.\n9. Stir sauce until it thickens.\n10. After belly boils, put oil in pan and fry pork belly.\n11. Chop fried pork belly.\n12. Assemble and enjoy!";
         }
          
     }
