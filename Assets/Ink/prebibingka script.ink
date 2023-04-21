@@ -14,6 +14,7 @@ I mean I'm your only cousin, but I'm doing fine.
 We both know what fine means, so I'll cut to it: Home, School, or something else?
 
 #jayce neutral
+#speaker Jayce
 No really, I'm fine. Neutral. Ok. Take your pick.
 
 #cousin worried 
