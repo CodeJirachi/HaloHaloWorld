@@ -1060,11 +1060,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "for kitchen and real life recipe testing\r\n\n\n\nDon, Darren, Gabrielle.
-    Thanks for always being brutally honest.\r\n\nfor all the great constructive
-    feedback on the art\r\n\nJayce character concept\r\n\nJayce character concept
-    \r\n\nfor always making us get hands on with Git\r\n\nfor a valuable and missed
-    course on Game Architecture \r\n"
+  m_text: "for kitchen and real life recipe testing\r\n\nfor all her support (and
+    lending her iPad)\n\nDon, Darren, Gabrielle. Thanks for always being brutally
+    honest.\r\n\nfor all the great constructive feedback on the art\r\n\nJayce character
+    concept\r\n\nJayce character concept \r\n\nfor always making us get hands on
+    with Git\r\n\nfor a valuable and missed course on Game Architecture \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54764c83a7df002419f54326be7ffede, type: 2}
   m_sharedMaterial: {fileID: 4624364039032476276, guid: 54764c83a7df002419f54326be7ffede, type: 2}
@@ -1540,7 +1540,7 @@ SpriteRenderer:
   m_SortingLayerID: -1206613821
   m_SortingLayer: 5
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 878b0049b6f4d5245823c5c335e1e967, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c894e6a36199e2a4d8157c27b8dbf2ce, type: 3}
   m_Color: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0.70980394}
   m_FlipX: 0
   m_FlipY: 0

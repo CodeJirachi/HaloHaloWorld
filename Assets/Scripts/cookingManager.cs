@@ -96,14 +96,15 @@ public class cookingManager : MonoBehaviour
                 choiceText = "";
             
                 recipeTitle.text = "<size=36%>Moo Kob Nam Prik/Lechon Kawali Fusion" +choiceText;
-                recipeContent.text = "1. Cook the rice.\n2. Chop garlic, green onion, and red thai chili.\n3. Boil water.\n4. Add raw pork belly, chopped ingredients, star anise, salt, and peppercorn to pot.\n5. While belly boils, make Nam Prik Pla - chop thai chilies and garlic.";
-                recipeContent2.text = "6. Mix together chopped ingredients, sugar, fish sauce, and lime.\n7. Make lechon sauce - chop and saute onion and garlic.\n8. After sauteing, add vinegar, water, chicken liver, & breadcrumbs.\n9. Stir sauce until it thickens.\n10. After belly boils, put oil in pan and fry pork belly.\n11. Chop fried pork belly.\n12. Assemble and enjoy!";
+                recipeContent.text = "1. Cook the rice & drag it back into inventory.\n2. Chop garlic, green onion, and red thai chili.\n3. Boil water.\n4. Add raw pork belly, chopped ingredients, star anise, salt, and peppercorn to pot.\n5. While belly boils, make Nam Prik Pla - chop thai chilies and garlic.";
+                recipeContent2.text = "<size=90%>6. Mix together chopped ingredients, sugar, fish sauce, and lime.\n7. Make lechon sauce - chop and saute onion and garlic.\n8. After sauteing, add vinegar, water, chicken liver, & breadcrumbs.\n9. Stir sauce until it thickens.\n10. After belly boils, put oil in pan and fry pork belly.\n11. Chop fried pork belly & drag back into inventory.\n12. Assemble and enjoy!";
             }
             else 
             {
+                choiceText = "";
                 recipeTitle.text = "<size=36%>Moo Kob Nam Prik/Lechon Kawali Fusion" + choiceText;
-                recipeContent.text = "1. Cook the rice.\n2. Chop garlic, green onion, and red thai chili.\n3. Boil water.\n4. Add raw pork belly, chopped ingredients, star anise, salt, and peppercorn to pot.\n5. While belly boils, make Nam Prik Pla - chop thai chilies and garlic.";
-                recipeContent2.text = "6. Mix together chopped ingredients, sugar, fish sauce, and lime.\n7. Make lechon sauce - chop and saute onion and garlic.\n8. After sauteing, add vinegar, water, chicken liver, & breadcrumbs.\n9. Stir sauce until it thickens.\n10. After belly boils, put oil in pan and fry pork belly.\n11. Chop fried pork belly.\n12. Assemble and enjoy!";
+                recipeContent.text = "1. Cook the rice & drag it back into inventory.\n2. Chop garlic, green onion, and red thai chili.\n3. Boil water.\n4. Add raw pork belly, chopped ingredients, star anise, salt, and peppercorn to pot.\n5. While belly boils, make Nam Prik Pla - chop thai chilies and garlic.";
+                recipeContent2.text = "<size=90%>6. Mix together chopped ingredients, sugar, fish sauce, and lime.\n7. Make lechon sauce - chop and saute onion and garlic.\n8. After sauteing, add vinegar, water, chicken liver, & breadcrumbs.\n9. Stir sauce until it thickens.\n10. After belly boils, put oil in pan and fry pork belly.\n11. Chop fried pork belly & drag back into inventory.\n12. Assemble and enjoy!";
             }
 
         }

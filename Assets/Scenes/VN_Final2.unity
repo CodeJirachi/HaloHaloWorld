@@ -514,7 +514,7 @@ SpriteRenderer:
   m_SortingLayerID: -1206613821
   m_SortingLayer: 5
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 878b0049b6f4d5245823c5c335e1e967, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c894e6a36199e2a4d8157c27b8dbf2ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -934,6 +934,7 @@ MonoBehaviour:
   customButton: {fileID: 4655723026960085111, guid: 3b0dbf2de2196964291eba0e0107ef47, type: 3}
   blackScreen: {fileID: 1307914351}
   finalscene: {fileID: 450093153}
+  theEndText: {fileID: 1961854709}
   inChoices: 0
 --- !u!1 &1755968112
 GameObject:
@@ -1147,6 +1148,7 @@ GameObject:
   - component: {fileID: 1961854710}
   - component: {fileID: 1961854712}
   - component: {fileID: 1961854711}
+  - component: {fileID: 1961854713}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1204,7 +1206,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1271,6 +1273,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961854709}
   m_CullTransparentMesh: 1
+--- !u!114 &1961854713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961854709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffc91651ce11634c9a39571212fca07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &1966776761
 GameObject:
   m_ObjectHideFlags: 0

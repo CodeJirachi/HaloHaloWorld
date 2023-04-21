@@ -36,6 +36,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject blackScreen;
 
     public GameObject finalscene;
+    public GameObject theEndText;
 
     List<string> tags;
 
@@ -98,8 +99,12 @@ public class DialogueManager : MonoBehaviour
                     if (!finalscene.activeSelf)
                     {
                         StartCoroutine(FadeToFinal(1.5f));
-                        StartCoroutine(FadeToBlack(1.5f)); // Jira: transition to credits?
-                        StartCoroutine(LoadSceneAfterSeconds(8.0f, "Credits")); //Jira: adding in credits
+                        //StartCoroutine(FadeToBlack(4.0f)); // Jira: transition to credits?
+                        //StartCoroutine(LoadSceneAfterSeconds(8.0f, "Credits")); //Jira: adding in credits
+                    } else
+                    {
+                        StartCoroutine(FadeToBlack(1.5f));
+                        StartCoroutine(LoadSceneAfterSeconds(3.0f, "Credits"));
                     }
                 }
                 else
@@ -438,10 +443,24 @@ public class DialogueManager : MonoBehaviour
     IEnumerator FadeToFinal(float seconds)
     {
         blackScreen.GetComponent<FadeInOut>().fadeIn = true;
+
+        //show final scene after x seconds
         yield return new WaitForSeconds(seconds);
         blackScreen.GetComponent<FadeInOut>().fadeIn = false;
         finalscene.SetActive(true);
         blackScreen.GetComponent<FadeInOut>().fadeOut = true;
+
+        yield return new WaitForSeconds(seconds * 2);
+        theEndText.GetComponent<FadeText>().fadeIn = true;
+
+        //fade out afer x seconds
+        yield return new WaitForSeconds(seconds * 6);
+        blackScreen.GetComponent<FadeInOut>().fadeOut = false;
+        blackScreen.GetComponent<FadeInOut>().fadeIn = true;
+
+        //go to credits
+        yield return new WaitForSeconds(seconds * 2);
+        SceneManager.LoadScene("Credits");
     }
 
     IEnumerator FadeToScene(float seconds, string scene_name)
@@ -453,13 +472,14 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator FadeToBlack(float seconds)
     {
+        Debug.Log("ello");
         blackScreen.GetComponent <FadeInOut>().fadeIn = true;
         yield return new WaitForSeconds(seconds);
     }
 
     IEnumerator Reveal(float seconds)
     {
-        Debug.Log("help");
+        //Debug.Log("help");
         blackScreen.GetComponent<FadeInOut>().fadeOut = true;
         yield return new WaitForSeconds(seconds);
     }

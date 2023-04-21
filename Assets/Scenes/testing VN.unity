@@ -709,7 +709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1.11, y: 0}
   m_SizeDelta: {x: 695, y: 390.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &649191882
@@ -1970,14 +1970,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03c391fd11ed3647949d311d14cc000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkFile: {fileID: 4900000, guid: c8436c3fd7f42e04490c30c0efd30bc3, type: 3}
+  inkFile: {fileID: 4900000, guid: 72d8ded8befe1054081f8a9c52778eca, type: 3}
   dialogueText: {fileID: 2123689763}
   nameText: {fileID: 1469421579}
   nameBox: {fileID: 237861595}
   jasmine: {fileID: 649191882}
   jayce: {fileID: 811499085}
+  youngJayce: {fileID: 0}
+  mom: {fileID: 0}
+  dad: {fileID: 0}
   choicePanel: {fileID: 1869226462}
   customButton: {fileID: 4655723026960085111, guid: 3b0dbf2de2196964291eba0e0107ef47, type: 3}
+  blackScreen: {fileID: 0}
+  finalscene: {fileID: 0}
   inChoices: 0
 --- !u!1 &1835056296
 GameObject:
@@ -2581,7 +2586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 51.6, y: -125}
+  m_AnchoredPosition: {x: 51.6, y: -118.18}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123689765
