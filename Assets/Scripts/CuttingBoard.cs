@@ -29,49 +29,55 @@ public class CuttingBoard : MonoBehaviour, IDropHandler
         currentItemName = currentItem.GetComponent<RectTransform>().name;
 
         Debug.Log("hi");
+        Debug.Log(currentItemName);
 
-        if (currentItemName == "red thai chili" || currentItemName == "red chili icon")
+        if (currentItem.GetComponent<IngredientDragDrop>() != null) //check if it is an icon 
         {
-            chili.SetActive(true);
-            currentItem.SetActive(false);
-        } 
-        else if (currentItemName == "garlic icon" || currentItemName == "garlic")
-        {
-            garlic.SetActive(true);
-            currentItem.SetActive(false);
-        }
-        else if (currentItemName == "green onion")
-        {
-            greenOnion.SetActive(true);
-            currentItem.SetActive(false);
-        }
 
-        else if(currentItemName == "green thai chili")
-        {
-            greenChili.SetActive(true);
-            currentItem.SetActive(false);
-        }
-        else if(currentItemName == "onion")
-        {
-            onion.SetActive(true);
-            currentItem.SetActive(false);
-        }
-        else if (currentItemName == "crispy pork belly")
-        {
-            lechon.SetActive(true);
-            currentItem.SetActive(false);
-        }
+            if (currentItemName == "red thai chili" || currentItemName == "red chili icon")
+            {
+                chili.SetActive(true);
+                currentItem.SetActive(false);
+            }
+            else if (currentItemName == "garlic icon" || currentItemName == "garlic")
+            {
+                garlic.SetActive(true);
+                currentItem.SetActive(false);
+            }
+            else if (currentItemName == "green onion")
+            {
+                greenOnion.SetActive(true);
+                currentItem.SetActive(false);
+            }
 
-        else if (currentItemName == "bell pepper")
-        {
-            bellPepper.SetActive(true);
-            currentItem.SetActive(false);
+            else if (currentItemName == "green thai chili")
+            {
+                greenChili.SetActive(true);
+                currentItem.SetActive(false);
+            }
+            else if (currentItemName == "onion")
+            {
+                onion.SetActive(true);
+                currentItem.SetActive(false);
+            }
+            else if (currentItemName == "crispy pork belly")
+            {
+                lechon.SetActive(true);
+                currentItem.SetActive(false);
+            }
+
+            else if (currentItemName == "bell pepper")
+            {
+                bellPepper.SetActive(true);
+                currentItem.SetActive(false);
+            }
+            else if (currentItemName == "hot dog")
+            {
+                hotdog.SetActive(true);
+                currentItem.SetActive(false);
+            }
+
+
         }
-        else if (currentItemName == "hot dog")
-        {
-            hotdog.SetActive(true);
-            currentItem.SetActive(false);
-        }
-    
 }
 }

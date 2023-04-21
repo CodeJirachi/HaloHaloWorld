@@ -30,6 +30,13 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
         prev_pos = GetComponent<RectTransform>().anchoredPosition;
     }
 
+    /*
+    void Update()
+    {
+        if(text_label != null)text_label.SetActive(this.gameObject.activeSelf);
+    }
+    */
+
     public void OnBeginDrag(PointerEventData eventData)
     {
 
@@ -112,7 +119,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     void OnMouseEnter()
     {
-        if (inSlot)
+        if (this.gameObject.activeSelf && inSlot)
         {
             Debug.Log(this.gameObject.name);
             Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -122,13 +129,13 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
             text_label = Instantiate(hoverLabelPrefab, mousepos, Quaternion.identity, canvas.transform);
 
             //this almost works... trying to fix hover label bug
-            /*
-            text_label.transform.SetParent(this.gameObject.transform, true);
-            text_label.AddComponent<Canvas>();
-            text_label.GetComponent<Canvas>().overrideSorting = true;
-            text_label.GetComponent<Canvas>().sortingLayerName = "Above-Draggable";
-            */
 
+            //text_label.transform.SetParent(this.gameObject.transform, true);
+            //text_label.AddComponent<Canvas>();
+            //text_label.GetComponent<Canvas>().overrideSorting = true;
+            //text_label.GetComponent<Canvas>().sortingLayerName = "Above-Draggable";
+
+            text_label.GetComponent<HoverLabelBehavior>().obj = this.gameObject;
             text_label.GetComponent<TMPro.TextMeshProUGUI>().text = "<mark=#c0bfde>" + this.gameObject.name + "</mark>"; //for background of text
             text_label.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = this.gameObject.name;
         }
@@ -136,7 +143,7 @@ public class IngredientDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDrag
 
     void OnMouseOver()
     {
-        if (inSlot)
+        if (this.gameObject.activeSelf && inSlot)
         {
             Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousepos.x += 1;
