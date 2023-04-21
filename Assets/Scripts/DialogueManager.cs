@@ -67,6 +67,7 @@ public class DialogueManager : MonoBehaviour
             nameBox.SetActive(true);
         }
 
+        StartCoroutine(Reveal(1.0f));
         //testing things - to be deleted/changed
         //cousinSpriteChange("neutral");
         //ChoiceTracker.CT.testVar = 3;
@@ -115,28 +116,44 @@ public class DialogueManager : MonoBehaviour
                             //Debug.Log("scene is " + ChoiceTracker.CT.scene);
                             break;
                         case "VN_SpaghettiFlashback":
-                            SceneManager.LoadScene("VN_PreBibingka");
+                            StartCoroutine(FadeToBlack(1.5f));
+                            StartCoroutine(LoadSceneAfterSeconds(3.0f, "VN_PreBibingka"));
+                            //SceneManager.LoadScene("VN_PreBibingka");
                             break;
                         case "VN_PreBibingka":
-                            SceneManager.LoadScene("VN_BibingkaFlashback");
+                            StartCoroutine(FadeToBlack(1.5f));
+                            StartCoroutine(LoadSceneAfterSeconds(3.0f, "VN_BibingkaFlashback"));
+                            //SceneManager.LoadScene("VN_BibingkaFlashback");
                             break;
                         case "VN_BibingkaFlashback":
-                            SceneManager.LoadScene("VN_PostBibingka");
+                            StartCoroutine(FadeToBlack(1.5f));
+                            StartCoroutine(LoadSceneAfterSeconds(3.0f, "VN_PostBibingka"));
+                            //SceneManager.LoadScene("VN_PostBibingka");
                             break;
                         case "VN_PostBibingka":
-                            SceneManager.LoadScene("VN_PreFusion");
+                            StartCoroutine(FadeToBlack(1.5f));
+                            StartCoroutine(LoadSceneAfterSeconds(3.0f, "VN_PreFusion"));
+                            //SceneManager.LoadScene("VN_PreFusion");
                             break;
                         case "VN_PreFusion":
-                            SceneManager.LoadScene("FusionDish (NEW)");
+                            StartCoroutine(FadeToBlack(1.5f));
+                            StartCoroutine(LoadSceneAfterSeconds(3.0f, "FusionDish (NEW)"));
+                            //SceneManager.LoadScene("FusionDish (NEW)");
                             break;
                         case "VN_FusionFlashback":
-                            SceneManager.LoadScene("VN_PostFusion");
+                            StartCoroutine(FadeToBlack(1.5f));
+                            StartCoroutine(LoadSceneAfterSeconds(3.0f, "VN_PostFusion"));
+                            //SceneManager.LoadScene("VN_PostFusion");
                             break;
                         case "VN_PostFusion":
-                            SceneManager.LoadScene("VN_Final1");
+                            StartCoroutine(FadeToBlack(1.5f));
+                            StartCoroutine(LoadSceneAfterSeconds(3.0f, "VN_Final1"));
+                            //SceneManager.LoadScene("VN_Final1");
                             break;
                         case "VN_Final1":
-                            SceneManager.LoadScene("VN_Final2");
+                            StartCoroutine(FadeToBlack(1.5f));
+                            StartCoroutine(LoadSceneAfterSeconds(3.0f, "VN_Final2"));
+                            //SceneManager.LoadScene("VN_Final2");
                             break;
                      }
                 }
@@ -425,6 +442,25 @@ public class DialogueManager : MonoBehaviour
     IEnumerator FadeToScene(float seconds, string scene_name)
     {
         blackScreen.GetComponent<FadeInOut>().fadeIn = true;
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(scene_name);
+    }
+
+    IEnumerator FadeToBlack(float seconds)
+    {
+        blackScreen.GetComponent <FadeInOut>().fadeIn = true;
+        yield return new WaitForSeconds(seconds);
+    }
+
+    IEnumerator Reveal(float seconds)
+    {
+        Debug.Log("help");
+        blackScreen.GetComponent<FadeInOut>().fadeOut = true;
+        yield return new WaitForSeconds(seconds);
+    }
+
+    IEnumerator LoadSceneAfterSeconds(float seconds, string scene_name)
+    {
         yield return new WaitForSeconds(seconds);
         SceneManager.LoadScene(scene_name);
     }
