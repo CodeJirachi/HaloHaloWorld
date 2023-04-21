@@ -98,6 +98,8 @@ public class DialogueManager : MonoBehaviour
                     if (!finalscene.activeSelf)
                     {
                         StartCoroutine(FadeToFinal(1.5f));
+                        StartCoroutine(FadeToBlack(1.5f)); // Jira: transition to credits?
+                        StartCoroutine(LoadSceneAfterSeconds(8.0f, "Credits")); //Jira: adding in credits
                     }
                 }
                 else
@@ -155,6 +157,9 @@ public class DialogueManager : MonoBehaviour
                             StartCoroutine(LoadSceneAfterSeconds(3.0f, "VN_Final2"));
                             //SceneManager.LoadScene("VN_Final2");
                             break;
+                        //case "VN_Final2": //Jira: adding in credits 
+                        //    StartCoroutine(LoadSceneAfterSeconds(8.0f, "Credits"));
+                        //    break;
                      }
                 }
             }
