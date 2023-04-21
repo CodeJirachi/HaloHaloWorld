@@ -13,6 +13,8 @@ public class RiceCooker : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeg
     public GameObject cookedRice;
     public Canvas canvas;
 
+    public GameObject achievementPrefab;
+
     GameObject currentIngredient;
     Vector2 currentPrevPosition;
 
@@ -29,6 +31,7 @@ public class RiceCooker : MonoBehaviour, IDropHandler, IPointerDownHandler, IBeg
             {
                 currentIngredient.SetActive(false);
                 StartCoroutine(CookRice(5.0f));
+                Instantiate(achievementPrefab);
                 //cookedRice.GetComponent<RectTransform>().anchoredPosition = currentPrevPosition;
                 //cookedRice.SetActive(true);
             }

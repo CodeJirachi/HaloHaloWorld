@@ -2915,6 +2915,7 @@ MonoBehaviour:
   orangelight: {fileID: 0}
   cookedRice: {fileID: 1639944076}
   canvas: {fileID: 1368548038}
+  achievementPrefab: {fileID: 0}
 --- !u!114 &326239062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7144,6 +7145,7 @@ MonoBehaviour:
   orangelight: {fileID: 326239059}
   cookedRice: {fileID: 1639944076}
   canvas: {fileID: 1368548038}
+  achievementPrefab: {fileID: 5187284749427037169, guid: 8aa7d938bbf01684fb57bc7a84f7acfc, type: 3}
 --- !u!1 &963784761
 GameObject:
   m_ObjectHideFlags: 0
@@ -8653,7 +8655,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149634226}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1149634228
 Camera:
   m_ObjectHideFlags: 0
@@ -8719,7 +8721,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149634226}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7b54efe06cec91c45bba586ef09130bb, type: 3}
@@ -12028,6 +12030,7 @@ MonoBehaviour:
   orangelight: {fileID: 0}
   cookedRice: {fileID: 1639944076}
   canvas: {fileID: 1368548038}
+  achievementPrefab: {fileID: 0}
 --- !u!114 &1576242328
 MonoBehaviour:
   m_ObjectHideFlags: 0
