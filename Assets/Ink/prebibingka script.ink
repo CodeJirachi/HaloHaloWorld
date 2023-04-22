@@ -1,8 +1,18 @@
+#jayce none
+#cousin none
+#speaker clear
+[The next morning…]
+
 #speaker clear
 \*knocking*
 
+#speaker Jayce
+#jayce annoyed
+Ughh I don’t feel like getting up. Must be Jasmine again.
+
 #speaker Jasmine
 #cousin happy
+#jayce neutral
 How's my favorite cousin doin'?
 
 #speaker Jayce
@@ -33,8 +43,20 @@ Do they make you do that too? Write recipes on paper from memory?
 #speaker Jayce
 No, they at least give us the respect to actually make things ourselves. 
 
-But yeah, I guess I'm a bit stuck on that.
+#cousin worried
+#speaker Jasmine
+At least you can actually eat your assignments.  
 
+I wish I could just write a program like <i>print("halo halo, world");</i> and have my computer make halo halo every time I crave it.
+
+#cousin neutral
+#speaker Jasmine
+It's not all bad though, my startup project for my CS 491 Capstone class is really fun to work on.
+
+But it’s definitely a lot of work!! And so many progress reports! 
+
+#speaker Jayce
+I’m a bit stuck on how to start up my project too… for the oven.
 I need to make some sort of baked good for this final, but baking's never worked out for me.
 
 #speaker Jasmine
@@ -117,4 +139,3 @@ Well let’s hone those memories into how you made Bibingka that first time, alr
 #speaker Jayce
 #jayce neutral
 \*nervous laugh* What was that first time I made Bibingka…. I guess you're right Jaz. Let's do this!
-->DONE

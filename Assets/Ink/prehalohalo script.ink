@@ -69,11 +69,12 @@ even if I follow what you did like a robot it doesn’t come out the same.
 And believe me I have <i>tried.</i>
 
 #cousin neutral
+
 #speaker Jayce
-So you’ll be able to catch me if I mess up?
+ So you’ll be able to catch me if I mess up?
 
 #speaker Jasmine
-Sure, but you’ve done this so many times It’ll probably come back to you quickly. 
+Sure, but you’ve done this so many times it’ll probably come back to you quickly. 
 
 For starters, I know you’ve got the right kind of ice cream in your fridge, yeah?
 

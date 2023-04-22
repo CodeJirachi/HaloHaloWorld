@@ -1,5 +1,4 @@
 //– transition to bibingka flashback– 
-#jayce none
 #speaker clear
 \*ding* 
 
@@ -72,17 +71,19 @@ He’ll love this bibingka. You’ll thank me someday for this.
 #speaker Mom
 Oh I’ll be right back and we’ll get started!! Hold on right there!!
 
+#mom none
 #speaker Jayce
 #youngjayce sad
 …Mom…
 
 …
 
-//*front door is heard slamming shut*
-
+#youngjayce none
+#mom neutral
 #speaker Mom
 Alright, I'm back- Anak? 
 
+#mom worry
 Anak, where did you go?
 
 //-Bibingka flashback end, post bibingka-

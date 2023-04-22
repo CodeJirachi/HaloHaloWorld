@@ -1,6 +1,19 @@
+#speaker clear
+\*knocking*
+
+#speaker Jayce
+#jayce annoyed
+#cousin neutral
+Do you just keep coming over so you can just keep eating all my food?
+
+#speaker Jasmine
+#cousin wink
+I reserve the right to remain silent.
+
 #speaker Jayce
 #jayce sad
-Hey Jaz..
+#cousin neutral
+Anyways, just come in Jaz…
 
 #speaker Jasmine
 #cousin neutral
@@ -64,7 +77,7 @@ I feel like you want to reach out to her. What… What exactly is stopping you?
 Uhhh. Err. A lot. I don’t know, it's just so weird. Every time I think about it I rather just turn off my brain.
 
 #speaker Jasmine
-Yeah, you sure do.
+Yeah, you sure do turn it off.
 
 #speaker Jayce
 #jayce annoyed
@@ -144,6 +157,3 @@ I think so.. But I guess I won’t really know until I try. I think I still have
 
 #speaker Jasmine
 Alright! Let’s do this then!
-
-//– transition to fusion cooking– 
-->DONE

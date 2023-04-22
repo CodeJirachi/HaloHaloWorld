@@ -1,7 +1,3 @@
-//– fusion flashback– 
-
-//use kitchen background for this
-
 #youngjayce none
 #speaker Dad
 #dad neutral
@@ -32,10 +28,15 @@ Okay well you can eat that, but I have been craving this sauce…
 
 #speaker Dad
 #dad happy
-Sauce coming through, behind behind!....- WOAH!
+Sauce coming through, behind behind!
+
+#speaker Dad
+#dad shocked
+#mom worry
+….WOAH!
 
 #speaker clear
-((crashing noise))
+\*CRASH*
 
 #speaker Mom
 #mom worry
@@ -49,6 +50,7 @@ Aeu! Yeah I'm fine, just slipped a bit. Oh no...
 Oh no? What oh no? Are you sure you're fine? Can you walk?
 
 #speaker Dad
+#dad shocked
 I think my 5 year streak may have been broken. Our sauces are all mixed up now. Dinner is ruined!
 
 #speaker Mom
@@ -59,7 +61,7 @@ Maybe we can just… not have any sauce tonight.
 This smells so good!! I’m going to steal a small piece…
 
 #speaker Dad
-No Jayce!
+No Jay!
 
 #speaker Mom
 The sauce! It’s… oh no…
@@ -96,4 +98,3 @@ Ohhhh. I hope we can always make delicious accidents as a family together!
 #speaker Dad
 #dad neutral
 Sure…
-->DONE

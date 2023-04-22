@@ -180,10 +180,21 @@ Uhhh, yeah your <i>Thai</i> dad loved <i>Italian</i> basil.
 
 === finish ===
 #cousin happy
+#speaker Jayce
+#jayce excited
 Haha, we’d always make a mess of the kitchen...
 
 and needed to get our parents to help us finish while we cleaned up. 
 
+#speaker Jasmine
 #cousin neutral
 Spaghetti sounds like the perfect thing to get your mind off things for a bit.
+
+#speaker Jayce
+#jayce neutral
+I can’t believe how much I ate of it as a kid, so much I would pass out!
+
+#speaker Jasmine
+#cousin neutral
+That’s one way of getting your mind off things.
 ->DONE
