@@ -484,7 +484,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442586032}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &442586034
 Camera:
   m_ObjectHideFlags: 0
@@ -1509,7 +1509,9 @@ MonoBehaviour:
   customButton: {fileID: 4655723026960085111, guid: 3b0dbf2de2196964291eba0e0107ef47, type: 3}
   blackScreen: {fileID: 420726995}
   finalscene: {fileID: 0}
+  theEndText: {fileID: 0}
   inChoices: 0
+  achievementPrefab: {fileID: 0}
 --- !u!1 &1835056296
 GameObject:
   m_ObjectHideFlags: 0

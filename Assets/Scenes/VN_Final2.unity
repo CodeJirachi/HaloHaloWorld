@@ -367,7 +367,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442586032}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e5dd05157a5643b4ebdbc323e74409a8, type: 3}
@@ -936,6 +936,7 @@ MonoBehaviour:
   finalscene: {fileID: 450093153}
   theEndText: {fileID: 1961854709}
   inChoices: 0
+  achievementPrefab: {fileID: 0}
 --- !u!1 &1755968112
 GameObject:
   m_ObjectHideFlags: 0
