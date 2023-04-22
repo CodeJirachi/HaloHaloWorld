@@ -59,6 +59,9 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
     //curr ingredient layer
     private int currIngredientLayer;
 
+    //for spaghetti code achievement
+    public GameObject achievementPrefab;
+
     public void Awake()
     {
         currIngredientLayer = 0;
@@ -80,6 +83,10 @@ public class Spaghetti_FoodContainer : MonoBehaviour, IDropHandler, IPointerDown
             if (currentIngredient == "raw spaghetti")
             {
                 potCooking.transform.GetChild(5).gameObject.SetActive(true);
+
+                //for spaghetti code achievement
+                Instantiate(achievementPrefab);
+
                 StartCoroutine(CookSpaghetti(5.0f));
                 draggedObject.SetActive(false);
                 //currentIngredient.SetActive(false);

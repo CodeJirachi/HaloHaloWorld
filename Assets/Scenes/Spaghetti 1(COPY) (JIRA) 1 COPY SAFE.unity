@@ -2233,6 +2233,7 @@ MonoBehaviour:
   potCooking: {fileID: 204883187}
   panCooking: {fileID: 0}
   currentIngredient: 
+  achievementPrefab: {fileID: 0}
 --- !u!225 &204883190
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6408,6 +6409,7 @@ MonoBehaviour:
   potCooking: {fileID: 660433111}
   panCooking: {fileID: 0}
   currentIngredient: 
+  achievementPrefab: {fileID: 264494642234483139, guid: bbf1eb6b8c62fc74197704ae88864afc, type: 3}
 --- !u!1 &664795354
 GameObject:
   m_ObjectHideFlags: 0
@@ -14821,6 +14823,7 @@ MonoBehaviour:
   potCooking: {fileID: 1328329276}
   panCooking: {fileID: 0}
   currentIngredient: 
+  achievementPrefab: {fileID: 0}
 --- !u!225 &1328329280
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18834,6 +18837,7 @@ MonoBehaviour:
   potCooking: {fileID: 1755154472}
   panCooking: {fileID: 0}
   currentIngredient: 
+  achievementPrefab: {fileID: 0}
 --- !u!114 &1755154475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19976,6 +19980,7 @@ MonoBehaviour:
   potCooking: {fileID: 0}
   panCooking: {fileID: 0}
   currentIngredient: 
+  achievementPrefab: {fileID: 0}
 --- !u!1 &1867745284
 GameObject:
   m_ObjectHideFlags: 0

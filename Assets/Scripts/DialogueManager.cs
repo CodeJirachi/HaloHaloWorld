@@ -44,6 +44,8 @@ public class DialogueManager : MonoBehaviour
 
     string scene_name;
 
+    public GameObject achievementPrefab;
+
     void Start()
     {
         scene_name = SceneManager.GetActiveScene().name;
@@ -266,7 +268,20 @@ public class DialogueManager : MonoBehaviour
                 case "dad":
                     dadSpriteChange(param);
                     break;
+                case "achievement":
+                    showAchievement(param);
+                    break;
             }
+        }
+    }
+
+    void showAchievement(string param)
+    {
+        switch(param)
+        {
+            case "rizz":
+                Instantiate(achievementPrefab);
+                break;
         }
     }
 

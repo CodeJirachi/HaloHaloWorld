@@ -37,6 +37,7 @@ public class FoodContainer : MonoBehaviour, IDropHandler
 
     bool inPopup;
 
+    public GameObject achievementPrefab;
     public void Awake()
     {
         currIngredientLayer = 0;
@@ -100,6 +101,7 @@ public class FoodContainer : MonoBehaviour, IDropHandler
             {
                 halohalo.transform.GetChild(11).gameObject.SetActive(true);
                 draggedObject.SetActive(false);
+                Instantiate(achievementPrefab);
 
                 Scoop.Play();
                 currIngredientLayer++;

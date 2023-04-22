@@ -1725,7 +1725,9 @@ MonoBehaviour:
   customButton: {fileID: 4655723026960085111, guid: 3b0dbf2de2196964291eba0e0107ef47, type: 3}
   blackScreen: {fileID: 904051745}
   finalscene: {fileID: 0}
+  theEndText: {fileID: 0}
   inChoices: 0
+  achievementPrefab: {fileID: 4591367263417950037, guid: b8139f5890415c743b2287d5e39a342d, type: 3}
 --- !u!1 &1869226462
 GameObject:
   m_ObjectHideFlags: 0

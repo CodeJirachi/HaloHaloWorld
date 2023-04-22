@@ -9026,6 +9026,7 @@ MonoBehaviour:
   dialoguePopup: {fileID: 1841829394}
   dialogueText: {fileID: 964076462}
   nameText: {fileID: 1103536971}
+  achievementPrefab: {fileID: 6829617349655339739, guid: fda1bb0ee18910e47963dde4870cfb09, type: 3}
 --- !u!114 &1647560244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10606,6 +10607,7 @@ MonoBehaviour:
   dialoguePopup: {fileID: 0}
   dialogueText: {fileID: 0}
   nameText: {fileID: 0}
+  achievementPrefab: {fileID: 0}
 --- !u!1 &2022804167
 GameObject:
   m_ObjectHideFlags: 0
