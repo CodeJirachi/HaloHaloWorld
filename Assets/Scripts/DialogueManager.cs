@@ -293,6 +293,9 @@ public class DialogueManager : MonoBehaviour
             case "happy":
                 jasmine.transform.GetChild(3).gameObject.SetActive(true);
                 break;
+            case "wink":
+                jasmine.transform.GetChild(4).gameObject.SetActive(true);
+                break;
             case "none":
                 break;
             default:
@@ -402,6 +405,9 @@ public class DialogueManager : MonoBehaviour
                 break;
             case "wink":
                 dad.transform.GetChild(2).gameObject.SetActive(true);
+                break;
+            case "shocked":
+                dad.transform.GetChild(3).gameObject.SetActive(true);
                 break;
             case "none":
                 break;
