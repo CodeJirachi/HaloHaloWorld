@@ -89,7 +89,7 @@ Well your mom always loved baking. Have you tried calling her?
 
 #speaker Jasmine
 #cousin neutral
-Alright... well, lets leave that aside for now. Do you remember anything in particular? 
+Alright... well, let's leave that aside for now. Do you remember anything in particular? 
 
 We could look up a recipe and go from there.
 

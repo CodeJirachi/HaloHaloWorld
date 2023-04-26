@@ -57,7 +57,7 @@ I think my 5 year streak may have been broken. Our sauces are all mixed up now. 
 Maybe we can just… not have any sauce tonight.
 
 #speaker Jayce
-#youngjayce neutral
+#youngjayce happy
 This smells so good!! I’m going to steal a small piece…
 
 #speaker Dad
@@ -67,6 +67,7 @@ No Jay!
 The sauce! It’s… oh no…
 
 #speaker Jayce
+#youngjayce neutral
 Wait, what is this?
 
 #speaker Mom
@@ -86,7 +87,7 @@ It’s just like you! An accident!
 
 #speaker Jayce
 #youngjayce neutral
-Huh? Did I do something weird when I was born?
+Huh? Did I do something weird?
 
 #speaker Mom
 What he means is, the sauce is both Filipino and Thai. Like you. 

@@ -1,4 +1,6 @@
 //– transition to bibingka flashback– 
+#youngjayce none
+#mom none
 #speaker clear
 \*ding* 
 
@@ -23,10 +25,10 @@ Anyway I’m glad you’re here. This is perfect!
 
 #speaker Jayce
 #youngjayce happy
-Ohh it smells so good in here Mom! So great to be spending this holiday cooking together like this, you and me.
+Ohh it smells so good in here Mom! Is that bibingka?
 
 #speaker Mom
-Aww, I agree! And I think it’s about time I teach you our family Bibingka recipe!
+Yes! Anak, I think it’s about time I teach you our family Bibingka recipe!
 
 #speaker Jayce
 #youngjayce neutral
@@ -59,14 +61,14 @@ and her mom to her before… and her mom’s mom to her mom before that… you g
 Woah, that’s a lot of bibingka!
 
 #speaker Mom
-Yes, generations worth of Bibingka. What I’m saying is, every good wife needs to know this for their future husband. 
+Yes, generations worth of Bibingka. What I’m saying is, every good wife needs to know this for her future husband. 
 
 He’ll love this bibingka. You’ll thank me someday for this.
 
 #speaker Jayce
 #youngjayce annoyed
-… I’d rather eat the bibingka myself than make it for just some guy.
- 
+A wife, huh...
+
 //phone rings sfx
 #speaker Mom
 Oh I’ll be right back and we’ll get started!! Hold on right there!!

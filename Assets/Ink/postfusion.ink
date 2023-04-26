@@ -55,7 +55,6 @@ Beans, ice cream, everything mixed together in that slightly-melted icy slush, I
 
 #speaker Jayce
 #jayce neutral
-#cousin worried
 Whenever I think about my mom, it's like that, I think. It feels so complicated and mixed up… 
 
 But at the end of the day, you reminded me she’s not just the beans. 
@@ -76,6 +75,7 @@ I mean like, even through all the good and bad all jumbled and mixed together, I
 
 And I hope that she can see that, too. Thanks for giving me the final push to see her.
 
+#speaker Jasmine
 #cousin neutral
 Of course, Jayce. Do you want me to come with?
 

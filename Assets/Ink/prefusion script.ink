@@ -1,8 +1,14 @@
+#jayce none
+#cousin none
 #speaker clear
+[The next morning...]
+
 \*knocking*
 
 #speaker Jayce
 #jayce annoyed
+Ate... again......
+
 #cousin neutral
 Do you just keep coming over so you can just keep eating all my food?
 
@@ -27,7 +33,7 @@ Yeah well just… thinking about what comes next. Lots of unknowns.
 
 #speaker Jasmine
 #cousin neutral
-I mean you always seemed pretty sure - just throw a dart at a map, and work at the nearest thai restaurant like you always wanted to.
+I mean you always seemed pretty sure - just throw a dart at a map, and work at the nearest Thai restaurant like you always wanted to.
 
 #speaker Jayce
 Well that's part of it… I guess now that I’m getting there. I need to think how I’m gonna figure that stuff out and all.
@@ -107,7 +113,7 @@ thinking “But what if?” instead of actually doing anything about it.
 Sure, but-
 
 #speaker Jasmine
-Listen, you know I always got your back right? You’re not the same place as you were as a kid back then. 
+Listen, you know I always got your back right? You’re not in the same place as you were as a kid back then. 
 
 If anything goes wrong, I’ll always be there for you. You’re not alone.
 
